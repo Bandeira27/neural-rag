@@ -62,3 +62,8 @@ Para gerar um JSON estruturado de nós e arestas (grafo) que será renderizado p
 *   **Then** o sistema deve extrair e isolar apenas o conteúdo JSON válido, ignorando o lixo em volta
 *   **And** validar a estrutura extraída com sucesso através do Pydantic
 *   **And** salvar o payload resultante na pasta `output/` como um arquivo JSON válido.
+
+### Tasks
+- [x] Backend: Configurar venv e requirements
+- [x] Backend: TDD test_parser.py
+- [x] Backend: Implementar parse_llm_json com Pydantic
