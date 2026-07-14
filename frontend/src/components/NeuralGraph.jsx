@@ -50,13 +50,34 @@ const NeuralGraph = () => {
           graphData={graphData}
           nodeId="id"
           nodeLabel="name"
-          nodeColor={node => {
+          d3VelocityDecay={0.1}
+          onNodeDragEnd={node => {
+            node.fx = node.x;
+            node.fy = node.y;
+          }}
+          nodeCanvasObject={(node, ctx, globalScale) => {
+            const label = node.id || node.label || node.name || '';
+            const fontSize = 12 / globalScale;
+            ctx.font = `${fontSize}px Sans-Serif`;
+            
+            // Draw circle
+            const r = 4;
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
+            let color = '#6b7280';
             switch(node.group) {
-              case 1: return '#3b82f6';
-              case 2: return '#10b981';
-              case 3: return '#8b5cf6';
-              default: return '#6b7280';
+              case 1: color = '#3b82f6'; break;
+              case 2: color = '#10b981'; break;
+              case 3: color = '#8b5cf6'; break;
             }
+            ctx.fillStyle = color;
+            ctx.fill();
+
+            // Draw text
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.fillText(label, node.x, node.y + r + fontSize);
           }}
           linkColor={() => 'rgba(255, 255, 255, 0.4)'}
           backgroundColor="#09090b"
