@@ -39,3 +39,26 @@ neural-rag/
     *   Renderer: `react-force-graph` (Crucial for rendering the physics of the neurons/graph).
     *   Core: `react`, `react-dom`.
     *   Bundler: `vite`.
+
+### Seção 3: User Stories e Acceptance Criteria
+
+**User Story: Extração de Grafo com LLM**
+
+Como sistema de backend (Python),
+Quero extrair entidades e relações de arquivos Markdown utilizando um LLM,
+Para gerar um JSON estruturado de nós e arestas (grafo) que será renderizado pelo frontend.
+
+#### Critérios de Aceite (BDD)
+
+**Cenário 1: Caminho Feliz (JSON Perfeito)**
+*   **Given** que o backend processa um arquivo Markdown da pasta `data/` enviando-o ao LLM
+*   **When** o LLM retorna uma resposta contendo exclusivamente um JSON bem formatado (com chaves `nodes` e `edges`)
+*   **Then** o sistema deve validar a estrutura com sucesso através do Pydantic
+*   **And** salvar o payload resultante na pasta `output/` como um arquivo JSON válido.
+
+**Cenário 2: Resiliência (LLM insere texto indesejado antes/depois do JSON)**
+*   **Given** que o backend processa um arquivo Markdown da pasta `data/` enviando-o ao LLM
+*   **When** o LLM retorna o JSON válido encapsulado em blocos de código markdown ou com texto introdutório (ex: "Aqui está o JSON gerado:\n```json\n...")
+*   **Then** o sistema deve extrair e isolar apenas o conteúdo JSON válido, ignorando o lixo em volta
+*   **And** validar a estrutura extraída com sucesso através do Pydantic
+*   **And** salvar o payload resultante na pasta `output/` como um arquivo JSON válido.
