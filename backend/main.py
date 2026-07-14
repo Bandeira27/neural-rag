@@ -1,9 +1,17 @@
 import urllib.request
 import urllib.parse
+import urllib.error
 import json
 import os
+from dotenv import load_dotenv
 
 def main():
+    load_dotenv()
+    api_key = os.getenv("OPENROUTER_API_KEY")
+    if not api_key:
+        print("Error: OPENROUTER_API_KEY not set.")
+        return
+
     base_dir = os.path.dirname(os.path.abspath(__file__))
     agents_path = os.path.join(base_dir, '../AGENTS.md')
     out_path = os.path.join(base_dir, '../frontend/public/graph.json')
@@ -17,25 +25,30 @@ def main():
         return
 
     # Prepare request
-    url = 'http://127.0.0.1:11434/api/generate'
+    url = 'https://openrouter.ai/api/v1/chat/completions'
     prompt = f"Você é um extrator de grafos. Leia o texto e extraia nós e conexões. REGRAS: 1. Retorne APENAS um JSON válido. 2. A chave 'nodes' é uma lista de objetos com 'id' (snake_case) e 'label' (Português, max 3 palavras). 3. A chave 'links' é uma lista com 'source' (id), 'target' (id) e 'label' (Português). EXEMPLO ESPERADO: {{\"nodes\": [{{\"id\": \"tech_lead\", \"label\": \"Líder Técnico\"}}, {{\"id\": \"devops\", \"label\": \"Operações\"}}], \"links\": [{{\"source\": \"tech_lead\", \"target\": \"devops\", \"label\": \"delega para\"}}]}} TEXTO: {agents_content}"
 
     data = {
-        "model": "phi3",
-        "prompt": prompt,
-        "format": "json",
-        "stream": False
+        "model": "meta-llama/llama-3-8b-instruct:free",
+        "messages": [
+            {"role": "user", "content": prompt}
+        ]
     }
 
-    req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers={'Content-Type': 'application/json'})
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {api_key}'
+    }
+
+    req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers=headers)
 
     try:
-        print("Sending request to Ollama...")
+        print("Sending request to OpenRouter...")
         with urllib.request.urlopen(req) as response:
             result = json.loads(response.read().decode('utf-8'))
             
-            # Ollama response puts the actual text in 'response' key
-            response_text = result.get('response', '')
+            # Extract response text from OpenRouter format
+            response_text = result['choices'][0]['message']['content']
             
             # Parse the response text as JSON
             try:
@@ -57,6 +70,8 @@ def main():
                 print("Error: Response JSON missing 'nodes' or 'links'.")
                 print("Parsed JSON:", graph_data)
                 
+    except urllib.error.HTTPError as e:
+        print(f"Request failed with status {e.code}: {e.read().decode('utf-8')}")
     except Exception as e:
         print(f"Request failed: {e}")
 
