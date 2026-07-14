@@ -1,24 +1,16 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState, useEffect } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
-
-const dummyData = {
-  nodes: [
-    { id: '1', name: 'Node 1', group: 1 },
-    { id: '2', name: 'Node 2', group: 1 },
-    { id: '3', name: 'Node 3', group: 2 },
-    { id: '4', name: 'Node 4', group: 2 },
-    { id: '5', name: 'Node 5', group: 3 }
-  ],
-  links: [
-    { source: '1', target: '2' },
-    { source: '1', target: '3' },
-    { source: '2', target: '4' },
-    { source: '3', target: '5' }
-  ]
-};
 
 const NeuralGraph = () => {
   const fgRef = useRef();
+  const [graphData, setGraphData] = useState({ nodes: [], links: [] });
+
+  useEffect(() => {
+    fetch('/graph.json')
+      .then(res => res.json())
+      .then(data => setGraphData(data))
+      .catch(err => console.error('Error fetching graph data:', err));
+  }, []);
 
   const handleNodeClick = useCallback(node => {
     // Center/zoom on node
@@ -34,7 +26,7 @@ const NeuralGraph = () => {
       <div className="flex-1 overflow-hidden relative">
         <ForceGraph2D
           ref={fgRef}
-          graphData={dummyData}
+          graphData={graphData}
           nodeLabel="name"
           nodeColor={node => {
             switch(node.group) {
