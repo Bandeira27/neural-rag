@@ -7,9 +7,9 @@ from dotenv import load_dotenv
 
 def main():
     load_dotenv()
-    api_key = os.getenv("OPENROUTER_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        print("Error: OPENROUTER_API_KEY not set.")
+        print("Error: GROQ_API_KEY not set.")
         return
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -25,11 +25,11 @@ def main():
         return
 
     # Prepare request
-    url = 'https://openrouter.ai/api/v1/chat/completions'
+    url = 'https://api.groq.com/openai/v1/chat/completions'
     prompt = f"Você é um extrator de grafos. Leia o texto e extraia nós e conexões. REGRAS: 1. Retorne APENAS um JSON válido. 2. A chave 'nodes' é uma lista de objetos com 'id' (snake_case) e 'label' (Português, max 3 palavras). 3. A chave 'links' é uma lista com 'source' (id), 'target' (id) e 'label' (Português). EXEMPLO ESPERADO: {{\"nodes\": [{{\"id\": \"tech_lead\", \"label\": \"Líder Técnico\"}}, {{\"id\": \"devops\", \"label\": \"Operações\"}}], \"links\": [{{\"source\": \"tech_lead\", \"target\": \"devops\", \"label\": \"delega para\"}}]}} TEXTO: {agents_content}"
 
     data = {
-        "model": "gryphe/mythomist-7b:free",
+        "model": "llama3-8b-8192",
         "messages": [
             {"role": "user", "content": prompt}
         ]
@@ -37,7 +37,8 @@ def main():
 
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': f'Bearer {api_key}'
+        'Authorization': f'Bearer {api_key}',
+        'User-Agent': 'Mozilla/5.0 (compatible; neural-rag/1.0)'
     }
 
     req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers=headers)
