@@ -1,21 +1,52 @@
+import sqlite3
+import chromadb
+from contextlib import contextmanager
+import uuid
+
 class StorageException(Exception):
     pass
 
-class StorageMock:
-    def __init__(self):
-        self.chroma_data = []
-        self.sqlite_data = []
+class Storage:
+    def __init__(self, sqlite_path="data.db", chroma_path="./chroma"):
+        self.sqlite_path = sqlite_path
+        self.chroma_path = chroma_path
         
-    def save(self, entity, fail_chroma=False, fail_sqlite=False):
-        if fail_chroma:
-            raise StorageException("ChromaDB Timeout")
+    @contextmanager
+    def get_sqlite_conn(self):
+        conn = sqlite3.connect(self.sqlite_path)
+        try:
+            yield conn
+        finally:
+            conn.close()
             
-        temp_chroma = [entity]
+    def get_chroma_client(self):
+        return chromadb.PersistentClient(path=self.chroma_path)
+
+    def save(self, entity, document_text=""):
+        chroma_client = self.get_chroma_client()
+        collection = chroma_client.get_or_create_collection(name="documents")
         
-        if fail_sqlite:
-            # Atomic failure: nothing is saved in self.chroma_data because sqlite failed
-            raise StorageException("SQLite Lock")
-            
-        self.chroma_data.extend(temp_chroma)
-        self.sqlite_data.append(entity)
-        return True
+        entity_id = str(uuid.uuid4())
+        
+        with self.get_sqlite_conn() as conn:
+            cursor = conn.cursor()
+            try:
+                # SQLite operation
+                cursor.execute("CREATE TABLE IF NOT EXISTS entities (id TEXT PRIMARY KEY, data TEXT)")
+                cursor.execute("INSERT INTO entities (id, data) VALUES (?, ?)", (entity_id, str(entity)))
+                
+                # ChromaDB operation
+                collection.add(
+                    documents=[document_text or str(entity)],
+                    ids=[entity_id]
+                )
+                
+                conn.commit()
+                return True
+            except Exception as e:
+                conn.rollback()
+                try:
+                    collection.delete(ids=[entity_id])
+                except:
+                    pass
+                raise StorageException(f"Storage failed: {e}")
