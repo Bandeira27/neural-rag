@@ -1,77 +1,85 @@
 {
   "nodes": [
     {
-      "id": "Night Watch / Root",
+      "id": "0",
+      "label": "0",
       "group": 1
     },
     {
-      "id": "Role & Workflow Constraints",
+      "id": "1",
+      "label": "1",
       "group": 2
     },
     {
-      "id": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding.",
+      "id": "2",
+      "label": "2",
       "group": 3
     },
     {
-      "id": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins.",
+      "id": "3",
+      "label": "3",
       "group": 4
     },
     {
-      "id": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement.",
+      "id": "4",
+      "label": "4",
       "group": 5
     },
     {
-      "id": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code.",
+      "id": "5",
+      "label": "5",
       "group": 6
     },
     {
-      "id": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria.",
+      "id": "6",
+      "label": "6",
       "group": 7
     },
     {
-      "id": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database.",
+      "id": "7",
+      "label": "7",
       "group": 8
     }
   ],
   "links": [
     {
-      "source": "Night Watch / Root",
-      "target": "Role & Workflow Constraints",
+      "source": "0",
+      "target": "1",
       "label": "Role & Workflow Constraints"
     },
     {
-      "source": "Role & Workflow Constraints",
-      "target": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding.",
+      "source": "1",
+      "target": "2",
       "label": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding."
     },
     {
-      "source": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding.",
-      "target": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins.",
+      "source": "2",
+      "target": "3",
       "label": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins."
     },
     {
-      "source": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins.",
-      "target": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement.",
+      "source": "3",
+      "target": "4",
       "label": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement."
     },
     {
-      "source": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement.",
-      "target": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code.",
+      "source": "4",
+      "target": "5",
       "label": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code."
     },
     {
-      "source": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code.",
-      "target": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria.",
+      "source": "5",
+      "target": "6",
       "label": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria."
     },
     {
-      "source": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria.",
-      "target": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database.",
+      "source": "6",
+      "target": "7",
       "label": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database."
     },
     {
-      "source": "Night Watch / Root",
-      "target": "Technical Strictness",
+      "source": "0",
+      "target": "8",
       "label": "Technical Strictness"
     }
   ]

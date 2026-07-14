@@ -18,7 +18,7 @@ def main():
 
     # Prepare request
     url = 'http://127.0.0.1:11434/api/generate'
-    prompt = f"Extract the main entities and relationships from the following text. Return ONLY a valid JSON object with two arrays: 'nodes' (objects with 'id' and 'group') and 'links' (objects with 'source', 'target', and 'label'). Você DEVE extrair/traduzir os nomes e rótulos das arestas (labels e ids) OBRIGATORIAMENTE para Português-BR. Retorne todos os labels exclusivamente em idioma Português do Brasil. TEXT: {agents_content}"
+    prompt = f"Extract the main entities and relationships from the following text. Return ONLY a valid JSON object with two arrays: 'nodes' and 'links'. Crie um 'id' (snake_case, sem espaços) e um 'label' (em PT-BR, curto, máximo 3 palavras) para cada node. Links objects with 'source', 'target', and 'label'. Você DEVE extrair/traduzir os nomes e rótulos das arestas OBRIGATORIAMENTE para Português-BR. TEXT: {agents_content}"
 
     data = {
         "model": "phi3",
