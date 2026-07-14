@@ -18,7 +18,19 @@ A aplicação sofreu um "Total Meltdown" (Hotfix 02). O Auditor/Tech Lead inicio
 
 ## 3. Checklist de Correção OBRIGATÓRIA (Frontend e Backend)
 
-### Frontend
+### Backend (BDD)
+- **Cenário: Geração do Grafo**
+  - **Dado** que o sistema RAG gera os nós do grafo
+  - **Então** o JSON gerado DEVE ter um `id` (formato curto/slug)
+  - **E** DEVE ter um `label` (Texto descritivo em PT-BR, máx 3 palavras)
+
+### Frontend (BDD)
+- **Cenário: Renderização Segura do Grafo**
+  - **Dado** que o componente `NeuralGraph.jsx` é montado
+  - **Então** ele DEVE implementar null safety explícito nas interações físicas (ex: `fgRef.current?.d3ReheatSimulation()`)
+  - **E** DEVE pintar APENAS a propriedade `label` no canvas, evitando estourar o limite de exibição do nó
+
+### Frontend (Checklist Original)
 - [ ] Atualizar `graph.json` com IDs únicos curtos (ex: `"id": "node_1"`) e adicionar propriedades `"label"` ou `"name"` para os textos descritivos.
 - [ ] Em `NeuralGraph.jsx`, corrigir o mapeamento da propriedade de texto (alterar `nodeLabel` para bater com os dados).
 - [ ] Adicionar null safety (`if (!fgRef.current) return;`) nas chamadas dentro de `useEffect` (especialmente no `setTimeout`) e em `onNodeDragEnd`.
