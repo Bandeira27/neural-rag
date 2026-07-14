@@ -54,10 +54,10 @@ const NeuralGraph = () => {
           onNodeDragEnd={node => {
             delete node.fx;
             delete node.fy;
-            fgRef.current.d3ReheatSimulation();
+            fgRef.current?.d3ReheatSimulation();
           }}
-          nodeCanvasObject={(node, ctx, globalScale) => {
-            const label = node.label || node.id || '';
+          nodeCanvasObject={(node, ctx, _globalScale) => {
+            const label = node.label || '';
             const fontSize = 3;
             ctx.font = `${fontSize}px Sans-Serif`;
             
