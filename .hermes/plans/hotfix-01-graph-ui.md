@@ -9,10 +9,9 @@ O usuário rejeitou a UI do MVP devido aos seguintes bugs críticos reportados:
 2. Ligações (edges) invisíveis (erro no linkCanvasObject ou ID mismatch).
 3. Nomes numéricos ilegíveis (falha de payload do Backend, erro no prompt do LLM ou parsing).
 
-## 3. Objetivos
-- Restabelecer a interação de drag-and-drop sem perda de nós.
-- Garantir a visibilidade correta das arestas (edges) conectando as entidades.
-- Corrigir a nomenclatura das entidades para exibir os nomes reais em vez de IDs numéricos.
+## 3. User Stories e BDDs
+1. **Cenário para o Backend:** Dado que o crawler/export_to_ui roda, Quando gera o graph.json, Então o campo 'id' (ou 'label') dos nós DEVE ser o nome textual extraído da entidade e NÃO um UUID numérico opaco.
+2. **Cenário para o Frontend:** Dado que o usuário clica e arrasta um nó, Quando solta o botão (dragEnd), Então o nó não deve desaparecer da tela e deve manter suas arestas visíveis conectadas.
 
 ## 4. Dev Checklist
 - [ ] **Backend:** DEVE forçar a propriedade 'id' ou 'label' do JSON a conter o NOME real da entidade (não um número).
