@@ -33,9 +33,14 @@ def main():
     cursor.execute("SELECT source, target, label FROM edges")
     db_edges = cursor.fetchall()
     
+    # Map node id to incoming edge label
+    id_to_label = {'0': 'Night Watch / Root'}
+    for e in db_edges:
+        id_to_label[e[1]] = e[2]
+
     # 3) Converta tudo num JSON estruturado
-    nodes = [{"id": n[0], "group": n[1]} for n in db_nodes]
-    links = [{"source": e[0], "target": e[1], "label": e[2]} for e in db_edges]
+    nodes = [{"id": id_to_label.get(n[0], str(n[0])), "group": n[1]} for n in db_nodes]
+    links = [{"source": id_to_label.get(e[0], str(e[0])), "target": id_to_label.get(e[1], str(e[1])), "label": e[2]} for e in db_edges]
     
     graph_data = {
         "nodes": nodes,

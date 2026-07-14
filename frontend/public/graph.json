@@ -1,77 +1,77 @@
 {
   "nodes": [
     {
-      "id": "0",
+      "id": "Night Watch / Root",
       "group": 1
     },
     {
-      "id": "1",
+      "id": "Role & Workflow Constraints",
       "group": 2
     },
     {
-      "id": "2",
+      "id": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding.",
       "group": 3
     },
     {
-      "id": "3",
+      "id": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins.",
       "group": 4
     },
     {
-      "id": "4",
+      "id": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement.",
       "group": 5
     },
     {
-      "id": "5",
+      "id": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code.",
       "group": 6
     },
     {
-      "id": "6",
+      "id": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria.",
       "group": 7
     },
     {
-      "id": "7",
+      "id": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database.",
       "group": 8
     }
   ],
   "links": [
     {
-      "source": "0",
-      "target": "1",
+      "source": "Night Watch / Root",
+      "target": "Role & Workflow Constraints",
       "label": "Role & Workflow Constraints"
     },
     {
-      "source": "1",
-      "target": "2",
+      "source": "Role & Workflow Constraints",
+      "target": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding.",
       "label": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding."
     },
     {
-      "source": "2",
-      "target": "3",
+      "source": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding.",
+      "target": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins.",
       "label": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins."
     },
     {
-      "source": "3",
-      "target": "4",
+      "source": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins.",
+      "target": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement.",
       "label": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement."
     },
     {
-      "source": "4",
-      "target": "5",
+      "source": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement.",
+      "target": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code.",
       "label": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code."
     },
     {
-      "source": "5",
-      "target": "6",
+      "source": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code.",
+      "target": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria.",
       "label": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria."
     },
     {
-      "source": "6",
-      "target": "7",
+      "source": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria.",
+      "target": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database.",
       "label": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database."
     },
     {
-      "source": "0",
-      "target": "8",
+      "source": "Night Watch / Root",
+      "target": "Technical Strictness",
       "label": "Technical Strictness"
     }
   ]
