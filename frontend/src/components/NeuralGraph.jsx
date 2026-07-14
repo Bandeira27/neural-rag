@@ -54,10 +54,11 @@ const NeuralGraph = () => {
           onNodeDragEnd={node => {
             delete node.fx;
             delete node.fy;
+            fgRef.current.d3ReheatSimulation();
           }}
           nodeCanvasObject={(node, ctx, globalScale) => {
             const label = node.label || node.id || '';
-            const fontSize = 12 / globalScale;
+            const fontSize = 3;
             ctx.font = `${fontSize}px Sans-Serif`;
             
             // Draw circle
