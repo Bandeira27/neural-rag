@@ -52,11 +52,11 @@ const NeuralGraph = () => {
           nodeLabel="name"
           d3VelocityDecay={0.1}
           onNodeDragEnd={node => {
-            node.fx = node.x;
-            node.fy = node.y;
+            delete node.fx;
+            delete node.fy;
           }}
           nodeCanvasObject={(node, ctx, globalScale) => {
-            const label = node.id || node.label || node.name || '';
+            const label = node.label || node.id || '';
             const fontSize = 12 / globalScale;
             ctx.font = `${fontSize}px Sans-Serif`;
             
@@ -80,6 +80,7 @@ const NeuralGraph = () => {
             ctx.fillText(label, node.x, node.y + r + fontSize);
           }}
           linkColor={() => 'rgba(255, 255, 255, 0.4)'}
+          linkDirectionalArrowLength={3.5}
           backgroundColor="#09090b"
           onNodeClick={handleNodeClick}
           cooldownTicks={100}
