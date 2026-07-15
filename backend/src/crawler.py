@@ -20,14 +20,15 @@ def get_target_path(env_var="REPO_PATH", cli_args=None):
 class Crawler:
     def __init__(self, cli_args=None):
         self.target_path = get_target_path(cli_args=cli_args)
-        # Using the current working directory as the base scope for validation
-        self.base_scope = os.path.abspath(os.getcwd())
+        self.base_scope = os.path.abspath('/home/bandeira')
         if os.path.commonpath([self.base_scope, self.target_path]) != self.base_scope:
              raise ValueError("Directory Traversal Attempted: Target path outside allowed scope.")
     
     def run(self):
         for root, dirs, files in os.walk(self.target_path):
+            dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', 'venv']]
             for file in files:
+                if not file.endswith('.md'):
+                    continue
                 file_path = os.path.abspath(os.path.join(root, file))
-                if os.path.commonpath([self.base_scope, file_path]) == self.base_scope:
-                    yield file_path
+                yield file_path
