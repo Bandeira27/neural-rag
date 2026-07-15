@@ -25,10 +25,23 @@ class Crawler:
              raise ValueError("Directory Traversal Attempted: Target path outside allowed scope.")
     
     def run(self):
+        valid_exts = ('.md', '.tsx', '.ts', 'package.json')
         for root, dirs, files in os.walk(self.target_path):
-            dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', 'venv']]
+            dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', 'venv', '__pycache__']]
             for file in files:
-                if not file.endswith('.md'):
+                if not file.endswith(valid_exts):
                     continue
                 file_path = os.path.abspath(os.path.join(root, file))
-                yield file_path
+                
+                # Para evitar estourar tokens da Groq, fazemos chunking simples para código fonte
+                if file.endswith(('.tsx', '.ts')):
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        lines = f.readlines()
+                    # Chunk de 100 linhas (ajuste se necessário)
+                    chunk_size = 100
+                    for i in range(0, len(lines), chunk_size):
+                        chunk = "".join(lines[i:i + chunk_size])
+                        yield file_path, chunk
+                else:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        yield file_path, f.read()

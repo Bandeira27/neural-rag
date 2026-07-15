@@ -27,8 +27,15 @@ def main():
     # Setup DB
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    cursor.execute("CREATE TABLE IF NOT EXISTS nodes (id TEXT, label TEXT, group_id INTEGER)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS nodes (id TEXT, label TEXT, group_id INTEGER, description TEXT)")
     cursor.execute("CREATE TABLE IF NOT EXISTS edges (source TEXT, target TEXT, label TEXT)")
+    
+    # Adicionar description caso não exista
+    cursor.execute("PRAGMA table_info(nodes)")
+    columns = [info[1] for info in cursor.fetchall()]
+    if 'description' not in columns:
+        cursor.execute("ALTER TABLE nodes ADD COLUMN description TEXT")
+    
     cursor.execute("DELETE FROM nodes")
     cursor.execute("DELETE FROM edges")
     conn.commit()
@@ -49,12 +56,14 @@ def main():
 
     files_to_process = []
     if crawler:
-        for f in crawler.run():
-            files_to_process.append(f)
+        for item in crawler.run():
+            # Crawler agora retorna (file_path, content)
+            files_to_process.append(item)
     else:
         agents_path = os.path.join(base_dir, '../AGENTS.md')
         if os.path.exists(agents_path):
-            files_to_process.append(agents_path)
+            with open(agents_path, 'r', encoding='utf-8') as f:
+                files_to_process.append((agents_path, f.read()))
         else:
             print(f"Error: {agents_path} not found.")
             return
@@ -64,16 +73,14 @@ def main():
     all_nodes = []
     all_links = []
 
-    for idx, file_path in enumerate(files_to_process):
+    for idx, (file_path, content) in enumerate(files_to_process):
         print(f"Processing ({idx+1}/{len(files_to_process)}): {file_path}")
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
         
         # skip empty
         if not content.strip():
             continue
 
-        prompt = f"Você é um extrator de grafos. Leia o texto e extraia nós e conexões. REGRAS: 1. Retorne APENAS um JSON válido. 2. A chave 'nodes' é uma lista de objetos com 'id' (snake_case) e 'label' (Português, max 3 palavras). 3. A chave 'links' é uma lista com 'source' (id), 'target' (id) e 'label' (Português). EXEMPLO ESPERADO: {{\"nodes\": [{{\"id\": \"tech_lead\", \"label\": \"Líder Técnico\"}}, {{\"id\": \"devops\", \"label\": \"Operações\"}}], \"links\": [{{\"source\": \"tech_lead\", \"target\": \"devops\", \"label\": \"delega para\"}}]}} TEXTO: {content}"
+        prompt = f"Você é um extrator de grafos. Leia o texto e extraia nós e conexões. REGRAS: 1. Retorne APENAS um JSON válido. 2. A chave 'nodes' é uma lista de objetos com 'id' (snake_case), 'label' (Português, max 3 palavras), e 'description' (Obrigatório, max 20 palavras em PT-BR explicando o componente/regra). 3. A chave 'links' é uma lista com 'source' (id), 'target' (id) e 'label' (Português). EXEMPLO ESPERADO: {{\"nodes\": [{{\"id\": \"tech_lead\", \"label\": \"Líder Técnico\", \"description\": \"Responsável por definir a arquitetura e revisar o código antes de ir para QA.\"}}], \"links\": [{{\"source\": \"tech_lead\", \"target\": \"devops\", \"label\": \"delega para\"}}]}} TEXTO: {content}"
         
         data = {
             "model": "llama-3.1-8b-instant",
@@ -102,7 +109,7 @@ def main():
                     graph_data = json.loads(response_text)
                     if 'nodes' in graph_data and 'links' in graph_data:
                         for node in graph_data['nodes']:
-                            cursor.execute("INSERT INTO nodes (id, label, group_id) VALUES (?, ?, ?)", (node['id'], node.get('label', ''), 1))
+                            cursor.execute("INSERT INTO nodes (id, label, group_id, description) VALUES (?, ?, ?, ?)", (node['id'], node.get('label', ''), 1, node.get('description', '')))
                             all_nodes.append(node)
                         for link in graph_data['links']:
                             cursor.execute("INSERT INTO edges (source, target, label) VALUES (?, ?, ?)", (link['source'], link['target'], link.get('label', '')))
