@@ -1,86 +1,6980 @@
 {
   "nodes": [
     {
-      "id": "0",
-      "label": "0",
-      "group": 1
+      "id": "react_flow_instance",
+      "label": "Instância React Flow",
+      "group": 1,
+      "description": "Instância da biblioteca React Flow, responsável por gerenciar a lógica do fluxo de reação."
     },
     {
-      "id": "1",
-      "label": "1",
-      "group": 2
+      "id": "react_instance",
+      "label": "Instância React",
+      "group": 1,
+      "description": "Instância da biblioteca React, responsável por gerenciar a lógica do lado do cliente."
     },
     {
-      "id": "2",
-      "label": "2",
-      "group": 3
+      "id": "tech_lead",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por definir a arquitetura e revisar o código antes de ir para QA."
     },
     {
-      "id": "3",
-      "label": "3",
-      "group": 4
+      "id": "devops",
+      "label": "DevOps",
+      "group": 1,
+      "description": "Equipe responsável por garantir a entrega contínua e escalada de soluções."
     },
     {
-      "id": "4",
-      "label": "4",
-      "group": 5
+      "id": "edge",
+      "label": "Ponte",
+      "group": 1,
+      "description": "Conexão entre dois componentes."
     },
     {
-      "id": "5",
-      "label": "5",
-      "group": 6
+      "id": "node",
+      "label": " Nó",
+      "group": 1,
+      "description": "Componente individual do fluxo de reação."
     },
     {
-      "id": "6",
-      "label": "6",
-      "group": 7
+      "id": "orchestrator_architect",
+      "label": "Orador e Arquiteto",
+      "group": 1,
+      "description": "Responsável por definir o fluxo de trabalho e executá-lo de acordo com as regras da Night Watch."
     },
     {
-      "id": "7",
-      "label": "7",
-      "group": 8
+      "id": "tech_lead",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por definir a estrutura de pastas e revisar o código estaticamente antes de passar para QA."
+    },
+    {
+      "id": "auditor",
+      "label": "Auditor",
+      "group": 1,
+      "description": "Responsável por identificar impactos e definir a estrutura de pastas, realizando uma revisão estática rigorosa antes de passar para QA."
+    },
+    {
+      "id": "doc_planning",
+      "label": "Documentação (Fase de Planejamento)",
+      "group": 1,
+      "description": "Desenvolve histórias de usuário, cenários de uso e critérios de aceitação (estilo BDD) antes do início da execução."
+    },
+    {
+      "id": "devops_secops",
+      "label": "DevOps & SecOps",
+      "group": 1,
+      "description": "Gerencia o pipeline de CI/CD, hooks pré-commit, compatibilidade ambiente (Kali Linux/Webkit2GTK) e enforça segurança do pipeline."
+    },
+    {
+      "id": "dev",
+      "label": "Desenvolvimento",
+      "group": 1,
+      "description": "Siga o plano de auditoria e as histórias de usuário estritamente. Escreva testes antes da código."
+    },
+    {
+      "id": "gatekeeper",
+      "label": "Portão (QA/Red Team)",
+      "group": 1,
+      "description": "Avalia UI/UX e testes antes de enviar um PR e tenta quebrar o UI com critérios de aceitação."
+    },
+    {
+      "id": "release_doc",
+      "label": "Documentação (Fase de Lançamento)",
+      "group": 1,
+      "description": "Manter registros de decisões arquitetônicas (ADRs), atualizar chaves de internacionalização e garantir documentação técnica em 100% Português."
+    },
+    {
+      "id": "tdd",
+      "label": "Desenvolvimento Orientado a Testes (TDD)",
+      "group": 1,
+      "description": "Você DEVE escrever testes unitários e E2E (Playwright) antes ou ao lado da implementação. Nenhuma exceção."
+    },
+    {
+      "id": "hermes",
+      "label": "Hermes",
+      "group": 1,
+      "description": "Orador e arquiteto que não edita código manualmente. Tudo deve ser delegado."
+    },
+    {
+      "id": "ci_cd",
+      "label": "Integração e Lançamento Continuos (CI/CD)",
+      "group": 1,
+      "description": "Trabalha em conjunto com DevOps & SecOps para gerenciar o pipeline."
+    },
+    {
+      "id": "i18n",
+      "label": "Internacionalização (I18n)",
+      "group": 1,
+      "description": "Tudo deve passar através de react-i18next e ser em 100% Português."
+    },
+    {
+      "id": "binary_testing",
+      "label": "Testes de Binários/Executáveis",
+      "group": 1,
+      "description": "Todos os resolvidos de bugs e recursos devem ser testados contra arquivos binários sem extensão em ambiente Linux."
+    },
+    {
+      "id": "oom_error",
+      "label": "Erro de Memória Insuficiente",
+      "group": 1,
+      "description": "Qualquer erro de memória igual automaticamente falha PR."
+    },
+    {
+      "id": "tauri",
+      "label": "Tauri - Framework do Desktop",
+      "group": 1,
+      "description": "Faz parte da pilha tecnológica moderna do Night Watch, garantindo desempenho e estabilidade."
+    },
+    {
+      "id": "rust",
+      "label": "Rust - Backend de Alto Desempenho",
+      "group": 1,
+      "description": "Fornece alta performance no parsing e processamento de binários PE e ELF."
+    },
+    {
+      "id": "zod",
+      "label": "Zod - Validação Frontend",
+      "group": 1,
+      "description": "Responsável pela validação rigorosa de esquemas e tipos no frontend do Night Watch."
+    },
+    {
+      "id": "tailwind_css",
+      "label": "Tailwind CSS - Estilização Utilitária",
+      "group": 1,
+      "description": "Utilitária e ágil estilização da interface de usuário."
+    },
+    {
+      "id": "night_watch",
+      "label": "Night Watch - Suíte de Engenharia Reversa",
+      "group": 1,
+      "description": "Análise de binários PE e ELF com interface moderna e alto desempenho."
+    },
+    {
+      "id": "tauri_dev",
+      "label": "Tauri Dev - Ambiente de Desenvolvimento",
+      "group": 1,
+      "description": "Permite a execução da aplicação desktop com desenvolvimento contínuo."
+    },
+    {
+      "id": "visualizacao_hexa",
+      "label": "Visualização Hexadecimal",
+      "group": 1,
+      "description": "Inspeção direta dos bytes do executável para fácil análise."
+    },
+    {
+      "id": "desmontagem_assembly",
+      "label": "Desmontagem (Assembly)",
+      "group": 1,
+      "description": "Análise de instruções de máquina utilizando a engine Capstone."
+    },
+    {
+      "id": "control_flow_graph_cfg",
+      "label": "Control Flow Graph (CFG)",
+      "group": 1,
+      "description": "Renderização avançada de grafos de execução com 'Lazy Loading' para alto desempenho."
+    },
+    {
+      "id": "interface_otimizada",
+      "label": "Interface Otimizada",
+      "group": 1,
+      "description": "Sidebar virtualizada capaz de exibir milhares de símbolos e seções sem perda de performance."
+    },
+    {
+      "id": "extracao_strings",
+      "label": "Extração de Strings",
+      "group": 1,
+      "description": "Identificação e leitura de strings textuais embutidas no binário."
+    },
+    {
+      "id": "gerenciamento_estado",
+      "label": "Gerenciamento de Estado",
+      "group": 1,
+      "description": "Armazenamento local e controle de sessões utilizando SQLite."
+    },
+    {
+      "id": "night_watch_manifesto",
+      "label": "Declaração da Noite Observador",
+      "group": 1,
+      "description": "Dicta os padrões de UI básicos para a Noite Observador."
+    },
+    {
+      "id": "aesthetic_theme",
+      "label": "Aesthetic e Tema",
+      "group": 1,
+      "description": "Define os padrões estéticos da Noite Observador, incluindo Tailwind Dark Mode e detalhes finos."
+    },
+    {
+      "id": "translucency_polish",
+      "label": "Translucência e Polimento",
+      "group": 1,
+      "description": "Requer a presença de efeitos de translucência, anomalias explícitas e atenção aos detalhes finos."
+    },
+    {
+      "id": "vibe",
+      "label": "Vibração",
+      "group": 1,
+      "description": "O aplicativo deve ter um sentimento de vigilância."
+    },
+    {
+      "id": "component_architecture",
+      "label": "Arquitetura de Componente",
+      "group": 1,
+      "description": "Define as regras estritas para a estrutura de componentes da Noite Observador, incluindo a proibição de elementos HTML nativos."
+    },
+    {
+      "id": "shadcn_ui",
+      "label": "Shadcn/UI",
+      "group": 1,
+      "description": "Recomenda o uso exclusivo do Shadcn/UI para componentes interativos."
+    },
+    {
+      "id": "css_strictness",
+      "label": "CSS Estrito",
+      "group": 1,
+      "description": "Proíbe o uso de `!important` e cor hexardocada em CSS."
+    },
+    {
+      "id": "accessibility",
+      "label": "Acessibilidade",
+      "group": 1,
+      "description": "Exige a navegação de teclado obrigatória e uso de ARIA roles para todos os componentes."
+    },
+    {
+      "id": "virtualization",
+      "label": "Virtualização",
+      "group": 1,
+      "description": "Exige o uso de virtualização para lidar com grandes conjuntos de dados."
+    },
+    {
+      "id": "graph_node_UX",
+      "label": "UX de Gráfico e Nó",
+      "group": 1,
+      "description": "Proíbe a omissão de nós/jumps em gráficos."
+    },
+    {
+      "id": "error_handling",
+      "label": "Manipulação de Erros",
+      "group": 1,
+      "description": "Exige a manipulação de erros de forma suave mediante Toasts e Estados Vazios do Shadcn."
+    },
+    {
+      "id": "graceful_failures",
+      "label": "Falhas Suaves",
+      "group": 1,
+      "description": "Exige a manipulação de erros de forma suave."
+    },
+    {
+      "id": "workarounds",
+      "label": "Trabalhos Alternativos",
+      "group": 1,
+      "description": "Preferencia parquear recursos sobre usar workaround de CSS caso os assetos de design estejam faltando."
+    },
+    {
+      "id": "laudo_tecnico",
+      "label": "Laudo Técnico",
+      "group": 1,
+      "description": "Relatório detalhado de um problema específico que inclui análise e solução."
+    },
+    {
+      "id": "falha_renderizacao",
+      "label": "Falha de Renderização",
+      "group": 1,
+      "description": "Problema no qual o grafo não é renderizado corretamente, podendo ser causado por problemas com o layout ou virtualização."
+    },
+    {
+      "id": "lentidao_severa",
+      "label": "Lentidão Severa",
+      "group": 1,
+      "description": "Problema que causa atrasos significativos no tempo de processamento do aplicativo, geralmente devido à inadequação ou ineficiência no código."
+    },
+    {
+      "id": "race_condition",
+      "label": "Race Condition",
+      "group": 1,
+      "description": "Situação em que a ordem de execução de código diferentes pode afetar o resultado do programa de maneira indesejada."
+    },
+    {
+      "id": "dagre_layout",
+      "label": "Layout de Dagre",
+      "group": 1,
+      "description": "Técnica de posicionamento de nós gráficos que utiliza um algoritmo de layout para determinar as coordenadas dos nós."
+    },
+    {
+      "id": "react_flow",
+      "label": "React Flow",
+      "group": 1,
+      "description": "Biblioteca React para renderização de grafos, que permite a criação de visualizações complexas de dados em tempo real."
+    },
+    {
+      "id": "virtualizacao",
+      "label": "Virtualização",
+      "group": 1,
+      "description": "Técnica que simula elementos de renderização de forma eficiente, reduzindo o número de elementos renderizados e melhorando o desempenho."
+    },
+    {
+      "id": "cfgview",
+      "label": "CFGView",
+      "group": 1,
+      "description": "Componente que exibe o fluxograma de controle com o uso de técnicas de layout de Dagre."
+    },
+    {
+      "id": "basic_block",
+      "label": "Bloco Básico",
+      "group": 1,
+      "description": "Unidade de código que contém um conjunto de instruções executáveis."
+    },
+    {
+      "id": "tsconfig_paths",
+      "label": "tsconfigPaths",
+      "group": 1,
+      "description": "Importa tsconfigPaths para ViteTSConfigPaths"
+    },
+    {
+      "id": "define_config",
+      "label": "defineConfig",
+      "group": 1,
+      "description": "Define a configuração para o Vite"
+    },
+    {
+      "id": "react",
+      "label": "Reage (plugin)",
+      "group": 1,
+      "description": "Plugin para o React do Vite"
+    },
+    {
+      "id": "host",
+      "label": "Host da Aplicação",
+      "group": 1,
+      "description": "Variável de ambiente que armazena o endereço do host"
+    },
+    {
+      "id": "process",
+      "label": "Processo",
+      "group": 1,
+      "description": "Objeto global que representa o processo atual"
+    },
+    {
+      "id": "package_json",
+      "label": "Arquivo de Configuração do Pacote",
+      "group": 1,
+      "description": "Arquivo principal do projeto onde se definiem as configurações do pacote, dependências e scripts."
+    },
+    {
+      "id": "name",
+      "label": "Nome do Pacote",
+      "group": 1,
+      "description": "O nome do pacote, utilizado para identificá-lo em dependências e scripts do projeto."
+    },
+    {
+      "id": "description",
+      "label": "Descrição do Pacote",
+      "group": 1,
+      "description": "Uma breve descrição do pacote, explicando seu propósito e função."
+    },
+    {
+      "id": "author",
+      "label": "Autor do Pacote",
+      "group": 1,
+      "description": "O nome do autor ou equipe que desenvolveu o pacote."
+    },
+    {
+      "id": "private",
+      "label": "Privacidade do Pacote",
+      "group": 1,
+      "description": "Indica se o pacote é privado ou público, afetando a visibilidade nas dependências e scripts."
+    },
+    {
+      "id": "version",
+      "label": "Versão do Pacote",
+      "group": 1,
+      "description": "A versão atual do pacote, representada pelo formato de versões semânticas, como `major.minor.patch`."
+    },
+    {
+      "id": "scripts",
+      "label": "Scripts do Pacote",
+      "group": 1,
+      "description": "Uma coleção de scripts definidos para serem executados em diferentes fases do projeto, como build, dev e preview."
+    },
+    {
+      "id": "dependencies",
+      "label": "Dependências do Pacote",
+      "group": 1,
+      "description": "Uma lista de dependências necessárias para o funcionamento do pacote, incluindo bibliotecas externas e frameworks."
+    },
+    {
+      "id": "devDependencies",
+      "label": "Dependências de Desenvolvimento",
+      "group": 1,
+      "description": "Uma lista de dependências necessárias apenas para o desenvolvimento e teste do pacote, incluindo ferramentas de build e testes."
+    },
+    {
+      "id": "clippy",
+      "label": "Pipeline de Verificação de Erros",
+      "group": 1,
+      "description": "Verifica erros no código com a ferramenta clippy, garantindo que o código esteja sem warnings."
+    },
+    {
+      "id": "chains_config",
+      "label": "Configuração de Condicionais Aninhados",
+      "group": 1,
+      "description": "Configuração para refatorar condicionais aninhados na extração do CFG do Capstone."
+    },
+    {
+      "id": "auditoria_nivelouro",
+      "label": "Auditoria de Nível Ouro",
+      "group": 1,
+      "description": "Regras de auditoria de nível ouro para garantir a qualidade do código."
+    },
+    {
+      "id": "devops",
+      "label": "DevOps",
+      "group": 1,
+      "description": "Equipe de desenvolvimento de infraestrutura e operações."
+    },
+    {
+      "id": "tech_lead",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por definir a arquitetura e revisar o código antes de ir para QA."
+    },
+    {
+      "id": "arquiteto",
+      "label": "Arquiteto",
+      "group": 1,
+      "description": "Responsável por definir a arquitetura da plataforma."
+    },
+    {
+      "id": "gatekeeper",
+      "label": "Auditor de Conformidade",
+      "group": 1,
+      "description": "Responsável por verificar a conformidade com as regras de auditoria."
+    },
+    {
+      "id": "night_watch",
+      "label": "Ferramenta de Teste e Documentação",
+      "group": 1,
+      "description": "Súite de teste e documentação escalável sem gargalos."
+    },
+    {
+      "id": "hexview",
+      "label": "Documentação de Baixo Nível",
+      "group": 1,
+      "description": "Documentação de baixo nível do HexView."
+    },
+    {
+      "id": "sqlx",
+      "label": "Biblioteca de SQL",
+      "group": 1,
+      "description": "Biblioteca de SQL para rodar as migrations em memória."
+    },
+    {
+      "id": "core-database",
+      "label": "Banco de Dados Central",
+      "group": 1,
+      "description": "Banco de dados central para armazenar as migrations."
+    },
+    {
+      "id": "tanstack-react-virtual",
+      "label": "Lembrete do Combo",
+      "group": 1,
+      "description": "Combo de operação concorrente com memmap2 em Rust."
+    },
+    {
+      "id": "memmap2",
+      "label": "Memória Mapeada de Arquivo",
+      "group": 1,
+      "description": "Biblioteca de memória mapeada de arquivo para operações concorrentes."
+    },
+    {
+      "id": "tauri",
+      "label": "Tauri",
+      "group": 1,
+      "description": "Biblioteca para criar aplicativos desktop com WebAssembly."
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "group": 1,
+      "description": "Biblioteca JavaScript para construir interfaces de usuário componentizadas."
+    },
+    {
+      "id": "typescript",
+      "label": "Typescript",
+      "group": 1,
+      "description": "Supersíntese de TypeScript para desenvolvimento de aplicações JavaScript."
+    },
+    {
+      "id": "vite",
+      "label": "Vite",
+      "group": 1,
+      "description": "Ferramenta para criar aplicações web rápidas com Webpack."
+    },
+    {
+      "id": "vs_code",
+      "label": "Visual Studio Code",
+      "group": 1,
+      "description": "Editor de código-fonte multiplataforma da Microsoft."
+    },
+    {
+      "id": "rust_analyzer",
+      "label": "Rust Analyzer",
+      "group": 1,
+      "description": "Análise de código para linguagem de programação Rust."
+    },
+    {
+      "id": "dev_setup",
+      "label": "Configuração de Desenvolvimento",
+      "group": 1,
+      "description": "Recomendação de ferramentas e configuração para desenvolvimento com Tauri."
+    },
+    {
+      "id": "define_config",
+      "label": "Definir Configuração",
+      "group": 1,
+      "description": "Importa a configuração de teste de jogos."
+    },
+    {
+      "id": "devices",
+      "label": "Dispositivos de Teste",
+      "group": 1,
+      "description": "Define os dispositivos de teste para o navegador."
+    },
+    {
+      "id": "export_default",
+      "label": "Exportar Padão",
+      "group": 1,
+      "description": "Exporta a configuração de teste de jogos."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca React",
+      "group": 1,
+      "description": "Framework de componentes para criar interfaces de usuário"
+    },
+    {
+      "id": "suspense",
+      "label": "Componente Suspense",
+      "group": 1,
+      "description": "Componente que permite carregar conteúdo de forma assimétrica"
+    },
+    {
+      "id": "react_dom",
+      "label": "Biblioteca React DOM",
+      "group": 1,
+      "description": "Requisita o DOM e gerencia o ciclo de vida da aplicação web"
+    },
+    {
+      "id": "query_client",
+      "label": "QueryClient",
+      "group": 1,
+      "description": "Requisita e cacheia dados da API para melhorar a experiência do usuário"
+    },
+    {
+      "id": "query_provider",
+      "label": "QueryProvider",
+      "group": 1,
+      "description": "Fornecer o contexto do QueryClient para os componentes filhos"
+    },
+    {
+      "id": "app",
+      "label": "Componente de Aplicação",
+      "group": 1,
+      "description": "Componente principal do aplicativo que gerencia toda a lógica de negocio"
+    },
+    {
+      "id": "state",
+      "label": "Estado da Aplicação",
+      "group": 1,
+      "description": "Armazena informações de estado da aplicação React."
+    },
+    {
+      "id": "invoke",
+      "label": "Invocação de Funções",
+      "group": 1,
+      "description": "Chama funções do sistema operacional via Tauri."
+    },
+    {
+      "id": "open",
+      "label": "Abrir Janela Dialog",
+      "group": 1,
+      "description": "Abre janela de diálogo via Tauri."
+    },
+    {
+      "id": "resolve",
+      "label": "Resolver Path",
+      "group": 1,
+      "description": "Resolve caminho de arquivo via Tauri."
+    },
+    {
+      "id": "useState",
+      "label": "Gerenciamento de Estado",
+      "group": 1,
+      "description": "Gerencia estado da aplicação React."
+    },
+    {
+      "id": "useEffect",
+      "label": "Efeitos Alé Momo Carga",
+      "group": 1,
+      "description": "Executa efeitos após o componente ser montado."
+    },
+    {
+      "id": "Button",
+      "label": "Botão de Ação",
+      "group": 1,
+      "description": "Componente botão de ação com estilos personalizados."
+    },
+    {
+      "id": "ScrollArea",
+      "label": "Área de Scroll",
+      "group": 1,
+      "description": "Componente de área de scroll com estilos personalizados."
+    },
+    {
+      "id": "ErrorBoundary",
+      "label": "Limite de Erro",
+      "group": 1,
+      "description": "Componente de limite de erro para catch de erros em components filhos."
+    },
+    {
+      "id": "Toaster",
+      "label": "Notificação em Tempo Real",
+      "group": 1,
+      "description": "Componente de notificação em tempo real para display de mensagens de erro ou sucesso."
+    },
+    {
+      "id": "useAppStore",
+      "label": "Gerenciamento do Estado de Aplicação",
+      "group": 1,
+      "description": "Gerencia o estado de aplicação React através do store."
+    },
+    {
+      "id": "useTranslation",
+      "label": "Tradução de Textos",
+      "group": 1,
+      "description": "Faz a tradução de textos para diferentes idiomas."
+    },
+    {
+      "id": "ActivityBar",
+      "label": "Barra de Atividade de Aplicação",
+      "group": 1,
+      "description": "Componente da barra de atividade de aplicação com estilos personalizados."
+    },
+    {
+      "id": "Sidebar",
+      "label": "Lado do Diálogo",
+      "group": 1,
+      "description": "Componente da sidebar de diálogo com estilos personalizados."
+    },
+    {
+      "id": "StatusBar",
+      "label": "Barra de Status de Aplicação",
+      "group": 1,
+      "description": "Componente da barra de status de aplicação com estilos personalizados."
+    },
+    {
+      "id": "HomeView",
+      "label": "Vista Inicial de Aplicação",
+      "group": 1,
+      "description": "Vista inicial da aplicação com layout de apresentação."
+    },
+    {
+      "id": "CFGView",
+      "label": "Vista de Layout",
+      "group": 1,
+      "description": "Vista de layout da aplicação com estilos personalizados."
+    },
+    {
+      "id": "HexView",
+      "label": "Vista de Controle",
+      "group": 1,
+      "description": "Vista de controle de aplicação que apresenta informações em formato hexadecimais."
+    },
+    {
+      "id": "ImportsView",
+      "label": "Vista de Imports",
+      "group": 1,
+      "description": "Vista de imports da aplicação que apresenta listagem de imports do sistema."
+    },
+    {
+      "id": "StringsView",
+      "label": "Vista de Strings",
+      "group": 1,
+      "description": "Vista de strings da aplicação que apresenta listagem de strings do sistema."
+    },
+    {
+      "id": "AssemblyView",
+      "label": "Vista de Montagem",
+      "group": 1,
+      "description": "Vista de montagem da aplicação que apresenta informações de montagem do sistema."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca React",
+      "group": 1,
+      "description": " Uma coleção de componentes e funções para criar interfaces de usuário."
+    },
+    {
+      "id": "zod",
+      "label": "Biblioteca de Validação de Formulários",
+      "group": 1,
+      "description": " Uma biblioteca para validação de formulários e dados em tempo de execução."
+    },
+    {
+      "id": "tanstack-react-virtual",
+      "label": "Biblioteca de Listas Virtuais",
+      "group": 1,
+      "description": " Uma biblioteca para renderizar listas com milhares de itens de forma eficiente."
+    },
+    {
+      "id": "@tanstack/react-query",
+      "label": "Biblioteca de Querys",
+      "group": 1,
+      "description": " A biblioteca para lidar com queries e caching de dados em aplicações React."
+    },
+    {
+      "id": "@tauri-apps/api/core",
+      "label": "API do Tauri",
+      "group": 1,
+      "description": " Uma API que fornece funcionamentos de sistema, tais como execução de comandos em processos de fundo."
+    },
+    {
+      "id": "@/store/useAppStore",
+      "label": "Store de Estado",
+      "group": 1,
+      "description": " Uma estrutura para gerenciar o estado da aplicação React."
+    },
+    {
+      "id": "lucide-react",
+      "label": "Componentes Iconográficos",
+      "group": 1,
+      "description": " Uma biblioteca que fornece componentes iconográficos personalizáveis."
+    },
+    {
+      "id": "use_ref",
+      "label": "Usar Referência",
+      "group": 1,
+      "description": "Referência do React para armazenar valores em memória"
+    },
+    {
+      "id": "invoke_method",
+      "label": "Invocar Método",
+      "group": 1,
+      "description": "Invocar uma função do Tauri para executar uma ação"
+    },
+    {
+      "id": "use_virtualizer",
+      "label": "Usar Virtualizador",
+      "group": 1,
+      "description": "Componente do Tanstack para otimizar a renderização de conteúdo"
+    },
+    {
+      "id": "use_query",
+      "label": "Usar Consulta",
+      "group": 1,
+      "description": "Hook do React Query para gerenciar consultas de dados"
+    },
+    {
+      "id": "use_app_store",
+      "label": "Usar Loja de Aplicativo",
+      "group": 1,
+      "description": "Hook para acesso aos dados do aplicativo"
+    },
+    {
+      "id": "import_export_info_array_schema",
+      "label": "Importar/Exportar Esquema de Array de Informações",
+      "group": 1,
+      "description": "Schema para validar o formato de arrays de informações ao importar/exportar"
+    },
+    {
+      "id": "file_question",
+      "label": "Pergunta de Arquivo",
+      "group": 1,
+      "description": "Ícone de arquivo para ser usado em componentes de perguntas"
+    },
+    {
+      "id": "handle_ipc_error",
+      "label": "Tratar Erro de IPC",
+      "group": 1,
+      "description": "Função para tratar erros de comunicação IPC"
+    },
+    {
+      "id": "scroll_area",
+      "label": "Área de Rolagem",
+      "group": 1,
+      "description": "Componente para criar áreas de rolagem personalizadas"
+    },
+    {
+      "id": "useRef",
+      "label": "Referência Padrão de React",
+      "group": 1,
+      "description": "Referência à uma referência padrão de um componente React."
+    },
+    {
+      "id": "z",
+      "label": "Validação de Dados com Zod",
+      "group": 1,
+      "description": "Valida dados em tempo de execução usando a biblioteca Zod."
+    },
+    {
+      "id": "useVirtualizer",
+      "label": "Virtualização de Elementos com Tanstack",
+      "group": 1,
+      "description": "Permite renderizar apenas elementos visíveis na tela, economizando recursos."
+    },
+    {
+      "id": "useQueries",
+      "label": "Consulta de Dados com React Query",
+      "group": 1,
+      "description": "Permite realizar consultas de dados de forma assíncrona e cacheada."
+    },
+    {
+      "id": "invoke",
+      "label": "Invocação de Funções com Tauri",
+      "group": 1,
+      "description": "Invoca funções do sistema operacional usando a biblioteca Tauri."
+    },
+    {
+      "id": "Hex_VIEW_CHUNK_ROWS",
+      "label": "Constantes de Visualização de Hex",
+      "group": 1,
+      "description": "Define a quantidade de linhas por vez na visualização de hexadécimos."
+    },
+    {
+      "id": "useAppStore",
+      "label": "Armazenamento de Aplicação",
+      "group": 1,
+      "description": "Fornece o acesso ao estado global da aplicação."
+    },
+    {
+      "id": "FileQuestion",
+      "label": "Ícone de Pergunta de Arquivo",
+      "group": 1,
+      "description": "Representa um ícone de pergunta de arquivo."
+    },
+    {
+      "id": "ScrollArea",
+      "label": "Área de Rolagem",
+      "group": 1,
+      "description": "Permite rolar a área de content quando exceder as dimensões do container."
+    },
+    {
+      "id": "import",
+      "label": "Importação de Módulos",
+      "group": 1,
+      "description": "Importa módulos necessários para o funcionamento do componente"
+    },
+    {
+      "id": "useRef",
+      "label": "Referência de Estado",
+      "group": 1,
+      "description": "Cria uma referência para um elemento do DOM e atualiza automaticamente quando o estado mudar"
+    },
+    {
+      "id": "useEffect",
+      "label": "Efeito Colateral",
+      "group": 1,
+      "description": "Efeito que é executado antes de atualizar o componente"
+    },
+    {
+      "id": "invoke",
+      "label": "Invocação de Função",
+      "group": 1,
+      "description": "Invoca uma função de dentro de outro componente ou arquivo"
+    },
+    {
+      "id": "@tauri-apps/api/core",
+      "label": "API do Tauri",
+      "group": 1,
+      "description": "API do Tauri que fornece acesso às funcionalidades do sistema"
+    },
+    {
+      "id": "@tanstack/react-virtual",
+      "label": "Reativação do Componente",
+      "group": 1,
+      "description": "Reativação do componente para atualizar as informações em tempo real"
+    },
+    {
+      "id": "@tanstack/react-query",
+      "label": "Pesquisa Infinia",
+      "group": 1,
+      "description": "Gerenciamento de informações em tempo real para um determinado componente"
+    },
+    {
+      "id": "extractErrorMessage",
+      "label": "Extração do Erro",
+      "group": 1,
+      "description": "Extração do erro e sua apresentação para a interface do usuário"
+    },
+    {
+      "id": "StringMatchArraySchema",
+      "label": "Validação de String",
+      "group": 1,
+      "description": "Validação de string para garantir que o formato esteja correto"
+    },
+    {
+      "id": "Loader2",
+      "label": "Loader Customizado",
+      "group": 1,
+      "description": "Loader personalizado para o componente"
+    },
+    {
+      "id": "FileQuestion",
+      "label": "Pergunta de Arquivo",
+      "group": 1,
+      "description": "Pergunta de arquivo para o componente"
+    },
+    {
+      "id": "useAppStore",
+      "label": "Armazenamento de Aplicação",
+      "group": 1,
+      "description": "Armazenamento de informações da aplicação para acesso rápido"
+    },
+    {
+      "id": "handleIpcError",
+      "label": "Manipulação de Erro Ipc ",
+      "group": 1,
+      "description": "Manipulação de erros no IPC"
+    },
+    {
+      "id": "ScrollArea",
+      "label": "Área de Rolagem",
+      "group": 1,
+      "description": "Área que permite a rolagem em um determinado local"
+    },
+    {
+      "id": "activity",
+      "label": "Requisição de Atividade",
+      "group": 1,
+      "description": "Representa uma requisição de atividade a ser realizada."
+    },
+    {
+      "id": "cpu",
+      "label": "Processador Cpu",
+      "group": 1,
+      "description": "Componente responsável pelo cálculo de processamento."
+    },
+    {
+      "id": "shield",
+      "label": "Escudo Shield",
+      "group": 1,
+      "description": "Componente responsável por proteger a aplicação contra ataques maliciosos."
+    },
+    {
+      "id": "hard_drive",
+      "label": "Disco Rígido",
+      "group": 1,
+      "description": "Componente responsável por armazenar dados da aplicação."
+    },
+    {
+      "id": "upload_cloud",
+      "label": "Upload de Arquivo para Nuvem",
+      "group": 1,
+      "description": "Função responsável por enviar arquivos para a nuvem."
+    },
+    {
+      "id": "lucide-react",
+      "label": "Biblioteca Lucide React",
+      "group": 1,
+      "description": "Biblioteca responsável por fornecer ícones React."
+    },
+    {
+      "id": "utils",
+      "label": "Utilitários Globais",
+      "group": 1,
+      "description": "Conection responsável por fornecer utilizários globais."
+    },
+    {
+      "id": "store-useappstore",
+      "label": "Armazenamento de Dados da Aplicação",
+      "group": 1,
+      "description": "Componente responsável por armazenar dados da aplicação."
+    },
+    {
+      "id": "tauri-apps-plugin-dialog",
+      "label": "Plugin de Diálogo da Tauri",
+      "group": 1,
+      "description": "Plugin responsável por fornecer funções de diálogo."
+    },
+    {
+      "id": "tauri-apps-api-path",
+      "label": "API de Caminho da Tauri",
+      "group": 1,
+      "description": "API responsável por fornecer funções de manipulação de caminho."
+    },
+    {
+      "id": "tauri-apps-api-core",
+      "label": "API de Núcleo da Tauri",
+      "group": 1,
+      "description": "API responsável por fornecer funções de execução de código."
+    },
+    {
+      "id": "tanstack-react-query",
+      "label": "Biblioteca de Consulta de Dados React",
+      "group": 1,
+      "description": "Biblioteca responsável por fornecer funções de consulta de dados."
+    },
+    {
+      "id": "sonner",
+      "label": "Função de Exibição de Mensagens",
+      "group": 1,
+      "description": "Componente responsável por exibir mensagens de erro ou sucesso."
+    },
+    {
+      "id": "zod",
+      "label": "Biblioteca de Validação de Dados",
+      "group": 1,
+      "description": "Biblioteca responsável por validar dados e garantir a consistência."
+    },
+    {
+      "id": "validators",
+      "label": "Função de Validação de Dados",
+      "group": 1,
+      "description": "Componente responsável por validar dados e garantir a consistência."
+    },
+    {
+      "id": "react-i18next",
+      "label": "Biblioteca de Tradução de Dados",
+      "group": 1,
+      "description": "Biblioteca responsável por traduzir dados e garantir a consistência."
+    },
+    {
+      "id": "button",
+      "label": "Componente de Botão",
+      "group": 1,
+      "description": "Componente responsável por criar botões interativos."
+    },
+    {
+      "id": "card",
+      "label": "Componente de Cartão",
+      "group": 1,
+      "description": "Componente responsável por criar cartões de informação."
+    },
+    {
+      "id": "table",
+      "label": "Componente de Tabela",
+      "group": 1,
+      "description": "Componente responsável por criaar tabelas de informação."
+    },
+    {
+      "id": "scroll-area",
+      "label": "Componente de Área de Rolagem",
+      "group": 1,
+      "description": "Componente responsável por fornecer área de rolagem."
+    },
+    {
+      "id": "tab_data",
+      "label": "Dados da Página",
+      "group": 1,
+      "description": "Repraesenta os dados da página ou formulário que será exibida."
+    },
+    {
+      "id": "section_info",
+      "label": "Informações da Seção",
+      "group": 1,
+      "description": "Contém as informações sobre a seção ou componente, como título e descrição."
+    },
+    {
+      "id": "StringMatch",
+      "label": "Interface para String de Match",
+      "group": 1,
+      "description": "Uma interface para achar correspondências em strings no texto."
+    },
+    {
+      "id": "offset",
+      "label": "Deslocamento no texto",
+      "group": 1,
+      "description": "Onde a correspondência foi encontrada no texto."
+    },
+    {
+      "id": "text",
+      "label": "Texto correspondente",
+      "group": 1,
+      "description": "O texto correspondente encontrado na String de Match."
+    },
+    {
+      "id": "import_export_info",
+      "label": "Informações de Importação e Exportação",
+      "group": 1,
+      "description": "Estrutura necessária para armazenar informações de arquivos de importação e exportação."
+    },
+    {
+      "id": "type_",
+      "label": "Tipo",
+      "group": 1,
+      "description": "Descrição do tipo de arquivo."
+    },
+    {
+      "id": "dll",
+      "label": "DLL",
+      "group": 1,
+      "description": "Diretório de bibliotecas dinâmicas."
+    },
+    {
+      "id": "name",
+      "label": "Nome",
+      "group": 1,
+      "description": "Identificador do arquivo de importação."
+    },
+    {
+      "id": "address",
+      "label": "Endereço",
+      "group": 1,
+      "description": "Endereço de memória reservado para o arquivo."
+    },
+    {
+      "id": "section_info",
+      "label": "Informação da Seção",
+      "group": 1,
+      "description": "Define as propriedades de uma seção de armazenamento, incluindo tamanho e offsets."
+    },
+    {
+      "id": "name",
+      "label": "Nome",
+      "group": 1,
+      "description": "Nome da seção de armazenamento."
+    },
+    {
+      "id": "size",
+      "label": "Tamanho",
+      "group": 1,
+      "description": "Tamanho da seção de armazenamento em bytes."
+    },
+    {
+      "id": "virtual_offset",
+      "label": "Offset Virtual",
+      "group": 1,
+      "description": "Offset virtual da seção de armazenamento."
+    },
+    {
+      "id": "raw_offset",
+      "label": "Offset Bruto",
+      "group": 1,
+      "description": "Offset bruto da seção de armazenamento."
+    },
+    {
+      "id": "action_types",
+      "label": "Tipos de Ação",
+      "group": 1,
+      "description": "Define os tipos de ações possíveis no aplicativo."
+    },
+    {
+      "id": "action",
+      "label": "Ação",
+      "group": 1,
+      "description": "Representa uma ação no contexto do aplicativo."
+    },
+    {
+      "id": "action_type",
+      "label": "Tipo de Ação",
+      "group": 1,
+      "description": "Descreve o tipo específico de ação que está sendo executada."
+    },
+    {
+      "id": "action_reducer",
+      "label": "Reduzir Ação",
+      "group": 1,
+      "description": "Função reduzir de ação que atua sobre o estado do aplicativo."
+    },
+    {
+      "id": "state",
+      "label": "Estado",
+      "group": 1,
+      "description": "Representa o estado atual do aplicativo."
+    },
+    {
+      "id": "toastr",
+      "label": "Toast",
+      "group": 1,
+      "description": "Mensagem temporária de feedback para o usuário."
+    },
+    {
+      "id": "devtools",
+      "label": "Ferramentas de Desenvolvimento",
+      "group": 1,
+      "description": "Suporte de ferramentas para o desenvolvimento do aplicativo."
+    },
+    {
+      "id": "toast_id",
+      "label": "Id do Toast",
+      "group": 1,
+      "description": "Identificador único do toast."
+    },
+    {
+      "id": "props",
+      "label": "Propriedades",
+      "group": 1,
+      "description": "Conjunto de propriedades passadas para o componente."
+    },
+    {
+      "id": "component",
+      "label": "Componente React",
+      "group": 1,
+      "description": "Artefato de interface de usuário construído com JSX e propriedades."
+    },
+    {
+      "id": "table",
+      "label": "Tabela",
+      "group": 1,
+      "description": "Elemento HTML que lista dados em linhas e colunas."
+    },
+    {
+      "id": "thead",
+      "label": "Cabecalho de Tabela",
+      "group": 1,
+      "description": "Linha de cabeçalho dentro de uma tabela."
+    },
+    {
+      "id": "tbody",
+      "label": "Corpo da Tabela",
+      "group": 1,
+      "description": "Conjunto de linhas dentro de uma tabela."
+    },
+    {
+      "id": "tfoot",
+      "label": "Rodapé de Tabela",
+      "group": 1,
+      "description": "Linha de rodapé dentro de uma tabela."
+    },
+    {
+      "id": "tr",
+      "label": "Linha da Tabela",
+      "group": 1,
+      "description": "Registo da tabela."
+    },
+    {
+      "id": "th",
+      "label": "Cabeçalho de Linha",
+      "group": 1,
+      "description": "Cabeçalho de uma linha da tabela."
+    },
+    {
+      "id": "td",
+      "label": "Celula da Tabela",
+      "group": 1,
+      "description": "Unidade de informação dentro de uma tabela."
+    },
+    {
+      "id": "jsx",
+      "label": "JSX",
+      "group": 1,
+      "description": "Sintaxe para renderizar elementos de interface de usuário em React."
+    },
+    {
+      "id": "cn",
+      "label": "Functo de Conjugação de Classes",
+      "group": 1,
+      "description": "Hàm que une classes de CSS em uma string única."
+    },
+    {
+      "id": "props",
+      "label": "Propriedades",
+      "group": 1,
+      "description": "Informações passadas de pais para filhos em um componente React."
+    },
+    {
+      "id": "import",
+      "label": "Importação",
+      "group": 1,
+      "description": "Ação de buscar e incluir módulos ou valores em um escopo."
+    },
+    {
+      "id": "export",
+      "label": "Exportação",
+      "group": 1,
+      "description": "Ação de colocar dados ou módulos à disposição para serem utilizados por outros módulos."
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "group": 1,
+      "description": "Biblioteca JavaScript para desenvolver interfaces de usuário escaláveis."
+    },
+    {
+      "id": "lib",
+      "label": "Biblioteca",
+      "group": 1,
+      "description": "Coleção de recursos e funcionalidades reutilizáveis."
+    },
+    {
+      "id": "utils",
+      "label": "Utilidades",
+      "group": 1,
+      "description": "Coleção de funções ou métodos que simplificam tarefas."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca React",
+      "group": 1,
+      "description": "Biblioteca JavaScript para construir interfaces de usuário."
+    },
+    {
+      "id": "toast_primitives",
+      "label": "Elementos Radix UI Toast",
+      "group": 1,
+      "description": "Elementos de UI para notificações e alertas."
+    },
+    {
+      "id": "class_variability_authority",
+      "label": "Biblioteca de Variáveis de Classe",
+      "group": 1,
+      "description": "Biblioteca para gerenciar variáveis de classe em React."
+    },
+    {
+      "id": "lucide_react",
+      "label": "Ícones Lucide React",
+      "group": 1,
+      "description": "Ícones svg personalizáveis para React."
+    },
+    {
+      "id": "lib_utils",
+      "label": "Ferramentas de Utilitário",
+      "group": 1,
+      "description": "Ferramentas de utilitário para auxiliar no desenvolvimento em React."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca JavaScript",
+      "group": 1,
+      "description": "Biblioteca de UI de front-end desenvolvida pela Facebook."
+    },
+    {
+      "id": "import",
+      "label": "Importação de Pacote",
+      "group": 1,
+      "description": "Importação de pacotes ou funções em um projeto React"
+    },
+    {
+      "id": "function",
+      "label": "Declaração de Função",
+      "group": 1,
+      "description": "Declaração de uma função em JavaScript, pode ser uma função pura ou impura"
+    },
+    {
+      "id": "props",
+      "label": "Propriedades Recebidas",
+      "group": 1,
+      "description": "Propriedades recebidas por um componente React"
+    },
+    {
+      "id": "className",
+      "label": "Nome da Classe",
+      "group": 1,
+      "description": "Atributo utilizado para aplicar estilos em elementos HTML"
+    },
+    {
+      "id": "div",
+      "label": "TAG Elemento",
+      "group": 1,
+      "description": "TAG HTML utilizado para criar elementos da página"
+    },
+    {
+      "id": "lib",
+      "label": "Biblioteca Utilizada",
+      "group": 1,
+      "description": "Biblioteca externa usada no projeto para melhorar a funcionalidade"
+    },
+    {
+      "id": "import_module",
+      "label": "Importar Módulo",
+      "group": 1,
+      "description": "Importa um módulo específico para usar na aplicação."
+    },
+    {
+      "id": "use_hook",
+      "label": "Usar Hook",
+      "group": 1,
+      "description": "Utiliza uma função hook para interagir com o navegador ou outros components."
+    },
+    {
+      "id": "use_translation",
+      "label": "Usar Tradução",
+      "group": 1,
+      "description": "Utiliza a tradução da aplicação para exibir texto ao usuário."
+    },
+    {
+      "id": "use_query",
+      "label": "Usar Pergunta",
+      "group": 1,
+      "description": "Utiliza a biblioteca @tanstack/react-query para fazer requisições de API."
+    },
+    {
+      "id": "use_virtualizer",
+      "label": "Usar Virtuoso",
+      "group": 1,
+      "description": "Utiliza a biblioteca @tanstack/react-virtual para otimizar a renderização de componentes."
+    },
+    {
+      "id": "invoke",
+      "label": "Chamar função",
+      "group": 1,
+      "description": "Invoca uma função específica da biblioteca @tauri-apps/api/core."
+    },
+    {
+      "id": "zod",
+      "label": "Validar dados",
+      "group": 1,
+      "description": "Utiliza a biblioteca Zod para validar dados e evitar erros."
+    },
+    {
+      "id": "dagre",
+      "label": "Desenhar gráfico",
+      "group": 1,
+      "description": "Utiliza a biblioteca Dagre para gerar gráficos de dependência."
+    },
+    {
+      "id": "ui_component",
+      "label": "Componente UI",
+      "group": 1,
+      "description": "Definição de um componente UI simples com Input, Button e ScrollArea."
+    },
+    {
+      "id": "icon",
+      "label": "Icone",
+      "group": 1,
+      "description": "Importação de ícones da biblioteca Lucide-react."
+    },
+    {
+      "id": "toast",
+      "label": "Toast",
+      "group": 1,
+      "description": "Uso de um hook personalizado para mostrar mensagens de toast."
+    },
+    {
+      "id": "custom_node",
+      "label": "Nó personalizado",
+      "group": 1,
+      "description": "Definição de um nó personalizado com dados específicos."
+    },
+    {
+      "id": "external_call_node",
+      "label": "Chamada de função externa",
+      "group": 1,
+      "description": "Definição de um nó que chama uma função externa."
+    },
+    {
+      "id": "node_types",
+      "label": "Tipos de nó",
+      "group": 1,
+      "description": "Definição dos tipos de nós disponíveis na aplicação."
+    },
+    {
+      "id": "use_state",
+      "label": "Estado do Componente",
+      "group": 1,
+      "description": "Função responsável por armazenar o estado de um componente React."
+    },
+    {
+      "id": "use_effect",
+      "label": "Efeito Colateral",
+      "group": 1,
+      "description": "Função responsável por executar um código quando o estado do componente muda."
+    },
+    {
+      "id": "lucide_react",
+      "label": "Icones Lucide",
+      "group": 1,
+      "description": "Biblioteca de icones usada no projeto."
+    },
+    {
+      "id": "button",
+      "label": "Botão",
+      "group": 1,
+      "description": "Componente de interface responsável por conter um texto ou ação."
+    },
+    {
+      "id": "input",
+      "label": "Campo de Texto",
+      "group": 1,
+      "description": "Componente de interface responsável por receber e armazenar dados do usuário."
+    },
+    {
+      "id": "scroll_area",
+      "label": "Área de Rolagem",
+      "group": 1,
+      "description": "Estrutura de layout responsável por controlar a rolagem de conteúdo em um espaço de tela."
+    },
+    {
+      "id": "section_info",
+      "label": "Informações da Seção",
+      "group": 1,
+      "description": "Interfaz para obter informações sobre uma seção específica do código."
+    },
+    {
+      "id": "app_store",
+      "label": "Armazenamento Global",
+      "group": 1,
+      "description": "Armazenamento compartilhado do aplicativo que contém dados globais."
+    },
+    {
+      "id": "translation",
+      "label": "Tradução de Texto",
+      "group": 1,
+      "description": "Biblioteca responsável por gerenciar a tradução de textos no aplicativo."
+    },
+    {
+      "id": "query",
+      "label": "Consulta de Dados",
+      "group": 1,
+      "description": "Função que permite realizar consultas e obter dados de uma fonte específica."
+    },
+    {
+      "id": "invoke",
+      "label": "Chamada de Função",
+      "group": 1,
+      "description": "Função que permite realizar chamadas a funções de outras bibliotecas."
+    },
+    {
+      "id": "ipc_error",
+      "label": "Gestor de Erros de IP",
+      "group": 1,
+      "description": "Função responsável por tratar erros relacionados à comunicação entre processos."
+    },
+    {
+      "id": "chevron_right",
+      "label": "Ícone de Direção para a Direita",
+      "group": 1,
+      "description": "Ícone utilizado para indicar que a próxima etapa é na direção para à direita."
+    },
+    {
+      "id": "chevron_down",
+      "label": "Ícone de Direção para Baixo",
+      "group": 1,
+      "description": "Ícone utilizado para indicar que a próxima etapa é na direção para baixo."
+    },
+    {
+      "id": "lucide",
+      "label": "Icones Lucide",
+      "group": 1,
+      "description": "Biblioteca de icones usada no projeto."
+    },
+    {
+      "id": "folder",
+      "label": "Pasta",
+      "group": 1,
+      "description": "Componente de interface responsável por representar um conjunto de arquivos e subpastas."
+    },
+    {
+      "id": "file",
+      "label": "Arquivo",
+      "group": 1,
+      "description": "Estrutura de armazenamento responsável por conter dados de um arquivo."
+    },
+    {
+      "id": "sidebar",
+      "label": "Lado do Sidebar",
+      "group": 1,
+      "description": "Componente responsável por representar o lado do sidebar do projeto."
+    },
+    {
+      "id": "section_select",
+      "label": "Seleção de Seção",
+      "group": 1,
+      "description": "Função responsável por tratar a seleção de seções específicas do código."
+    },
+    {
+      "id": "sections",
+      "label": "Seções do Projeto",
+      "group": 1,
+      "description": "Estrutura responsável por conter as seções principais do projeto."
+    },
+    {
+      "id": "active_file",
+      "label": "Arquivo Atual",
+      "group": 1,
+      "description": "Estrutura responsável por manter a referência do arquivo atual."
+    },
+    {
+      "id": "tauri",
+      "label": "Biblioteca Tauri",
+      "group": 1,
+      "description": "Biblioteca usada para criar aplicativos de desktop web."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca React",
+      "group": 1,
+      "description": "Uma biblioteca JavaScript para criar interfaces de usuário na web."
+    },
+    {
+      "id": "radix_ui",
+      "label": "Radix UI",
+      "group": 1,
+      "description": "Um conjunto de componentes UI construídos com o estilo da Radix."
+    },
+    {
+      "id": "class_variance_authority",
+      "label": "Authority de Variância de Classe",
+      "group": 1,
+      "description": "Uma biblioteca para gerenciar classes CSS e evitar problemas de incompatibilidade."
+    },
+    {
+      "id": "cva",
+      "label": "Variante de Classe",
+      "group": 1,
+      "description": "Uma variante da biblioteca CVA para gerenciar classes CSS."
+    },
+    {
+      "id": "cn",
+      "label": "Conjunção de Classes",
+      "group": 1,
+      "description": "Uma função para conjunção de classes CSS."
+    },
+    {
+      "id": "slot",
+      "label": "Slot",
+      "group": 1,
+      "description": "Um conceito do Radix UI para renderizar componentes como slots."
+    },
+    {
+      "id": "lib_utils",
+      "label": "Utilitários do Projeto",
+      "group": 1,
+      "description": "Um pacote de utilitários para o projeto."
+    },
+    {
+      "id": "button_variants",
+      "label": "Variantes de Botão",
+      "group": 1,
+      "description": "Uma coleção de variants de botão definidos em CVA."
+    },
+    {
+      "id": "button",
+      "label": "Botão",
+      "group": 1,
+      "description": "Um componente de botão."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca React",
+      "group": 1,
+      "description": "Biblioteca JavaScript para construir interfaces de usuário."
+    },
+    {
+      "id": "ui_component",
+      "label": "Componente de Interface",
+      "group": 1,
+      "description": "Elemento da interface de usuário que pode ser personalizada."
+    },
+    {
+      "id": "select",
+      "label": "Seletor de Ops",
+      "group": 1,
+      "description": "Componente que permite ao usuário selecionar uma opção de uma lista."
+    },
+    {
+      "id": "cn",
+      "label": "Conjunto de Nomes",
+      "group": 1,
+      "description": "Utilidade para nomear componentes de forma consistente."
+    },
+    {
+      "id": "@base-ui/react/select",
+      "label": "Biblioteca Personalizada",
+      "group": 1,
+      "description": "Conjunto de componentes de formulários reutilizáveis."
+    },
+    {
+      "id": "lucide-react",
+      "label": "Biblioteca de Ícones",
+      "group": 1,
+      "description": "Coleção de ícones SVG reutilizável."
+    },
+    {
+      "id": "import",
+      "label": "Importação de Módulos",
+      "group": 1,
+      "description": "Instrução para carregar módulos em memória."
+    },
+    {
+      "id": "const",
+      "label": "Declaração de Constantes",
+      "group": 1,
+      "description": "Início da declaração de uma variável constante."
+    },
+    {
+      "id": "export",
+      "label": "Exportação de Funções",
+      "group": 1,
+      "description": "Declaração de uma função para ser utilizada em outros arquivos."
+    },
+    {
+      "id": "function",
+      "label": "Declaração de Funções",
+      "group": 1,
+      "description": "Início da definição de uma função."
+    },
+    {
+      "id": "input_component",
+      "label": "Componente de Entrada",
+      "group": 1,
+      "description": "Componente HTML responsável por capturar e validar dados da interface do usuário."
+    },
+    {
+      "id": "input_primitive",
+      "label": "Componente de Entrada Primitivo",
+      "group": 1,
+      "description": "Componente de entrada baseado na biblioteca @base-ui/react/input."
+    },
+    {
+      "id": "import_statement",
+      "label": "Declaração de Importação",
+      "group": 1,
+      "description": "Sentença responsável por importar módulos ou bibliotecas para o código."
+    },
+    {
+      "id": "input_function",
+      "label": "Função de Entrada",
+      "group": 1,
+      "description": "Função responsável por lidar com eventos de entrada de dados."
+    },
+    {
+      "id": "react",
+      "label": "Biblioteca React",
+      "group": 1,
+      "description": "Biblioteca JavaScript responsável por gerenciar a interface do usuário."
+    },
+    {
+      "id": "react_component_props",
+      "label": "Propriedades do Componente de React",
+      "group": 1,
+      "description": "Objeto que contém as propriedades passadas ao componente de React."
+    },
+    {
+      "id": "utils",
+      "label": "Ferramentas Úteis",
+      "group": 1,
+      "description": "Colecção de funções e bibliotecas úteis para fins gerais."
+    },
+    {
+      "id": "dev_dependencies",
+      "label": "Dependências de Desenvolvimento",
+      "group": 1,
+      "description": "Dependências necessárias para o processo de desenvolvimento do projeto."
+    },
+    {
+      "id": "scroll_area",
+      "label": "Área de Rolagem",
+      "group": 1,
+      "description": "Componente responsável por exibir conteúdo que ultrapassa o espaço disponível."
+    },
+    {
+      "id": "scroll_area_props",
+      "label": "Propriedades de Área de Rolagem",
+      "group": 1,
+      "description": "Interface que estende as propriedades do componente ScrollAreaPrimitive.Root."
+    },
+    {
+      "id": "scroll_area_primitive",
+      "label": "Área de Rolagem Primitiva",
+      "group": 1,
+      "description": "Componente base da área de rolagem proveniente da biblioteca @radix-ui/react-scroll-area."
+    },
+    {
+      "id": "scrollbar",
+      "label": "Barra de Rolagem",
+      "group": 1,
+      "description": "Componente responsável por controlar a rolagem na área de conteúdo."
+    },
+    {
+      "id": "devops",
+      "label": "Desenvolvedor de Operações",
+      "group": 1,
+      "description": "Perfil com habilidades técnicas para operações e manutenção de sistemas."
+    },
+    {
+      "id": "cn",
+      "label": "Conecção",
+      "group": 1,
+      "description": "Utilização de função para criar classes CSS personalizadas."
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "group": 1,
+      "description": "Um dos principais frameworks de desenvolvimento de interfaces do usuário da web."
+    },
+    {
+      "id": "lib_utils",
+      "label": "Utilitários da Biblioteca",
+      "group": 1,
+      "description": "Coleção de funcionalidades prontas para uso no projeto."
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "group": 1,
+      "description": "Superset de JavaScript que adiciona tipos estáticos e outras funcionalidades avançadas."
+    },
+    {
+      "id": "root_component",
+      "label": "Componente Raiz",
+      "group": 1,
+      "description": "Componente pai de um aplicativo ou sistema de interface do usuário."
+    },
+    {
+      "id": "string_match_schema",
+      "label": "Schema de String Match",
+      "group": 1,
+      "description": "Descreve a estrutura de dados para armazenar informações de strings que se encaixam em um padrão."
+    },
+    {
+      "id": "string_match_array_schema",
+      "label": "Schema de Array de String Match",
+      "group": 1,
+      "description": "Descreve a estrutura de dados para armazenar uma coleção de informações de strings que se encaixam em um padrão."
+    },
+    {
+      "id": "import_export_info_schema",
+      "label": "Schema de Informações de Importação/Exportação",
+      "group": 1,
+      "description": "Descreve a estrutura de dados para armazenar informações sobre arquivos importados ou exportados."
+    },
+    {
+      "id": "import_export_info_array_schema",
+      "label": "Schema de Array de Informações de Importação/Exportação",
+      "group": 1,
+      "description": "Descreve a estrutura de dados para armazenar uma coleção de informações sobre arquivos importados ou exportados."
+    },
+    {
+      "id": "recent_file_schema",
+      "label": "Schema de Arquivo Recente",
+      "group": 1,
+      "description": "Descreve a estrutura de dados para armazenar informações sobre os arquivos mais recentes."
+    },
+    {
+      "id": "search_result_schema",
+      "label": "Schema de Resultado de Busca",
+      "group": 1,
+      "description": "Descreve a estrutura de dados para armazenar a lista de resultados de uma busca com números."
+    },
+    {
+      "id": "handle_ipc_error_func",
+      "label": "Função Erro IPC",
+      "group": 1,
+      "description": "Define a função para lidar com erros relacionados a IPC."
+    },
+    {
+      "id": "err",
+      "label": "Erro",
+      "group": 1,
+      "description": "Variável que armazena o erro ocorrido."
+    },
+    {
+      "id": "toast",
+      "label": "Notificação de Toast",
+      "group": 1,
+      "description": "Função utilizada para exibir notificações de toast."
+    },
+    {
+      "id": "export_function",
+      "label": "Função de Exportação",
+      "group": 1,
+      "description": "Exporta a função para ser utilizada em outros lugares com o parâmetro 'err' de tipo desconhecido."
+    },
+    {
+      "id": "extractErrorMessage",
+      "label": "Extração de Mensagem de Erro",
+      "group": 1,
+      "description": "Realiza a extração da mensagem de erro do parâmetro 'err' para retornar como string."
+    },
+    {
+      "id": "err",
+      "label": "Parâmetro de Erro",
+      "group": 1,
+      "description": "Parâmetro recebido pela função para ser utilizado na extração da mensagem de erro."
+    },
+    {
+      "id": "unknown",
+      "label": "Tipo Desconhecido",
+      "group": 1,
+      "description": "Tipo de dado desconhecido que está sendo recebido como parâmetro pela função."
+    },
+    {
+      "id": "err_message",
+      "label": "Mensagem de Erro",
+      "group": 1,
+      "description": "Mensagem de erro extraída do parâmetro 'err' e retornada pela função."
+    },
+    {
+      "id": "string",
+      "label": "Tipo de Dados String",
+      "group": 1,
+      "description": "Tipo de dado string que é retornado pela função após a extração da mensagem de erro."
+    },
+    {
+      "id": "func_cnb",
+      "label": "Função cn",
+      "group": 1,
+      "description": "Função que combina classes CSS usando a lib clsx."
+    },
+    {
+      "id": "tailwind_merge",
+      "label": "Mergear Tailwind",
+      "group": 1,
+      "description": "Função que permite a junção de regras CSS utilizando a lib tailwind-merge."
+    },
+    {
+      "id": "i18n",
+      "label": "Biblioteca Internacionalização",
+      "group": 1,
+      "description": "Biblioteca responsável por traduzir e internacionalizar strings e valores no aplicativo."
+    },
+    {
+      "id": "initReactI18next",
+      "label": "Iniciação da Internacionalização",
+      "group": 1,
+      "description": "Função responsável por inicializar a internacionalização do componente React."
+    },
+    {
+      "id": "ptBR",
+      "label": "Tradução Português Brasil",
+      "group": 1,
+      "description": "Tradução das mensagens e strings para o idioma português brasileiro."
+    },
+    {
+      "id": "i18next",
+      "label": "Instância da Biblioteca Internacionalização",
+      "group": 1,
+      "description": "Instância da biblioteca i18next, responsável por realizar a internacionalização do aplicativo."
+    },
+    {
+      "id": "export-default",
+      "label": "Exportação Padrão",
+      "group": 1,
+      "description": "Função responsável por exportar a instância da biblioteca i18next como padrão."
+    },
+    {
+      "id": "use_app_store",
+      "label": "Estado da Aplicação",
+      "group": 1,
+      "description": "Armazena informações globais da aplicação e permite atualizá-las de forma atômica."
+    },
+    {
+      "id": "create",
+      "label": "Função de Criação",
+      "group": 1,
+      "description": "Cria um novo estado para a aplicação e permite adicionar funções para atualizá-lo."
+    },
+    {
+      "id": "set",
+      "label": "Função de Atualização",
+      "group": 1,
+      "description": "Atualiza um estado existente da aplicação de forma atômica."
+    },
+    {
+      "id": "zustand",
+      "label": "State Management",
+      "group": 1,
+      "description": "É uma biblioteca de gerenciamento de estados para React que permite criar um Estado da Aplicação com base em uma função que retorna um estado inicial."
+    },
+    {
+      "id": "appstate",
+      "label": "Definição do Estado",
+      "group": 1,
+      "description": "Define o esqueleto do Estado da Aplicação com base em funções que retornam valores ou atualizam o estado."
+    },
+    {
+      "id": "playwright_test",
+      "label": "Teste com Playwright",
+      "group": 1,
+      "description": "Exemplo de teste escrito com a biblioteca Playwright."
+    },
+    {
+      "id": "night_watch",
+      "label": "Night Watch E2E Tests",
+      "group": 1,
+      "description": "Testes de usuário finais da aplicação Night Watch."
+    },
+    {
+      "id": "sidebar",
+      "label": "Lado da Barra",
+      "group": 1,
+      "description": "Componente visual que contém as configurações da aplicação."
+    },
+    {
+      "id": "explorer",
+      "label": "Explorador",
+      "group": 1,
+      "description": "Componente que permite navegar pelo sistema de arquivos."
+    },
+    {
+      "id": "files",
+      "label": "Arquivos",
+      "group": 1,
+      "description": "Lista de arquivos disponíveis na aplicação."
+    },
+    {
+      "id": "search",
+      "label": "Pesquisa",
+      "group": 1,
+      "description": "Barra de entrada para buscar conteúdo na aplicação."
+    },
+    {
+      "id": "soc_matrix",
+      "label": "Matriz SOC",
+      "group": 1,
+      "description": "Componente visual que apresenta informações sobre o sistema."
+    },
+    {
+      "id": "settings",
+      "label": "Configurações",
+      "group": 1,
+      "description": "Componente que permite alterar as configurações da aplicação."
+    },
+    {
+      "id": "notifications",
+      "label": "Notificações",
+      "group": 1,
+      "description": "Componente que apresenta mensagens sobre alterações na aplicação."
+    },
+    {
+      "id": "error_log",
+      "label": "Registro de Erros",
+      "group": 1,
+      "description": "Componente que apresenta mensagens de erro na aplicação."
+    },
+    {
+      "id": "test",
+      "label": "Teste de Playwright",
+      "group": 1,
+      "description": "Avaliação do comportamento de um aplicativo utilizando Playwright, biblioteca de automação web."
+    },
+    {
+      "id": "error",
+      "label": "Erro de Execução",
+      "group": 1,
+      "description": "Exceção gerada durante a execução do teste, impedindo sua conclusão."
+    },
+    {
+      "id": "notifications",
+      "label": "Notificações",
+      "group": 1,
+      "description": "Barra de notificações do aplicativo, mostrando mensagens importantes."
+    },
+    {
+      "id": "sidebar",
+      "label": "Barra Lateral",
+      "group": 1,
+      "description": "Componente responsável por mostrar a estrutura do aplicativo, incluindo menu e submenus."
+    },
+    {
+      "id": "explorer",
+      "label": "Explorador",
+      "group": 1,
+      "description": "Painel quepermite navegar entre os componentes do aplicativo."
+    },
+    {
+      "id": "files",
+      "label": "Arquivos",
+      "group": 1,
+      "description": "Componente que lista os arquivos disponíveis no aplicativo."
+    },
+    {
+      "id": "search",
+      "label": "Procurar",
+      "group": 1,
+      "description": "Campo de busca que permite procurar por conteúdo no aplicativo."
+    },
+    {
+      "id": "dashboard",
+      "label": "Painel de Controle",
+      "group": 1,
+      "description": "Painel que mostra informações gerais sobre o aplicativo e seus componentes."
+    },
+    {
+      "id": "soc-matrix",
+      "label": "Matriz SOC",
+      "group": 1,
+      "description": "Componente que mostra uma matriz de dados, com informações sobre o aplicativo."
+    },
+    {
+      "id": "settings",
+      "label": "Configurações",
+      "group": 1,
+      "description": "Componente que permite editar configurações do aplicativo."
+    },
+    {
+      "id": "react-flow",
+      "label": "Gráficos React Flow",
+      "group": 1,
+      "description": "Componente que gera gráficos interativos utilizando a biblioteca React Flow."
+    },
+    {
+      "id": "node",
+      "label": "Nó",
+      "group": 1,
+      "description": "Elemento do gráfico React Flow, representado por um círculo."
+    },
+    {
+      "id": "test_runner",
+      "label": "Execução de Testes",
+      "group": 1,
+      "description": "Responsável por executar os testes automatizados com Playwright."
+    },
+    {
+      "id": "playwright_test",
+      "label": "Teste Playwright",
+      "group": 1,
+      "description": "Reprende um teste automatizado utilizando a biblioteca Playwright."
+    },
+    {
+      "id": "timeout_error",
+      "label": "Erro de Tempo Excedido",
+      "group": 1,
+      "description": "Ocorre quando o tempo de espera é superior à quantidade de tempo definida pelo usuário."
+    },
+    {
+      "id": "search_input",
+      "label": "Campo de Busca",
+      "group": 1,
+      "description": "Campo para inserir texto de busca utilizando o PlaceHolder 'Search by name or hex...'."
+    },
+    {
+      "id": "function_item",
+      "label": "Itens da Lista",
+      "group": 1,
+      "description": "Representa os itens da lista virtuais gerados após a busca."
+    },
+    {
+      "id": "flow_container",
+      "label": "Contêiner de Fluxo",
+      "group": 1,
+      "description": "Representa o contêiner que contém o gráfico de fluxo."
+    },
+    {
+      "id": "nodes",
+      "label": "Nós do Fluxo",
+      "group": 1,
+      "description": "Reprende os nós do gráfico de fluxo."
+    },
+    {
+      "id": "watermark",
+      "label": "Água-Fina",
+      "group": 1,
+      "description": "Componente responsável por adicionar uma camada de água-fina no gráfico de fluxo."
+    },
+    {
+      "id": "import",
+      "label": "Importação de Bibliotecas",
+      "group": 1,
+      "description": "Importação das bibliotecas necessárias para realizar o teste."
+    },
+    {
+      "id": "test",
+      "label": "Exemplo de Teste",
+      "group": 1,
+      "description": "Exemplo de como escrever um teste com a biblioteca Playwright."
+    },
+    {
+      "id": "expect",
+      "label": "Verificação de Resultado",
+      "group": 1,
+      "description": "Função para verificar o resultado do teste e determinar se ele foi bem-sucedido ou não."
+    },
+    {
+      "id": "test",
+      "label": "Teste",
+      "group": 1,
+      "description": "Recurso utilizado para validar a funcionalidade de um sistema."
+    },
+    {
+      "id": "expect",
+      "label": "Expectativa",
+      "group": 1,
+      "description": "Define o comportamento esperado de um sistema ou recurso."
+    },
+    {
+      "id": "playwright_test",
+      "label": "Teste em Playwright",
+      "group": 1,
+      "description": "Recurso utilizado para criar e executar tests em Playwright."
+    },
+    {
+      "id": "test",
+      "label": "Teste",
+      "group": 1,
+      "description": "Um conjunto de verificações automáticas em uma aplicação."
+    },
+    {
+      "id": "test_before_each",
+      "label": "Teste antes de cada teste",
+      "group": 1,
+      "description": "Executa antes de cada teste, geralmente para pré-conditions ou setup."
+    },
+    {
+      "id": "go_to",
+      "label": "Ir ao endereço",
+      "group": 1,
+      "description": "Redireciona a página para um endereço especificado."
+    },
+    {
+      "id": "expect",
+      "label": "Espera que",
+      "group": 1,
+      "description": "Verifica se um elemento da página atende a certas expectativas."
+    },
+    {
+      "id": "timeout",
+      "label": "Tempo limite",
+      "group": 1,
+      "description": "Especifica o tempo que Playwright aguarda antes de retornar um erro."
+    },
+    {
+      "id": "page",
+      "label": "Página",
+      "group": 1,
+      "description": "O objeto representando a página atual."
+    },
+    {
+      "id": "search_input",
+      "label": "Campo de busca",
+      "group": 1,
+      "description": "O campo de busca do elemento Search."
+    },
+    {
+      "id": "fill",
+      "label": "Preencher campo",
+      "group": 1,
+      "description": "Insere texto num campo de entrada."
+    },
+    {
+      "id": "locator",
+      "label": "Localizador",
+      "group": 1,
+      "description": "Objeto que ajuda o Playwright a encontrar elementos da página."
+    },
+    {
+      "id": "filter",
+      "label": "Filtro",
+      "group": 1,
+      "description": "Filtro que é aplicado ao localizador para encontrar elementos específicos."
+    },
+    {
+      "id": "click",
+      "label": "Clique",
+      "group": 1,
+      "description": "Simula um clique sobre um elemento da página."
+    },
+    {
+      "id": "flow_container",
+      "label": "Câmera de fluxo",
+      "group": 1,
+      "description": "O elemento container da página que contém o fluxo."
+    },
+    {
+      "id": "react_flow_node",
+      "label": "Nó do Fluxo",
+      "group": 1,
+      "description": "Um nó no fluxo da página com a propriedade \"react-flow__node\"."
+    },
+    {
+      "id": "nodes",
+      "label": "Nós do fluxo",
+      "group": 1,
+      "description": "A lista de nós do fluxo da página."
+    },
+    {
+      "id": "test",
+      "label": "Teste",
+      "group": 1,
+      "description": "Uma unidade de verificação automatizada."
+    },
+    {
+      "id": "esperado",
+      "label": "Esperado",
+      "group": 1,
+      "description": "O resultado previsto do teste."
+    },
+    {
+      "id": "resultado",
+      "label": "Resultado",
+      "group": 1,
+      "description": "O resultado real do teste."
+    },
+    {
+      "id": "test_1",
+      "label": "Teste 1",
+      "group": 1,
+      "description": "Verificar se o sidebar tem Explorador, Arquivos e Busca visíveis."
+    },
+    {
+      "id": "test_2",
+      "label": "Teste 2",
+      "group": 1,
+      "description": "Verificar se a SOC Matrix é exibida no dashboard."
+    },
+    {
+      "id": "test_3",
+      "label": "Teste 3",
+      "group": 1,
+      "description": "Verificar se o botão de configurações está visível no ActivityBar."
+    },
+    {
+      "id": "test_4",
+      "label": "Teste 4",
+      "group": 1,
+      "description": "Verificar se o gráfico de fluxo React está visível após procura e seleção de uma função."
+    },
+    {
+      "id": "locator",
+      "label": "Locator",
+      "group": 1,
+      "description": "Uma função para localizar um elemento dentro da página web."
+    },
+    {
+      "id": "goto",
+      "label": "Ir para",
+      "group": 1,
+      "description": "Ir para uma página específica da aplicação web."
+    },
+    {
+      "id": "getByText",
+      "label": "Obter texto",
+      "group": 1,
+      "description": "Obter um elemento dentro da página web com um determinado texto."
+    },
+    {
+      "id": "toBeVisible",
+      "label": "Ser visível",
+      "group": 1,
+      "description": "Verificar se um elemento está visível dentro da página web."
+    },
+    {
+      "id": "expect",
+      "label": "Expectativa",
+      "group": 1,
+      "description": "Uma função para criar uma expectativa sobre o resultado de uma ação."
+    },
+    {
+      "id": "page",
+      "label": "Página",
+      "group": 1,
+      "description": "O objeto principal da lib Playwright que controla a interação com a página web."
+    },
+    {
+      "id": "test.describe",
+      "label": "Descrever teste",
+      "group": 1,
+      "description": "Descrever um conjunto de testes dentro de um grupo de testes."
+    },
+    {
+      "id": "test.beforeEach",
+      "label": "Executar antes de cada teste",
+      "group": 1,
+      "description": "Executar uma função antes de cada teste dentro de um grupo de testes."
+    },
+    {
+      "id": "test(it).beforeEach",
+      "label": "Executar antes de cada teste",
+      "group": 1,
+      "description": "Executar uma função antes de cada teste dentro de um grupo de testes."
+    },
+    {
+      "id": "expect(locator).toBeVisible()",
+      "label": "Expectar elemento ser visível",
+      "group": 1,
+      "description": "Expectar que um elemento esteja visível dentro da página web após uma ação específica."
+    },
+    {
+      "id": "locator.getByText('Settings').waitFor({ state: 'visible', timeout: 5000 })",
+      "label": "Esperar elemento ficar visível",
+      "group": 1,
+      "description": "Esperar que um elemento fique visível dentro da página web após uma ação específica."
+    },
+    {
+      "id": "test_1",
+      "label": "Teste 1",
+      "group": 1,
+      "description": "Testa se o sidebar está renderizado com Explorer, Files e Search visíveis."
+    },
+    {
+      "id": "test_2",
+      "label": "Teste 2",
+      "group": 1,
+      "description": "Testa se o Dashboard SOC Matrix está renderizado e visível."
+    },
+    {
+      "id": "test_3",
+      "label": "Teste 3",
+      "group": 1,
+      "description": "Testa se o botão de Configurações está presente na ActivityBar."
+    },
+    {
+      "id": "test_4",
+      "label": "Teste 4",
+      "group": 1,
+      "description": "Testa se o gráfico de Fluxo Reativo está renderizado após a busca e seleção de uma função."
+    },
+    {
+      "id": "esperado",
+      "label": "Elemento Esperado",
+      "group": 1,
+      "description": "Elemento que deve estar disponível na página."
+    },
+    {
+      "id": "locator",
+      "label": "Localizador",
+      "group": 1,
+      "description": "Localizador de elementos na página."
+    },
+    {
+      "id": "sidebar",
+      "label": "Sidebar",
+      "group": 1,
+      "description": "Painel lateral da aplicação."
+    },
+    {
+      "id": "explorador",
+      "label": "Explorador",
+      "group": 1,
+      "description": "Componente que exibe os arquivos e pastas."
+    },
+    {
+      "id": "files",
+      "label": "Arquivos",
+      "group": 1,
+      "description": "Componente que exibe a lista de arquivos."
+    },
+    {
+      "id": "search",
+      "label": "Procurar",
+      "group": 1,
+      "description": "Componente que permite a busca de elementos na página."
+    },
+    {
+      "id": "settings",
+      "label": "Configurações",
+      "group": 1,
+      "description": "Painel que contém as configurações da aplicação."
+    },
+    {
+      "id": "soc_matrix",
+      "label": "SOC Matrix",
+      "group": 1,
+      "description": "Componente que exibe a matriz de SOC."
+    },
+    {
+      "id": "react_flow",
+      "label": "Fluxo Reativo",
+      "group": 1,
+      "description": "Componente que exibe o gráfico de fluxo reativo."
+    },
+    {
+      "id": "FileInfo",
+      "label": "Arquivo",
+      "group": 1,
+      "description": "Representa informações sobre um arquivo em disco."
+    },
+    {
+      "id": "format",
+      "label": "Formato",
+      "group": 1,
+      "description": "Tipo do arquivo, como texto, imagem, vídeo, etc."
+    },
+    {
+      "id": "architecture",
+      "label": "Estrutura",
+      "group": 1,
+      "description": "Descrição da estrutura do arquivo, como binário ou texto."
+    },
+    {
+      "id": "import_info",
+      "label": "Informação de Importação",
+      "group": 1,
+      "description": "Informações necessárias para importação de dados."
+    },
+    {
+      "id": "type_",
+      "label": "Tipo de Arquivo",
+      "group": 1,
+      "description": "Tipo de arquivo a ser importado (por exemplo, CSV, JSON)."
+    },
+    {
+      "id": "dll",
+      "label": "Dylib ou DLL",
+      "group": 1,
+      "description": "Nome do dylib ou DLL a ser importado."
+    },
+    {
+      "id": "name",
+      "label": "Nome do Arquivo",
+      "group": 1,
+      "description": "Nome do arquivo a ser importado."
+    },
+    {
+      "id": "address",
+      "label": "Endereço de Memória",
+      "group": 1,
+      "description": "Endereço de memória do arquivo a ser importado."
+    },
+    {
+      "id": "edge_data",
+      "label": "Dados da Aresta",
+      "group": 1,
+      "description": "Obrigatória para definir a aresta do grafo, com o destino e o tipo de aresta."
+    },
+    {
+      "id": "target",
+      "label": "Destino",
+      "group": 1,
+      "description": "O nó destino de uma aresta do grafo."
+    },
+    {
+      "id": "edge_type",
+      "label": "Tipo de Aresta",
+      "group": 1,
+      "description": "Define o tipo da aresta entre os nós do grafo."
+    },
+    {
+      "id": "basic_block",
+      "label": "Bloco Básico",
+      "group": 1,
+      "description": "Representa um bloco de código com instruções."
+    },
+    {
+      "id": "edge_data",
+      "label": "Dado da Aresta",
+      "group": 1,
+      "description": "Contém informações adicionais sobre as arestas entre blocos de código."
+    },
+    {
+      "id": "edge_data_lib",
+      "label": "Dado da Aresta Biblioteca",
+      "group": 1,
+      "description": "Dado relacionado a bibliotecas utilizadas nos blocos de código."
+    },
+    {
+      "id": "instructions",
+      "label": "Instruções Código",
+      "group": 1,
+      "description": "Conjunto de instruções de código dentro de um bloco básico."
+    },
+    {
+      "id": "library",
+      "label": "Biblioteca Utilizada",
+      "group": 1,
+      "description": "Biblioteca adicional utilizada nos blocos de código."
+    },
+    {
+      "id": "symbol",
+      "label": "Símbolo de Identificação",
+      "group": 1,
+      "description": "Símbolo utilizado para identificar o bloco de código."
+    },
+    {
+      "id": "block_type",
+      "label": "Tipo do Bloco",
+      "group": 1,
+      "description": "Tipo de bloco de código (por exemplo, loop ou condicional)."
+    },
+    {
+      "id": "pr_template",
+      "label": "Template de Pull Request",
+      "group": 1,
+      "description": "Modelo a ser utilizado para criar novas pull requests."
+    },
+    {
+      "id": "audit_gatekeeper",
+      "label": "Auditoria do Gatekeeper",
+      "group": 1,
+      "description": "Lista de regras e verificação da qualidade do código."
+    },
+    {
+      "id": "zero_panic",
+      "label": "Regra Zero Panic",
+      "group": 1,
+      "description": "Proibição de uso de `unwrap` e `expect` no Rust."
+    },
+    {
+      "id": "estilo_inline",
+      "label": "Regra Estilo Inline",
+      "group": 1,
+      "description": "Proibição do uso de estilo inline e uso obrigatório de Tailwind em React."
+    },
+    {
+      "id": "zod_ipc",
+      "label": "Regra Zod IPC",
+      "group": 1,
+      "description": "Implementação do Zod IPC."
+    },
+    {
+      "id": "tipagem_estrita",
+      "label": "Regra Tipagem Estrita",
+      "group": 1,
+      "description": "Proibição de uso de tipos `any` no código."
+    },
+    {
+      "id": "codigo_autoexplicativo",
+      "label": "Regra Código Autoexplicativo",
+      "group": 1,
+      "description": "Proibição de uso de comentários inline em código."
+    },
+    {
+      "id": "historia_usuario",
+      "label": "História de Usuário",
+      "group": 1,
+      "description": "Descrição das histórias de usuário atendidas pela pull request."
+    },
+    {
+      "id": "testes_realizados",
+      "label": "Testes Realizados",
+      "group": 1,
+      "description": "Descrição dos testes realizados para garantir a qualidade do código."
+    },
+    {
+      "id": "descrição",
+      "label": "Descrição da Pull Request",
+      "group": 1,
+      "description": "Descrição da lógica e motivações arquiteturais da pull request."
+    },
+    {
+      "id": "hermes_plan_mode",
+      "label": "Plano de Trabalho Hermes",
+      "group": 1,
+      "description": "Modelo de plano de trabalho para implementar e revisar códigos."
+    },
+    {
+      "id": "meta",
+      "label": "Meta",
+      "group": 1,
+      "description": "Informações iniciais do plano de trabalho, incluindo ID, autor e data."
+    },
+    {
+      "id": "contexto_auditória",
+      "label": "Contexto e Auditoria",
+      "group": 1,
+      "description": "Descrição do contexto e da auditoria da implementação de um motor de Light RAG local e offline."
+    },
+    {
+      "id": "stack_light_rag",
+      "label": "Stack de Light RAG",
+      "group": 1,
+      "description": "Desenvolvimento de um motor de Light RAG com linguagem Python, embeddings de HuggingFace local e banco de dados vetorial ChromaDB."
+    },
+    {
+      "id": "estrutura_pastas",
+      "label": "Estrutura de Pastas",
+      "group": 1,
+      "description": "Definição precisa da estrutura de pastas para o motor de RAG, com subdivisões e pastas necessárias."
+    },
+    {
+      "id": "auditoria_impactos",
+      "label": "Auditoria e Impactos",
+      "group": 1,
+      "description": "Informações sobre a auditoria e os impactos da introdução do módulo RAG na pasta .hermes/rag/."
+    },
+    {
+      "id": "user_stories",
+      "label": "User Stories e Critérios de Aceite",
+      "group": 1,
+      "description": "Definição de user stories e critérios de aceite para implementação do motor de RAG, através de cenários BDD e critérios de aceite."
+    },
+    {
+      "id": "dev_checklist",
+      "label": "Dev Checklist",
+      "group": 1,
+      "description": "Lista de verificação para desenvolvedores, incluindo testes unitários, E2E e revisão de código."
+    },
+    {
+      "id": "tech_lead_checklist",
+      "label": "Tech Lead/Code Review Checklist",
+      "group": 1,
+      "description": "Lista de verificação para líder técnico e revisão de código, incluindo clean code, princípios SOLID e respeito à arquitetura."
+    },
+    {
+      "id": "qa_gatekeeper_checklist",
+      "label": "QA/Gatekeeper Checklist",
+      "group": 1,
+      "description": "Lista de verificação para QA e gatekeeper, incluindo testes de OOM, rastreabilidade E2E, segurança e A11y, análise de binários e UI/UX."
+    },
+    {
+      "id": "documentacao_memoria",
+      "label": "Documentação e Memória",
+      "group": 1,
+      "description": "Indexação da documentação gerada pelo motor de RAG local em um motor de Light RAG."
+    },
+    {
+      "id": "meta",
+      "label": "Meta da Planta",
+      "group": 1,
+      "description": "Informações de identificação da planta de trabalho"
+    },
+    {
+      "id": "contexto_auditoria",
+      "label": "Contexto e Auditoria",
+      "group": 1,
+      "description": "Definição do contexto e auditoria concluída com impactos mapeados no sistema"
+    },
+    {
+      "id": "stories_e_critérios",
+      "label": "User Stories e Critérios de Aceite",
+      "group": 1,
+      "description": "Cenários BDD escritos e critérios de aceite definidos e alinhados"
+    },
+    {
+      "id": "dev_checklist",
+      "label": "Dev Checklist",
+      "group": 1,
+      "description": "Lista de verificação para desenvolvedores com testes unitários e E2E escritos"
+    },
+    {
+      "id": "tech_lead_code_review",
+      "label": "Líder Técnico e Revisão de Código",
+      "group": 1,
+      "description": "Verificação de código limpo e atendimento a princípios SOLID"
+    },
+    {
+      "id": "qa_gatekeeper",
+      "label": "QA/Gatekeeper Checklist",
+      "group": 1,
+      "description": "Lista de verificação para QA com testes de OOM, rastreabilidade E2E, segurança e a11y"
+    },
+    {
+      "id": "night_watch",
+      "label": "Night Watch",
+      "group": 1,
+      "description": "Suíte moderna para engenharia reversa e análise de vulnerabilidades."
+    },
+    {
+      "id": "tech_lead",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por definir a arquitetura e revisar o código antes de ir para QA."
+    },
+    {
+      "id": "perf_extrema",
+      "label": "Performance Extrema",
+      "group": 1,
+      "description": "Manipulação de binários gigantes sem travamentos da UI."
+    },
+    {
+      "id": "seg_da_memo",
+      "label": "Segurança da Memória",
+      "group": 1,
+      "description": "Core em Rust garante que a própria ferramenta não sofra de vulnerabilidades de memória."
+    },
+    {
+      "id": "modularidade",
+      "label": "Modularidade Total",
+      "group": 1,
+      "description": "Motor de parsing, disassembler, debugger e interface gráfica são módulos independentes."
+    },
+    {
+      "id": "ux_primeiro_lugar",
+      "label": "UX em Primeiro Lugar",
+      "group": 1,
+      "description": "Navegação por estruturas complexas de binários deve ser tão natural quanto navegar pelo código-fonte."
+    },
+    {
+      "id": "fase_1",
+      "label": "Fase 1: Fundação e Análise Estática",
+      "group": 1,
+      "description": "Foco na análise de executáveis Windows (PE)."
+    },
+    {
+      "id": "fase_2",
+      "label": "Fase 2: O Motor Dinâmico",
+      "group": 1,
+      "description": "Acoplamento a processos em execução, leitura e modificação de memória em tempo real."
+    },
+    {
+      "id": "fase_3",
+      "label": "Fase 3: Expansão Multiplataforma (Linux)",
+      "group": 1,
+      "description": "Adaptação do `core-parser` para entender o formato ELF, implementação do motor de debugging no Linux."
+    },
+    {
+      "id": "fase_4",
+      "label": "Fase 4: Análise de Vulnerabilidades e Métricas",
+      "group": 1,
+      "description": "Métricas visuais, heurística, relatórios e geração de assinaturas (YARA)."
+    },
+    {
+      "id": "fase_5",
+      "label": "Fase 5: A Fronteira Web",
+      "group": 1,
+      "description": "Módulo isolado dedicado à engenharia reversa de WebAssembly (WASM), ferramentas para desofuscação de JavaScript."
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "group": 1,
+      "description": "Rust (Cargo Workspaces) responsável pelo core da ferramenta."
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "group": 1,
+      "description": "Tauri + Tecnologias Web responsável pela interface gráfica."
+    },
+    {
+      "id": "comunicao",
+      "label": "Comunicação",
+      "group": 1,
+      "description": "IPC (Inter-Process Communication) otimizado para lidar com grandes volumes de dados de forma assíncrona."
+    },
+    {
+      "id": "documento_de_comunicacao",
+      "label": "Documento de Comunicação",
+      "group": 1,
+      "description": "O documento que detalha os comandos IPC (Inter-Process Communication)."
+    },
+    {
+      "id": "get_file_info",
+      "label": "Recupera Metadados do Arquivo",
+      "group": 1,
+      "description": "Comando que recupera metadados básicos e hashes criptográficos do arquivo mapeado."
+    },
+    {
+      "id": "get_pe_sections",
+      "label": "Faz o Parsing do Arquivo PE",
+      "group": 1,
+      "description": "Comando que faz o parsing do arquivo PE via goblin e mapeia suas seções."
+    },
+    {
+      "id": "get_hex_view",
+      "label": "Lê Bytes Brutos do Arquivo",
+      "group": 1,
+      "description": "Comando que lê bytes brutos a partir de um offset exato utilizando memmap2."
+    },
+    {
+      "id": "get_assembly_view",
+      "label": "Executa o Disassembly de um Segmento de Bytes",
+      "group": 1,
+      "description": "Comando que executa o disassembly de um segmento de bytes via capstone-rs."
+    },
+    {
+      "id": "get_pe_imports_exports",
+      "label": "Lista Dependências e Funções Exportadas",
+      "group": 1,
+      "description": "Comando que lista dependências DLL e funções exportadas de um PE."
+    },
+    {
+      "id": "get_pe_strings",
+      "label": "Busca por Cadeias de Caracteres",
+      "group": 1,
+      "description": "Comando que busca por cadeias de caracteres em um arquivo PE em background via rayon."
+    },
+    {
+      "id": "get_recent_projects",
+      "label": "Retorna Projetos Recentes",
+      "group": 1,
+      "description": "Comando que retorna projetos recentes armazenados no banco de dados local SQLite."
+    },
+    {
+      "id": "add_recent_project",
+      "label": "Adiciona Projeto Recente",
+      "group": 1,
+      "description": "Comando que adiciona um projeto recente ao banco de dados local SQLite."
+    },
+    {
+      "id": "search_in_file",
+      "label": "Busca por Palavras no Arquivo",
+      "group": 1,
+      "description": "Comando que realiza uma busca por palavras em um arquivo."
+    },
+    {
+      "id": "get_cfg_blocks",
+      "label": "Recupera Blocos do CFG",
+      "group": 1,
+      "description": "Comando que recupera a estrutura de blocos do CFG de uma função específica."
+    },
+    {
+      "id": "get_function_cfg",
+      "label": "Retorna Dados do CFG de uma Função",
+      "group": 1,
+      "description": "Comando que retorna os dados estruturados do CFG de uma função específica."
+    },
+    {
+      "id": "humano",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por decidir a arquitetura e ditar o ritmo do projeto."
+    },
+    {
+      "id": "arquiteto",
+      "label": "Arquiteto do Projeto",
+      "group": 1,
+      "description": "Define a arquitetura do projeto e resolve problemas técnicos."
+    },
+    {
+      "id": "backend_engineer",
+      "label": "Engenheiro de Back-end",
+      "group": 1,
+      "description": "Responsável por desenvolver o backend do projeto, com foco em performance."
+    },
+    {
+      "id": "subagentes_de_qualidade_e_especialistas",
+      "label": "Subagentes de Qualidade e Especialistas",
+      "group": 1,
+      "description": "Equipe de especialistas que trabalham em conjunto com o Hermeus para resolver problemas e implementar mudanças."
+    },
+    {
+      "id": "bda",
+      "label": "Analista de Negócios e Dados",
+      "group": 1,
+      "description": "Responsável por transformar ideias brutas em requisitos formais e critérios de aceite."
+    },
+    {
+      "id": "dba",
+      "label": "Especialista em Banco de Dados",
+      "group": 1,
+      "description": "Responsável por projetar, otimizar e gerenciar as estruturas de persistência locais."
+    },
+    {
+      "id": "git_flow_subagentes",
+      "label": "Subagentes do Ciclo de Desenvolvimento",
+      "group": 1,
+      "description": "Equipe de subagentes que trabalham no ciclo de desenvolvimento do projeto."
+    },
+    {
+      "id": "pull_request_autorizador",
+      "label": "Autorizador de PRs",
+      "group": 1,
+      "description": "Responsável por aprovar ou solicitar mudanças nos PRs de acordo com as regras de desempenho-zero e comentários inline."
+    },
+    {
+      "id": "technical_writer",
+      "label": "Escrivão Técnico",
+      "group": 1,
+      "description": "Responsável por gerar documentação automática das APIs internas e manuais de arquitetura."
+    },
+    {
+      "id": "crash_investigador",
+      "label": "Investigador de Incidentes Críticos",
+      "group": 1,
+      "description": "Responsável por investigar e resolver problemas críticos no projeto."
+    },
+    {
+      "id": "site_reliability_engineer",
+      "label": "Engenheiro de Site de Confiança",
+      "group": 1,
+      "description": "Responsável por garantir a confiabilidade e performance do projeto."
+    },
+    {
+      "id": "security_auditor",
+      "label": "Auditor de Segurança",
+      "group": 1,
+      "description": "Responsável por garantir a segurança das APIs internas."
+    },
+    {
+      "id": "repo_manager",
+      "label": "Gerente de Repositório",
+      "group": 1,
+      "description": "Responsável por refatorar e manter a árvore de diretórios."
+    },
+    {
+      "id": "qa",
+      "label": "Especialista em Qualidade",
+      "group": 1,
+      "description": "Responsável por validar o código e realizar testes unitários e de borda."
+    },
+    {
+      "id": "devops",
+      "label": "Gerente de Integração contínua e entrega de recursos",
+      "group": 1,
+      "description": "Responsável por gerenciar compilação cruzada, automação de build e criação de PRs."
+    },
+    {
+      "id": "hermes",
+      "label": "Orquestrador",
+      "group": 1,
+      "description": "Responsável por coordenar a equipe e resolver problemas técnicos."
+    },
+    {
+      "id": "cursor",
+      "label": "Arquiteto-chave",
+      "group": 1,
+      "description": "Responsável por ler e implementar mudanças de acordo com os arquivos de decisões de arquitetura."
+    },
+    {
+      "id": "code_reviewer_gatkeeeper",
+      "label": "Revisor de código e Gatilho",
+      "group": 1,
+      "description": "Responsável por gerenciar revisão automática e aprovação de PRs de acordo com as regras de desempenho-zero e comentários inline."
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend UI",
+      "group": 1,
+      "description": "Estritamente isolado da lógica principal, atuando puramente como uma camada de visualização."
+    },
+    {
+      "id": "app_gui",
+      "label": "Interface do Usuário do App",
+      "group": 1,
+      "description": "Responsável pela visualização do conteúdo e tratamento de eventos do usuário."
+    },
+    {
+      "id": "store",
+      "label": "Gerenciamento de Estado Global",
+      "group": 1,
+      "description": "Guarda metadados do estado complexo e solicita blocos virtuais via IPC."
+    },
+    {
+      "id": "ipc",
+      "label": "Ponte IPC",
+      "group": 1,
+      "description": "Abstrai as chamadas brutas `invoke()` do Tauri e garante tipagem TypeScript de ponta a ponta."
+    },
+    {
+      "id": "core_engine",
+      "label": "Motor de Navegação",
+      "group": 1,
+      "description": "Dividido em múltiplas bibliotecas Rust independentes para garantir separação de responsabilidades e aceleração da compilação."
+    },
+    {
+      "id": "core_database",
+      "label": "Banco de Dados Local",
+      "group": 1,
+      "description": "Gerencia bancos locais para salvar funções parseadas, comentários do usuário e bookmarks."
+    },
+    {
+      "id": "core_parser",
+      "label": "Parsers de Ficheiros",
+      "group": 1,
+      "description": "Responsável por entender formatos de arquivo (PE/ELF) e realizar a leitura de dados."
+    },
+    {
+      "id": "core_disassembler",
+      "label": "Desfragmentado",
+      "group": 1,
+      "description": "Transforma bytes em texto assembly sem conversar diretamente com o parser."
+    },
+    {
+      "id": "core_analysis",
+      "label": "Análise de Dados",
+      "group": 1,
+      "description": "Responsável por heurísticas, detecção de criptografia e construção do gráfico de fluxo."
+    },
+    {
+      "id": "core_debugger",
+      "label": "Depurador",
+      "group": 1,
+      "description": "Utilizado para implementar a funcionalidade de depuração futura."
+    },
+    {
+      "id": "docs",
+      "label": "Documentação do Projeto",
+      "group": 1,
+      "description": "Armazena documentos importantes relacionados ao projeto, como registros de decisão arquitetural (ADRs) e protótipos visuais de interface."
+    },
+    {
+      "id": "scripts",
+      "label": "Scripts Auxiliares",
+      "group": 1,
+      "description": "Realiza tarefas como CI/CD e automatizações de processo."
+    },
+    {
+      "id": "debito_tecnico",
+      "label": "Dívida Técnica",
+      "group": 1,
+      "description": "Limitações arquiteturais conhecidas e gargalos de infraestrutura que afetam a Night Watch."
+    },
+    {
+      "id": "ux_debt",
+      "label": "Dívida de UX",
+      "group": 1,
+      "description": "Problema específico de usuário que afeta a experiência do usuário no Night Watch."
+    },
+    {
+      "id": "linux_trackpad",
+      "label": "Trackpad Linux",
+      "group": 1,
+      "description": "Problema específico do trackpad no ambiente Linux que afeta a navegação no Grafo de Controle (CFGView)."
+    },
+    {
+      "id": "tauri_stack",
+      "label": "Stack do Tauri v2",
+      "group": 1,
+      "description": "Stack de tecnologia utilizada pelo Night Watch que inclui o WebkitGTK/Webkit2GTK via Wry."
+    },
+    {
+      "id": "server_graficos",
+      "label": "Servidores Gráficos",
+      "group": 1,
+      "description": "X11 e Wayland, que consumem eventos físicos nativos de pinça e rolagem bidimensional."
+    },
+    {
+      "id": "react_flow",
+      "label": "React Flow",
+      "group": 1,
+      "description": "Componente responsável pela navegação no Grafo de Controle (CFGView)."
+    },
+    {
+      "id": "cfg_view",
+      "label": "Grafo de Controle (CFGView",
+      "group": 1,
+      "description": "Visão de controle que exibe o grafo de navegação."
+    },
+    {
+      "id": "controls",
+      "label": "Controles",
+      "group": 1,
+      "description": "Componente que contém botões de Zoom In, Zoom Out e Fit View."
+    },
+    {
+      "id": "eventos_hardware",
+      "label": "Eventos de Hardware",
+      "group": 1,
+      "description": "Eventos físicos nativos de pinça e rolagem bidimensional do trackpad."
+    },
+    {
+      "id": "gestos_trackpad",
+      "label": "Gestos do Trackpad",
+      "group": 1,
+      "description": "Zoom e rolagem bidimensional que devem ser realizados no Grafo de Controle (CFGView)."
+    },
+    {
+      "id": "projeto",
+      "label": "Projeto Night Watch",
+      "group": 1,
+      "description": "Ferramenta de Engenharia Reversa para análise de binários."
+    },
+    {
+      "id": "fase_1",
+      "label": "Fase 1: Análise Estática e Interface",
+      "group": 1,
+      "description": "Carregar executável, realizar parsing de estruturas internas e exibir em interface estilo IDE."
+    },
+    {
+      "id": "backend_core",
+      "label": "Backend (Core)",
+      "group": 1,
+      "description": "Rust com Cargo Workspaces e bibliotecas como goblin e memmap2."
+    },
+    {
+      "id": "frontend_gui",
+      "label": "Frontend (GUI)",
+      "group": 1,
+      "description": "Tauri + React para interface com editor de código e UI Components."
+    },
+    {
+      "id": "cargo_workspace",
+      "label": "Estrutura de Pastas (Rust Workspace)",
+      "group": 1,
+      "description": "Cargo Workspace com core-parser, core-disassembler e app-gui."
+    },
+    {
+      "id": "painel_lateral",
+      "label": "Painel Lateral (Explorer)",
+      "group": 1,
+      "description": "Exibir estrutura de árvore das entranhas do executável com virtualização."
+    },
+    {
+      "id": "area_central",
+      "label": "Área Central (Editor)",
+      "group": 1,
+      "description": "Suporte a abas e renderizar conteúdo selecionado no Explorer com Monaco Editor."
+    },
+    {
+      "id": "comunicacao",
+      "label": "Comunicação",
+      "group": 1,
+      "description": "Tauri usa IPC para solicitar ao core-parser a leitura de partições do arquivo."
+    },
+    {
+      "id": "virtual_loader",
+      "label": "Carregador Virtual",
+      "group": 1,
+      "description": "Mapear espaço de memória de bibliotecas importadas e resolver símbolos dinâmicos via IAT."
+    },
+    {
+      "id": "arquitetura_memoria",
+      "label": "Arquitetura de Memória",
+      "group": 1,
+      "description": "Desenhar arestas no CFG apontando para bloco externo (Syscalls / Imports)."
+    },
+    {
+      "id": "dashboard",
+      "label": "Painel Principal",
+      "group": 1,
+      "description": "Abertura do arquivo e apresentação dos Módulos Ativos."
+    },
+    {
+      "id": "modulo_ativo",
+      "label": "Módulos Ativos",
+      "group": 1,
+      "description": " cards ou widgets dinâmicos com inspeção de informações."
+    },
+    {
+      "id": "identificacao_e_hashes",
+      "label": "Identificação e Hashes",
+      "group": 1,
+      "description": "Módulo Base com formato, MD5, SHA256."
+    },
+    {
+      "id": "secoes_executaveis",
+      "label": "Seções Executáveis",
+      "group": 1,
+      "description": "Módulo detalhando .text, .rdata, permissões do PE/ELF."
+    },
+    {
+      "id": "importacoes_criticas",
+      "label": "Importações Críticas",
+      "group": 1,
+      "description": "Módulo listando dependências estáticas do sistema operacional."
+    },
+    {
+      "id": "extraacao_de_strings",
+      "label": "Extração de Strings",
+      "group": 1,
+      "description": "Contagem geral e preview rápido de palavras."
+    },
+    {
+      "id": "react_router",
+      "label": "React Router",
+      "group": 1,
+      "description": "Define o contexto de aplicação e ativa o módulo ativo."
+    },
+    {
+      "id": "contexto_de_aplicacao",
+      "label": "Contexto de Aplicação",
+      "group": 1,
+      "description": "Define o activeFilePath e ativa os hooks do React Query."
+    },
+    {
+      "id": "hooks_do_react_query",
+      "label": "Hooks do React Query",
+      "group": 1,
+      "description": "Acorde o fluxo de execução e invoca o backend com o comando necessário."
+    },
+    {
+      "id": "backend_rust",
+      "label": "Processamento Rust",
+      "group": 1,
+      "description": "Mapeia o arquivo, lê offsets via goblin e gera as estruturas serializadas via serde."
+    },
+    {
+      "id": "pipeline_de Parsing_do_zod",
+      "label": "Pipeline de Parsing do Zod",
+      "group": 1,
+      "description": "Verifica a validade do payload antes de renderizar os dados no dashboard."
+    },
+    {
+      "id": "tauri",
+      "label": "Tauri",
+      "group": 1,
+      "description": "Serializa as estruturas geradas no backend e as retorna ao processo frontend."
+    },
+    {
+      "id": "error_boundary",
+      "label": "Error Boundary",
+      "group": 1,
+      "description": "Cada módulo ativo possui sua própria tela de erro para evitar a interrupção do dashboard."
+    },
+    {
+      "id": "control_flow_graph",
+      "label": "Gráfco de Fluxo de Controle",
+      "group": 1,
+      "description": "Permite a visualização do fluxo de execução de funções desassembladas de forma interativa."
+    },
+    {
+      "id": "custom_node",
+      "label": " Nó Personalizado",
+      "group": 1,
+      "description": "Exibe os endereços virtuais (offsets) e as instruções Assembly, além de aplicar temas visuais."
+    },
+    {
+      "id": "lógica_de_alinhamento",
+      "label": "Lógica de Alinhamento (DAGRE)",
+      "group": 1,
+      "description": "Utilizado como layout engine para evitar nós sobrepostos e linhas caóticas."
+    },
+    {
+      "id": "estrutura_de_árvore",
+      "label": "Estrutura de Árvore",
+      "group": 1,
+      "description": "Evaluada pelos nós e edges passados pelo backend, calculando automaticamente as posições."
+    },
+    {
+      "id": "sem_antics",
+      "label": "Arestas Semânticas",
+      "group": 1,
+      "description": "Bloco de execução conectados por edges fortemente tipados, ajudando a traçar rapidamente o comportamento condicional da função."
+    },
+    {
+      "id": "function_selector",
+      "label": "Selecionador de Função",
+      "group": 1,
+      "description": "Serve como âncora visual e interativa que dispara a requisição `get_cfg_blocks` correspondente."
+    },
+    {
+      "id": "legend",
+      "label": "Legenda",
+      "group": 1,
+      "description": "Listando as categorias semânticas (True, False, Unconditional, External) para rápida referência."
+    },
+    {
+      "id": "entry_point",
+      "label": "Ponto de Entrada",
+      "group": 1,
+      "description": "Bloco que marca o início da execução da função."
+    },
+    {
+      "id": "hex_view",
+      "label": "Componente de Visualização de Binários",
+      "group": 1,
+      "description": "Fornece uma interface de alta performance para visualizar arquivos binários massivos sem carregar a carga útil inteira na memória."
+    },
+    {
+      "id": "frontend_virtualization",
+      "label": "Virtualização do Front-end",
+      "group": 1,
+      "description": "Utiliza a combinação de virtualização do front-end, IPC de Rust e armazenamento de estado eficiente."
+    },
+    {
+      "id": "rust_ipc_endpoint",
+      "label": "Ponto de Extremidade de IPC de Rust",
+      "group": 1,
+      "description": "Exposição de comando de IPC de Tauri de Rust chamado get_hex_view."
+    },
+    {
+      "id": "memmap2",
+      "label": "Memmap2",
+      "group": 1,
+      "description": "Leia os arquivos de forma membro-mapa em vez de carregar em memória."
+    },
+    {
+      "id": "chunked_reading",
+      "label": "Leitura por Chunks",
+      "group": 1,
+      "description": "Recupere dados por chunks precisos com base na posição de rolagem do usuário e na solicitação de offset, retornando apenas os bytes necessários para a visualização da janela corrente."
+    },
+    {
+      "id": "offset_to_hex_translation",
+      "label": "Tradução de Offset para Hex",
+      "group": 1,
+      "description": "Traduza os offset de bytes recebidos do backend em strings de formato hex dinâmicas e representações ASCII no frontend."
+    },
+    {
+      "id": "react_query",
+      "label": "React Query",
+      "group": 1,
+      "description": "Cache o dados de chunks de bytes usando as faixas de offset solicitadas como chaves."
+    },
+    {
+      "id": "devops",
+      "label": "DevOps",
+      "group": 1,
+      "description": "Responsável por manter o sistema funcionando e otimizado."
+    },
+    {
+      "id": "tech_lead",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por definir a arquitetura e revisar o código antes de ir para QA."
+    },
+    {
+      "id": "data-fetching",
+      "label": "Gerenciamento de Data Fetching",
+      "group": 1,
+      "description": "Responsável por gerenciar a recuperação de dados de forma eficiente."
+    },
+    {
+      "id": "cache-avançado",
+      "label": "Cache Avançado",
+      "group": 1,
+      "description": "Responsável por armazenar e gerenciar dados recuperados para reduzir tempo de carga."
+    },
+    {
+      "id": "gerenciamento-de-estado",
+      "label": "Gerenciamento de Estado",
+      "group": 1,
+      "description": "Responsável por gerenciar o estado global do sistema de forma eficiente e escalável."
+    },
+    {
+      "id": "integracao-com-sqlite",
+      "label": "Integração com SQLite",
+      "group": 1,
+      "description": "Responsável por integrar a aplicação com o banco de dados SQLite para armazenar e recuperar dados."
+    },
+    {
+      "id": "gerenciamento-padro-de-caminhos",
+      "label": "Gerenciamento de Caminhos",
+      "group": 1,
+      "description": "Responsável por gerenciar os caminhos de arquivos e pastas de forma padronizada."
+    },
+    {
+      "id": "suporte-otimizado-de-drag-and-drop",
+      "label": "Suporte Otimizado de Drag e Drop",
+      "group": 1,
+      "description": "Responsável por fornecer um mecanismo de drag e drop eficiente e otimizado."
+    },
+    {
+      "id": "processamento-multithreading",
+      "label": "Processamento Multithreading",
+      "group": 1,
+      "description": "Responsável por processar tarefas em paralelo para otimizar o desempenho."
+    },
+    {
+      "id": "construção-de-uma-ui-resiliente",
+      "label": "Construção de Uma UI Resiliente",
+      "group": 1,
+      "description": "Responsável por construir uma UI que seja resiliente a falhas de renderização."
+    },
+    {
+      "id": "implementacao-de-sistema-de-notificacoes",
+      "label": "Implementação de Sistema de Notificações",
+      "group": 1,
+      "description": "Responsável por implementar um sistema de notificações moderno e eficiente."
+    },
+    {
+      "id": "log-estruturado",
+      "label": "Log Estruturado",
+      "group": 1,
+      "description": "Responsável por fornecer um mecanismo de log estruturado para melhorar a observabilidade e rastreabilidade."
+    },
+    {
+      "id": "implementacao-de-valiacoes-de-esquemas",
+      "label": "Implementação de Validações de Esquemas",
+      "group": 1,
+      "description": "Responsável por implementar validações de esquemas para garantir a integridade dos dados."
+    },
+    {
+      "id": "garantia-de-tipagem_segura",
+      "label": "Garantia de Tipagem Segura",
+      "group": 1,
+      "description": "Responsável por garantir a tipagem segura em todo o fluxo de dados."
+    },
+    {
+      "id": "night_watch",
+      "label": "Night Watch Patcher Engine",
+      "group": 1,
+      "description": "Ferramenta para transformar o Night Watch em um patcher de binários profissional."
+    },
+    {
+      "id": "static_analyzer",
+      "label": "Análise Estática",
+      "group": 1,
+      "description": "Análise estática do código sem edição automática."
+    },
+    {
+      "id": "binary_patcher",
+      "label": "Patcher de Binários",
+      "group": 1,
+      "description": "Funcionalidade para patchar binários sem corrompê-los."
+    },
+    {
+      "id": "ida_pro",
+      "label": "IDA Pro",
+      "group": 1,
+      "description": "Referência para a implementação do padrão ouro do patcher de binários."
+    },
+    {
+      "id": "x64dbg",
+      "label": "x64dbg",
+      "group": 1,
+      "description": "Outra ferramenta para debug e análise de binários."
+    },
+    {
+      "id": "iced_x86",
+      "label": "iced-x86",
+      "group": 1,
+      "description": "Biblioteca Rust para disassemblersembly de binários."
+    },
+    {
+      "id": "capstone",
+      "label": "Capstone",
+      "group": 1,
+      "description": "Algoritmo de disassembly utilizado anteriormente."
+    },
+    {
+      "id": "patch_manager",
+      "label": "Patch Manager",
+      "group": 1,
+      "description": "Componente responsável por gerenciar patches de binários."
+    },
+    {
+      "id": "hash_map",
+      "label": "HashMap",
+      "group": 1,
+      "description": "Estrutura de dados para armazenar patches em memória."
+    },
+    {
+      "id": "export_patched_binary",
+      "label": "Exportar Binário Patchado",
+      "group": 1,
+      "description": "Endpoint para exportar binários patchados sem corrompê-los."
+    },
+    {
+      "id": "code_caves",
+      "label": "Code Caves",
+      "group": 1,
+      "description": "Bloco de código injetado em executáveis para realizar patcheos mais avançados."
+    },
+    {
+      "id": "trampolines",
+      "label": "Trampolines",
+      "group": 1,
+      "description": "Salto relativo para localizar Code Caves e realizar patcheos mais complexos."
+    },
+    {
+      "id": "ui ux",
+      "label": "UI/UX e Highlighting",
+      "group": 1,
+      "description": "Componentes de interface e corização semântica para exibir binários e instruções de forma mais agradável."
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "group": 1,
+      "description": "Biblioteca JavaScript para desenvolver a interface e cores semânticas do patcher de binários."
+    },
+    {
+      "id": "hex_view",
+      "label": "Hex View",
+      "group": 1,
+      "description": "Visualização hexadecimal da interface para exibir binários."
+    },
+    {
+      "id": "shadcn ui",
+      "label": "Shadcn/UI",
+      "group": 1,
+      "description": "Modal de edição instrução com cores e cores semânticas para uma experiência de usuário mais imersiva."
+    },
+    {
+      "id": "subagent_backend_rust",
+      "label": "Subagente Backend (Rust)",
+      "group": 1,
+      "description": "Tarefa de adicionar `iced-x86`, criar `PatchManager` e endpoints IPC para patchar binários."
+    },
+    {
+      "id": "subagent_backend_rust_algoritmos_avancados",
+      "label": "Subagente Backend (Rust - Algoritmos Avançados)",
+      "group": 1,
+      "description": "Tarefa de criar Code Caves e lógica matemática para Trampolines para patchar binários de forma mais avançada."
+    },
+    {
+      "id": "subagent_frontend_react",
+      "label": "Subagente Frontend (React)",
+      "group": 1,
+      "description": "Tarefa de criar interface e cores semânticas para exibir binários e instruções de forma mais agradável."
+    },
+    {
+      "id": "subagente_qa_gatekeeper",
+      "label": "Subagente QA/Gatekeeper",
+      "group": 1,
+      "description": "Tarefa de escrever testes unitários para garantir que a funcionalidade de patchar binários não corrompa o executável."
+    },
+    {
+      "id": "arquitetura_do_backend",
+      "label": "Arquitetura do Backend",
+      "group": 1,
+      "description": "Define as regras rígidas para a engenharia do backend do Night Watch."
+    },
+    {
+      "id": "stack_base",
+      "label": "Stack Base",
+      "group": 1,
+      "description": "Escolhe a linguagem e as abstrações principais para o backend."
+    },
+    {
+      "id": "rust",
+      "label": "Rust",
+      "group": 1,
+      "description": "Linguagem escolhida para o backend."
+    },
+    {
+      "id": "cargo_workspaces",
+      "label": "Cargo Workspaces",
+      "group": 1,
+      "description": "Gerenciador de dependências e organização de código em Rust."
+    },
+    {
+      "id": "memmap2",
+      "label": "Mapeamento de Memória",
+      "group": 1,
+      "description": "Abstração para mapear arquivos na memória virtual do processo."
+    },
+    {
+      "id": "rayon",
+      "label": "Concorrência e Processamento Massivo",
+      "group": 1,
+      "description": "Abstração para paralelismo de dados e processamento intensivo."
+    },
+    {
+      "id": "error_handling",
+      "label": "Tratamento de Erros",
+      "group": 1,
+      "description": "Abstrações para tratamento de erros, incluindo `thiserror` e `anyhow`."
+    },
+    {
+      "id": "io_e_mapeamento_de_memoria",
+      "label": "I/O e Mapeamento de Memória",
+      "group": 1,
+      "description": "Regras específicas para I/O e mapeamento de memória."
+    },
+    {
+      "id": "concorrência_e_processamento_massivo",
+      "label": "Concorrência e Processamento Massivo",
+      "group": 1,
+      "description": "Regras específicas para concorrência e processamento massivo."
+    },
+    {
+      "id": "seguranca_no_parsing",
+      "label": "Segurança no Parsing",
+      "group": 1,
+      "description": "Regras específicas para segurança no parsing."
+    },
+    {
+      "id": "estrutura_de Dominic",
+      "label": "Estrutura de Dominio",
+      "group": 1,
+      "description": "Regras específicas para a estrutura do código."
+    },
+    {
+      "id": "frontend_development",
+      "label": "Desenvolvimento do Frontend",
+      "group": 1,
+      "description": "Desenvolvimento do frontend baseado em React com TypeScript no Night Watch, focando em performance, estabilidade e aderência estrita à arquitetura baseada em Tauri."
+    },
+    {
+      "id": "tech_lead",
+      "label": "Líder Técnico",
+      "group": 1,
+      "description": "Responsável por definir a arquitetura e revisar o código antes de ir para QA."
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "group": 1,
+      "description": "Framework JavaScript usado para desenvolver interfaces de usuário inovadoras e interativas."
+    },
+    {
+      "id": "tauri",
+      "label": "Tauri",
+      "group": 1,
+      "description": "Ferramenta de desenvolvimento de aplicativos desktop baseada em Rust, criando uma abstração de IPC para interagir entre front end e back end."
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "group": 1,
+      "description": "Supersete do JavaScript adiciona tipos estáticos e outras funcionalidades avançadas para tornar o código mais fácil de entender e manter."
+    },
+    {
+      "id": "tailwind_css",
+      "label": "Tailwind CSS",
+      "group": 1,
+      "description": "Framework de folhas de estilo CSS utilitário, permitindo escrever códigos CSS de forma concisa e intuitiva."
+    },
+    {
+      "id": "zod",
+      "label": "Zod",
+      "group": 1,
+      "description": "Biblioteca de validação de dados que ajuda a garantir a qualidade dos dados entrados por meio de tipos estritos."
+    },
+    {
+      "id": "tanstack_react_query",
+      "label": "TanStack React Query",
+      "group": 1,
+      "description": "Biblioteca para gestão de estado de dados, permitindo a realização de chamadas IPC com eficiência."
+    },
+    {
+      "id": "zustand",
+      "label": "Zustand",
+      "group": 1,
+      "description": "Biblioteca de gerenciamento de dados global e local, facilitando a comunicação entre componentes."
+    },
+    {
+      "id": "react_virtual",
+      "label": "React Virtual",
+      "group": 1,
+      "description": "Biblioteca de virtualização de componentes, otimizando a renderização de elementos na tela."
+    },
+    {
+      "id": "ipc",
+      "label": "IPC (Inter Process Communication)",
+      "group": 1,
+      "description": "Mecanismo de comunicação entre processos, permitindo que front end e back end se comuniquem entre si."
+    },
+    {
+      "id": "schema_zod",
+      "label": "Schema Zod",
+      "group": 1,
+      "description": "Definição estruturada de tipos de dados, garantindo a consistência e qualidade dos dados."
+    },
+    {
+      "id": "painel_syncing",
+      "label": "Sincronização de Painéis",
+      "group": 1,
+      "description": "Substituir sistema de abas por visualização dividida (Split View)"
+    },
+    {
+      "id": "patching_mode",
+      "label": "Patching Mode",
+      "group": 1,
+      "description": "Editar binários com suporte a Histórico de Alterações"
+    },
+    {
+      "id": "coloracao_condicional",
+      "label": "Coloração Condicional de Arestas",
+      "group": 1,
+      "description": "Visualização das rotas do assembly com coloração de setas"
+    },
+    {
+      "id": "renomeacao_dinamica",
+      "label": "Renomeação Dinâmica de Símbolos",
+      "group": 1,
+      "description": "Renomear endereços hexadecimais por toda a tela"
+    },
+    {
+      "id": "mini_mapa_inteligente",
+      "label": "Mini-Mapa Inteligente e Exportação",
+      "group": 1,
+      "description": "Geração de relatórios e exportação do fluxo como imagem"
+    },
+    {
+      "id": "hexadecimal",
+      "label": "Hexadecimal",
+      "group": 1,
+      "description": "Exibição hexadecimal ao lado do Assembly ou do Grafo"
+    },
+    {
+      "id": "grafo",
+      "label": "Grafo",
+      "group": 1,
+      "description": "Exibição do grafo de assembly"
+    },
+    {
+      "id": "assembly",
+      "label": "Assembly",
+      "group": 1,
+      "description": "Exibição do assembly de código"
+    },
+    {
+      "id": "CFGView",
+      "label": "CFGView",
+      "group": 1,
+      "description": "Exibição do grafico do fluxo"
+    },
+    {
+      "id": "ReactFlow",
+      "label": "ReactFlow",
+      "group": 1,
+      "description": "Biblioteca utilizada para criar o grafico do fluxo"
+    },
+    {
+      "id": "scroll_infinito_real",
+      "label": "Scroll infinito real",
+      "group": 1,
+      "description": "Técnica de carregamento de dados sob demanda para evitar baixa performance nos navegadores em aplicativos com largura de tela fixa."
+    },
+    {
+      "id": "engenheiro_reverso",
+      "label": "Engenheiro Reverso",
+      "group": 1,
+      "description": "Profissional responsável por resolver problemas de desempenho no sistema."
+    },
+    {
+      "id": "barra_de_tarefas",
+      "label": "Barra de Tarefas",
+      "group": 1,
+      "description": "Componente da interface do usuário responsável por mostrar as listas de elementos ou itens de um aplicativo."
+    },
+    {
+      "id": "react_virtualizer",
+      "label": "React Virtualizer",
+      "group": 1,
+      "description": "Biblioteca React que permite a otimização de listas de itens de largura dinâmica carregando apenas os elementos visíveis."
+    },
+    {
+      "id": "ipc",
+      "label": "IPC (Comunicação Entre Processos)",
+      "group": 1,
+      "description": "Mecanismo de comunicação entre processos em sistema operacional Unix que permite a troca de dados entre aplicativos."
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "group": 1,
+      "description": "Compartimento do servidor responsável por processar requisições HTTP do aplicativo ou cliente."
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "group": 1,
+      "description": "Compartimento do clientes responsável por renderizar a interface do usuário do aplicativo."
+    },
+    {
+      "id": "layout_flexbox",
+      "label": "Layout Flexbox",
+      "group": 1,
+      "description": "Técnica de alinhamento de elementos na tela que permite uma fácil configuração responsiva e adaptável ao tamanho da tela do usuário."
+    },
+    {
+      "id": "arquivo_2gb",
+      "label": "Arquivo de 2 GB",
+      "group": 1,
+      "description": "Arquivo de grande tamanho que causa desempenho ruim nos navegadores ao ler o conteúdo da barra de tarefas."
+    },
+    {
+      "id": "section_size",
+      "label": "Tamanho da Section",
+      "group": 1,
+      "description": "Parâmetro usado para calcular a altura da barra de rolagem (total height). Pode ser um número ou uma variável que depende de mais condições."
+    },
+    {
+      "id": "offset",
+      "label": "Offset",
+      "group": 1,
+      "description": "Variável que indica a altura da região visível da lista de resultados na barra de rolagem. É usado para calcular a posição correta dos dados que estão sendo atualizados na tela."
+    },
+    {
+      "id": "chunck",
+      "label": "Chunk",
+      "group": 1,
+      "description": "Módulo de dados do aplicativo que é carregado em memória quando o usuário avança na barra de rolagem e o aplicativo atualiza os dados em tela."
+    },
+    {
+      "id": "rodapé",
+      "label": "Rodapé",
+      "group": 1,
+      "description": "Pela definição de layout flexbox, o rodapé é definido como altura mínima da tela para que a barra de rolagem possa ser visualizada sem que as margens laterais sejam cortadas."
+    },
+    {
+      "id": "matemática_da_barra_de_rolagem",
+      "label": "Matemática da Barra de Rologem",
+      "group": 1,
+      "description": "Operadores de lógica que utilizam variáveis para calcular o espaço que está sendo visto pelo browser, como altura e altura visivel na tela."
+    },
+    {
+      "id": "secao",
+      "label": "Seção do Arquivo",
+      "group": 1,
+      "description": " Representa uma seção do arquivo ELF."
+    },
+    {
+      "id": "sintese",
+      "label": "Síntese de Imports e Exports",
+      "group": 1,
+      "description": " Itera as tabelas de símbolos para extrair imports e exports."
+    },
+    {
+      "id": "import",
+      "label": "Importado",
+      "group": 1,
+      "description": "Símbolos cujo valor st_shndx seja SHN_UNDEF."
+    },
+    {
+      "id": "export",
+      "label": "Exportado",
+      "group": 1,
+      "description": "Símbolos com visibilidade global ou fraca."
+    },
+    {
+      "id": "arquitetura",
+      "label": "Autodetecção de Arquitetura",
+      "group": 1,
+      "description": "Detecta se o ELF é 32-bit ou 64-bit e configura o Capstone."
+    },
+    {
+      "id": "disassembler",
+      "label": "Desassembelador",
+      "group": 1,
+      "description": "Modulo core-disassembler responsável por desassembelar binários."
+    },
+    {
+      "id": "elf",
+      "label": "Executable and Linkable Format",
+      "group": 1,
+      "description": "Formato Executável e Linkável do Linux."
+    },
+    {
+      "id": "capstone",
+      "label": "Capstone",
+      "group": 1,
+      "description": "Framework de análise de binários."
+    },
+    {
+      "id": "motor_de_disassembly",
+      "label": "Motor de Desmontagem",
+      "group": 1,
+      "description": "Sobretudo do processo de reversão de arquivos binários e desmonte da sua estrutura."
+    },
+    {
+      "id": "pesquisador_de_seguranca",
+      "label": "Pesquisador de Segurança",
+      "group": 1,
+      "description": "Responsável por analisar e entender o processo de desmontagem de arquivos binários."
+    },
+    {
+      "id": "engenheiro_reverso",
+      "label": "Engenheiro Reverso",
+      "group": 1,
+      "description": "Professor responsável por ensinar a metodologia de análise de código reverso, desmontagem e depuração."
+    },
+    {
+      "id": "analista_de_vulnerabilidades",
+      "label": "Analisador de Vulnerabilidades",
+      "group": 1,
+      "description": "Professor responsável por identificar possíveis vulnerabilidades em um código ou programa."
+    },
+    {
+      "id": "core-disassembler",
+      "label": "Disassembler do Coração",
+      "group": 1,
+      "description": "Módulo responsável por descompactar e identificar as instruções em um programa binário reverso."
+    },
+    {
+      "id": "capstone-rs",
+      "label": "Capstone-Rs",
+      "group": 1,
+      "description": "Biblioteca de tradução de código reverso para linguagens compiladas."
+    },
+    {
+      "id": "core-parser",
+      "label": "Parser do Coração",
+      "group": 1,
+      "description": "Módulo que faz o mapeamento de memória binaria, carregando o arquivo binário e gerando um mapa de enderecos."
+    },
+    {
+      "id": "tauri",
+      "label": "Tauri",
+      "group": 1,
+      "description": "Ferramenta para criar aplicações desktop baseadas em navegador."
+    },
+    {
+      "id": "hexgrid",
+      "label": "Hexgrid",
+      "group": 1,
+      "description": "Listagem virtualizada para renderizar os devidos códigos binários."
+    },
+    {
+      "id": "home_page",
+      "label": "Página Inicial",
+      "group": 1,
+      "description": "A primeira tela que o usuário vê ao iniciar o aplicativo."
+    },
+    {
+      "id": "sqlite_backend",
+      "label": "Backend com SQLite",
+      "group": 1,
+      "description": "Usa a biblioteca sqlx para interagir com o banco de dados SQLite."
+    },
+    {
+      "id": "react_front_end",
+      "label": "Frente de Tela com React",
+      "group": 1,
+      "description": "Utiliza React para proporcionar uma interface de usuário interativa."
+    },
+    {
+      "id": "recent_files_table",
+      "label": "Tabela de Arquivos Recentes",
+      "group": 1,
+      "description": "Armazena registros de arquivos recentes com suas respectivas informações (caminho, nome, tamanho e data de última abertura)."
+    },
+    {
+      "id": "drozone_component",
+      "label": "Componente Dropzone",
+      "group": 1,
+      "description": "Permite aos usuários arquivar arquivos facilmente drag-and-drop."
+    },
+    {
+      "id": "analista",
+      "label": "Análista",
+      "group": 1,
+      "description": "O tipo de usuário que realiza a integração com o sistema."
+    },
+    {
+      "id": "ipc_api",
+      "label": "API IPC",
+      "group": 1,
+      "description": "Permite que o frontend e o backend se comuniquem de forma segura via Interface de Privalegios da Plataforma."
+    },
+    {
+      "id": "analisista_estatico",
+      "label": "Análise Estática",
+      "group": 1,
+      "description": "Análise de malwares/binários sem execução, buscando metadados relevantes."
+    },
+    {
+      "id": "pe",
+      "label": "PE (Portable Executable)",
+      "group": 1,
+      "description": "Formato de arquivo usado pelos executáveis do Windows."
+    },
+    {
+      "id": "goblin",
+      "label": "Goblin",
+      "group": 1,
+      "description": "Biblioteca para processar e analisar PE."
+    },
+    {
+      "id": "mmap",
+      "label": "Mmap",
+      "group": 1,
+      "description": "Memoria mapeada do processo."
+    },
+    {
+      "id": "tauri",
+      "label": "Tauri",
+      "group": 1,
+      "description": "Ferramenta de construção de aplicativos WebDesktop de interface."
+    },
+    {
+      "id": "ipc",
+      "label": "IPC (Comunicação entre Processos)",
+      "group": 1,
+      "description": "Mecanismo de comunicação entre processos."
+    },
+    {
+      "id": "core-parser",
+      "label": "Core Parser",
+      "group": 1,
+      "description": "Ferramenta responsável por extrair metadados do PE."
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "group": 1,
+      "description": "Biblioteca de front-end responsável por renderizar as abas."
+    },
+    {
+      "id": "core-parser__tauri",
+      "label": "Core-Tauri",
+      "group": 1,
+      "description": "Integração entre o core-parser e a Tauri."
+    },
+    {
+      "id": "recent_file",
+      "label": "Arquivo Recentemente Modificado",
+      "group": 1,
+      "description": "O modelo de dados que representa o arquivo modificado recentemente."
     }
   ],
   "links": [
     {
-      "source": "0",
-      "target": "1",
-      "label": "Role & Workflow Constraints"
+      "source": "tech_lead",
+      "target": "devops",
+      "label": "trabalha com"
     },
     {
-      "source": "1",
-      "target": "2",
-      "label": "Auditor / Tech Lead: Identifies impact and defines folder structure/scaffolding."
+      "source": "orchestrator_architect",
+      "target": "tech_lead",
+      "label": "Define"
     },
     {
-      "source": "2",
-      "target": "3",
-      "label": "Documentation (Planning Phase): Drafts User Stories and Acceptance Criteria before execution begins."
+      "source": "tech_lead",
+      "target": "auditor",
+      "label": "Delega para"
     },
     {
-      "source": "3",
-      "target": "4",
-      "label": "DevOps & SecOps: Manages CI/CD, pre-commit hooks, environment compatibility, pipeline security enforcement."
+      "source": "auditor",
+      "target": "doc_planning",
+      "label": "Define"
     },
     {
-      "source": "4",
-      "target": "5",
-      "label": "Execution (Dev): Follow audit plan and User Stories strictly. Writes Tests BEFO0RE Code."
+      "source": "doc_planning",
+      "target": "devops_secops",
+      "label": "Delega para"
     },
     {
-      "source": "5",
-      "target": "6",
-      "label": "Gatekeeper (QA/Red Team): Audit UI/UX and tests before any PR attempt to break the UI based on Acceptance Criteria."
+      "source": "devops_secops",
+      "target": "dev",
+      "label": "Delega para"
     },
     {
-      "source": "6",
-      "target": "7",
-      "label": "Documentation (Release Phase): Maintains ADRs, updates i18n keys ensuring Portuguese technical documentation. Injects/indexes new decisions into the local RAG vector database."
+      "source": "dev",
+      "target": "gatekeeper",
+      "label": "Delega para"
     },
     {
-      "source": "0",
-      "target": "8",
-      "label": "Technical Strictness"
+      "source": "gatekeeper",
+      "target": "release_doc",
+      "label": "Delega para"
+    },
+    {
+      "source": "release_doc",
+      "target": "tdd",
+      "label": "Delega para"
+    },
+    {
+      "source": "tdd",
+      "target": "orchestrator_architect",
+      "label": "Revisar"
+    },
+    {
+      "source": "hermes",
+      "target": "orchestrator_architect",
+      "label": "Define"
+    },
+    {
+      "source": "ci_cd",
+      "target": "devops_secops",
+      "label": "Delega para"
+    },
+    {
+      "source": "i18n",
+      "target": "doc_planning",
+      "label": "Delega para"
+    },
+    {
+      "source": "binary_testing",
+      "target": "devops_secops",
+      "label": "Delega para"
+    },
+    {
+      "source": "oom_error",
+      "target": "gatekeeper",
+      "label": "Delega para"
+    },
+    {
+      "source": "tauri",
+      "target": "night_watch",
+      "label": "faz parte da"
+    },
+    {
+      "source": "night_watch",
+      "target": "tauri_dev",
+      "label": "utiliza"
+    },
+    {
+      "source": "rust",
+      "target": "night_watch",
+      "label": "fornece"
+    },
+    {
+      "source": "zod",
+      "target": "night_watch",
+      "label": "fornece"
+    },
+    {
+      "source": "tailwind_css",
+      "target": "interface_otimizada",
+      "label": "utiliza"
+    },
+    {
+      "source": "visualizacao_hexa",
+      "target": "desmontagem_assembly",
+      "label": "integra com"
+    },
+    {
+      "source": "control_flow_graph_cfg",
+      "target": "interface_otimizada",
+      "label": "integra com"
+    },
+    {
+      "source": "extracao_strings",
+      "target": "interface_otimizada",
+      "label": "integra com"
+    },
+    {
+      "source": "gerenciamento_estado",
+      "target": "interface_otimizada",
+      "label": "integra com"
+    },
+    {
+      "source": "night_watch_manifesto",
+      "target": "aesthetic_theme",
+      "label": "define"
+    },
+    {
+      "source": "aesthetic_theme",
+      "target": "translucency_polish",
+      "label": "requer"
+    },
+    {
+      "source": "translucency_polish",
+      "target": "vibe",
+      "label": "deve ter"
+    },
+    {
+      "source": "component_architecture",
+      "target": "shadcn_ui",
+      "label": "recomenda"
+    },
+    {
+      "source": "shadcn_ui",
+      "target": "css_strictness",
+      "label": "proíbe"
+    },
+    {
+      "source": "component_architecture",
+      "target": "virtualization",
+      "label": "exige"
+    },
+    {
+      "source": "component_architecture",
+      "target": "graph_node_UX",
+      "label": "proíbe"
+    },
+    {
+      "source": "error_handling",
+      "target": "graceful_failures",
+      "label": "exige"
+    },
+    {
+      "source": "error_handling",
+      "target": "workarounds",
+      "label": "prefere"
+    },
+    {
+      "source": "laudo_tecnico",
+      "target": "falha_renderizacao",
+      "label": "causa"
+    },
+    {
+      "source": "falha_renderizacao",
+      "target": "lentidao_severa",
+      "label": "causa"
+    },
+    {
+      "source": "lentidao_severa",
+      "target": "race_condition",
+      "label": "relacionada"
+    },
+    {
+      "source": "race_condition",
+      "target": "dagre_layout",
+      "label": "evidenciada"
+    },
+    {
+      "source": "dagre_layout",
+      "target": "react_flow",
+      "label": "utilizado"
+    },
+    {
+      "source": "react_flow",
+      "target": "virtualizacao",
+      "label": "aplicado"
+    },
+    {
+      "source": "cfgview",
+      "target": "basic_block",
+      "label": "contém"
+    },
+    {
+      "source": "process",
+      "target": "env",
+      "label": "Tem acesso a"
+    },
+    {
+      "source": "define_config",
+      "target": "react",
+      "label": "usa"
+    },
+    {
+      "source": "tsconfig_paths",
+      "target": "define_config",
+      "label": "é importado por"
+    },
+    {
+      "source": "react",
+      "target": "define_config",
+      "label": "é usado por"
+    },
+    {
+      "source": "define_config",
+      "target": "host",
+      "label": "tem acesso a"
+    },
+    {
+      "source": "process",
+      "target": "host",
+      "label": "define"
+    },
+    {
+      "source": "package_json",
+      "target": "name",
+      "label": "Define nome do pacote"
+    },
+    {
+      "source": "package_json",
+      "target": "description",
+      "label": "Define descrição do pacote"
+    },
+    {
+      "source": "package_json",
+      "target": "author",
+      "label": "Define autor do pacote"
+    },
+    {
+      "source": "package_json",
+      "target": "private",
+      "label": "Define privacidade do pacote"
+    },
+    {
+      "source": "package_json",
+      "target": "version",
+      "label": "Define versão do pacote"
+    },
+    {
+      "source": "package_json",
+      "target": "scripts",
+      "label": "Define scripts do pacote"
+    },
+    {
+      "source": "package_json",
+      "target": "dependencies",
+      "label": "Define dependências do pacote"
+    },
+    {
+      "source": "scripts",
+      "target": "lint",
+      "label": "Executa script de lint"
+    },
+    {
+      "source": "scripts",
+      "target": "dev",
+      "label": "Executa script de desenvolvimento"
+    },
+    {
+      "source": "scripts",
+      "target": "build",
+      "label": "Executa script de build"
+    },
+    {
+      "source": "scripts",
+      "target": "preview",
+      "label": "Executa script de preview"
+    },
+    {
+      "source": "scripts",
+      "target": "tauri",
+      "label": "Executa script de Tauri"
+    },
+    {
+      "source": "dependencies",
+      "target": "@base-ui/react",
+      "label": "Depende da biblioteca base-ui/react"
+    },
+    {
+      "source": "dependencies",
+      "target": "@dnd-kit/core",
+      "label": "Depende da biblioteca dnd-kit/core"
+    },
+    {
+      "source": "dependencies",
+      "target": "@dnd-kit/modifiers",
+      "label": "Depende da biblioteca dnd-kit/modifiers"
+    },
+    {
+      "source": "dependencies",
+      "target": "@dnd-kit/sortable",
+      "label": "Depende da biblioteca dnd-kit/sortable"
+    },
+    {
+      "source": "dependencies",
+      "target": "@dnd-kit/utilities",
+      "label": "Depende da biblioteca dnd-kit/utilities"
+    },
+    {
+      "source": "clippy",
+      "target": "chains_config",
+      "label": "Implementação"
+    },
+    {
+      "source": "chains_config",
+      "target": "auditoria_nivelouro",
+      "label": "Parte de"
+    },
+    {
+      "source": "auditoria_nivelouro",
+      "target": "devops",
+      "label": "Verifica com"
+    },
+    {
+      "source": "devops",
+      "target": "tech_lead",
+      "label": "Revisado por"
+    },
+    {
+      "source": "tech_lead",
+      "target": "arquiteto",
+      "label": "Definido por"
+    },
+    {
+      "source": "arquiteto",
+      "target": "gatekeeper",
+      "label": "Verificado por"
+    },
+    {
+      "source": "gatekeeper",
+      "target": "night_watch",
+      "label": "Garantido por"
+    },
+    {
+      "source": "night_watch",
+      "target": "hexview",
+      "label": "Integrado com"
+    },
+    {
+      "source": "hexview",
+      "target": "tanstack-react-virtual",
+      "label": "Usado com"
+    },
+    {
+      "source": "core-database",
+      "target": "sqlx",
+      "label": "Usado com"
+    },
+    {
+      "source": "dev_setup",
+      "target": "vs_code",
+      "label": "Usa como IDE"
+    },
+    {
+      "source": "dev_setup",
+      "target": "tauri",
+      "label": "Usa como biblioteca"
+    },
+    {
+      "source": "tauri",
+      "target": "rust_analyzer",
+      "label": "Orientação para análise de código"
+    },
+    {
+      "source": "define_config",
+      "target": "devices",
+      "label": "Importa"
+    },
+    {
+      "source": "define_config",
+      "target": "export_default",
+      "label": "Define"
+    },
+    {
+      "source": "suspense",
+      "target": "app",
+      "label": "É usado em"
+    },
+    {
+      "source": "react_dom",
+      "target": "app",
+      "label": "É usado em"
+    },
+    {
+      "source": "query_client",
+      "target": "app",
+      "label": "É usado em"
+    },
+    {
+      "source": "query_provider",
+      "target": "app",
+      "label": "É usado em"
+    },
+    {
+      "source": "app",
+      "target": "react",
+      "label": "É baseado em"
+    },
+    {
+      "source": "react",
+      "target": "react_dom",
+      "label": "É utilizado por"
+    },
+    {
+      "source": "query_client",
+      "target": "query_provider",
+      "label": "É fornecido por"
+    },
+    {
+      "source": "App",
+      "target": "useState",
+      "label": "usa"
+    },
+    {
+      "source": "App",
+      "target": "useEffect",
+      "label": "usa"
+    },
+    {
+      "source": "useState",
+      "target": "Button",
+      "label": "envia"
+    },
+    {
+      "source": "useEffect",
+      "target": "ScrollArea",
+      "label": "envia"
+    },
+    {
+      "source": "ErrorBoundary",
+      "target": "useState",
+      "label": "capta"
+    },
+    {
+      "source": "useState",
+      "target": "ErrorBoundary",
+      "label": "captura"
+    },
+    {
+      "source": "Toaster",
+      "target": "useState",
+      "label": "exibe"
+    },
+    {
+      "source": "useState",
+      "target": "Toaster",
+      "label": "exibe"
+    },
+    {
+      "source": "useAppStore",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "useAppStore",
+      "label": "captura"
+    },
+    {
+      "source": "useTranslation",
+      "target": "useState",
+      "label": "forneca"
+    },
+    {
+      "source": "useState",
+      "target": "useTranslation",
+      "label": "usa"
+    },
+    {
+      "source": "ActivityBar",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "ActivityBar",
+      "label": "captura"
+    },
+    {
+      "source": "Sidebar",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "Sidebar",
+      "label": "captura"
+    },
+    {
+      "source": "StatusBar",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "StatusBar",
+      "label": "captura"
+    },
+    {
+      "source": "HomeView",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "HomeView",
+      "label": "captura"
+    },
+    {
+      "source": "CFGView",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "CFGView",
+      "label": "captura"
+    },
+    {
+      "source": "HexView",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "HexView",
+      "label": "captura"
+    },
+    {
+      "source": "ImportsView",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "ImportsView",
+      "label": "captura"
+    },
+    {
+      "source": "StringsView",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "StringsView",
+      "label": "captura"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "useState",
+      "label": "envia"
+    },
+    {
+      "source": "useState",
+      "target": "AssemblyView",
+      "label": "captura"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "react",
+      "label": "Utiliza"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "zod",
+      "label": "Utiliza"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "tanstack-react-virtual",
+      "label": "Utiliza"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "@tanstack/react-query",
+      "label": "Utiliza"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "@tauri-apps/api/core",
+      "label": "Utiliza"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "@/store/useAppStore",
+      "label": "Utiliza"
+    },
+    {
+      "source": "AssemblyView",
+      "target": "lucide-react",
+      "label": "Utiliza"
+    },
+    {
+      "source": "use_ref",
+      "target": " ImportsView",
+      "label": "chamado em"
+    },
+    {
+      "source": "invoke_method",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "use_virtualizer",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "use_query",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "use_app_store",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "import_export_info_array_schema",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "file_question",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "handle_ipc_error",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "scroll_area",
+      "target": " ImportsView",
+      "label": "utilizado em"
+    },
+    {
+      "source": "HexView",
+      "target": "useRef",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "z",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "useVirtualizer",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "useQueries",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "invoke",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "HEX_VIEW_CHUNK_ROWS",
+      "label": "define"
+    },
+    {
+      "source": "HexView",
+      "target": "useAppStore",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "FileQuestion",
+      "label": "usa"
+    },
+    {
+      "source": "HexView",
+      "target": "ScrollArea",
+      "label": "usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "import",
+      "label": "Importa"
+    },
+    {
+      "source": "StringsView",
+      "target": "useRef",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "useEffect",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "invoke",
+      "label": "Invoca"
+    },
+    {
+      "source": "StringsView",
+      "target": "@tauri-apps/api/core",
+      "label": "Usa"
+    },
+    {
+      "source": " StringsView",
+      "target": "@tanstack/react-virtual",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "@tanstack/react-query",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "extractErrorMessage",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "StringMatchArraySchema",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "Loader2",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "FileQuestion",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "useAppStore",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "handleIpcError",
+      "label": "Usa"
+    },
+    {
+      "source": "StringsView",
+      "target": "ScrollArea",
+      "label": "Usa"
+    },
+    {
+      "source": "activity",
+      "target": "cpu",
+      "label": "Utiliza"
+    },
+    {
+      "source": "shield",
+      "target": "hard_drive",
+      "label": "Protege"
+    },
+    {
+      "source": "hard_drive",
+      "target": "upload_cloud",
+      "label": "Envia para"
+    },
+    {
+      "source": "lucide-react",
+      "target": "activity",
+      "label": "Fornecer"
+    },
+    {
+      "source": "utils",
+      "target": "store-useappstore",
+      "label": "Conecta"
+    },
+    {
+      "source": "tauri-apps-plugin-dialog",
+      "target": "utils",
+      "label": "Utiliza"
+    },
+    {
+      "source": "tauri-apps-api-path",
+      "target": "tauri-apps-api-core",
+      "label": "Fornecer"
+    },
+    {
+      "source": "tanstack-react-query",
+      "target": "tauri-apps-api-core",
+      "label": "Usa"
+    },
+    {
+      "source": "sonner",
+      "target": "utils",
+      "label": "Fornecer Mensagens"
+    },
+    {
+      "source": "zod",
+      "target": "validators",
+      "label": "Valida"
+    },
+    {
+      "source": "react-i18next",
+      "target": "utils",
+      "label": "Fornecer Tradução"
+    },
+    {
+      "source": "button",
+      "target": "card",
+      "label": "Cria Em"
+    },
+    {
+      "source": "card",
+      "target": "table",
+      "label": "Cria Com"
+    },
+    {
+      "source": "table",
+      "target": "scroll-area",
+      "label": "Exibe Em"
+    },
+    {
+      "source": "tab_data",
+      "target": "section_info",
+      "label": "inclui"
+    },
+    {
+      "source": "section_info",
+      "target": "name",
+      "label": "contém"
+    },
+    {
+      "source": "section_info",
+      "target": "size",
+      "label": "contém"
+    },
+    {
+      "source": "section_info",
+      "target": "virtual_offset",
+      "label": "contém"
+    },
+    {
+      "source": "section_info",
+      "target": "raw_offset",
+      "label": "contém"
+    },
+    {
+      "source": "action_reducer",
+      "target": "action",
+      "label": "executa"
+    },
+    {
+      "source": "action_reducer",
+      "target": "state",
+      "label": "atualiza"
+    },
+    {
+      "source": "toast",
+      "target": "devtools",
+      "label": "exibe"
+    },
+    {
+      "source": "toast_id",
+      "target": "props",
+      "label": "contém"
+    },
+    {
+      "source": "react",
+      "target": "import",
+      "label": "é utilizado para"
+    },
+    {
+      "source": "import",
+      "target": "jsx",
+      "label": "carrega o"
+    },
+    {
+      "source": "jsx",
+      "target": "props",
+      "label": "permite a passagem de"
+    },
+    {
+      "source": "props",
+      "target": "cn",
+      "label": "é utilizada para conjugar"
+    },
+    {
+      "source": "cn",
+      "target": "table",
+      "label": "é uma função do componente"
+    },
+    {
+      "source": "table",
+      "target": "thead",
+      "label": "contém um"
+    },
+    {
+      "source": "thead",
+      "target": "tbody",
+      "label": "é precedido por"
+    },
+    {
+      "source": "tbody",
+      "target": "tfoot",
+      "label": "segue-se"
+    },
+    {
+      "source": "tfoot",
+      "target": "tr",
+      "label": "define um elemento"
+    },
+    {
+      "source": "tr",
+      "target": "th",
+      "label": "é a linha que"
+    },
+    {
+      "source": "th",
+      "target": "td",
+      "label": "contém um"
+    },
+    {
+      "source": "td",
+      "target": "import",
+      "label": "é um elemento que"
+    },
+    {
+      "source": "import",
+      "target": "export",
+      "label": "é utilizado para"
+    },
+    {
+      "source": "export",
+      "target": "react",
+      "label": "envia dados para"
+    },
+    {
+      "source": "react",
+      "target": "toast_primitives",
+      "label": "Importa"
+    },
+    {
+      "source": "toast_primitives",
+      "target": "cva",
+      "label": "Importa"
+    },
+    {
+      "source": "cva",
+      "target": "class_variability_authority",
+      "label": "É implementado por"
+    },
+    {
+      "source": "class_variability_authority",
+      "target": "react",
+      "label": "Importa"
+    },
+    {
+      "source": "react",
+      "target": "lucide_react",
+      "label": "Importa"
+    },
+    {
+      "source": "lucide_react",
+      "target": "react",
+      "label": "É usada por"
+    },
+    {
+      "source": "react",
+      "target": "lib_utils",
+      "label": "Importa"
+    },
+    {
+      "source": "lib_utils",
+      "target": "react",
+      "label": "É usada por"
+    },
+    {
+      "source": "react",
+      "target": "import",
+      "label": "Usa"
+    },
+    {
+      "source": "import",
+      "target": "function",
+      "label": "Importa"
+    },
+    {
+      "source": "function",
+      "target": "props",
+      "label": "Aceita"
+    },
+    {
+      "source": "props",
+      "target": "div",
+      "label": "Deve ser aplicado em"
+    },
+    {
+      "source": "div",
+      "target": "class",
+      "label": "Utiliza o atributo"
+    },
+    {
+      "source": "lib",
+      "target": "import",
+      "label": "Importa a biblioteca"
+    },
+    {
+      "source": "import",
+      "target": "function",
+      "label": "Importa a declaração da função"
+    },
+    {
+      "source": "div",
+      "target": "lib",
+      "label": "Utiliza a biblioteca"
+    },
+    {
+      "source": "import_module",
+      "target": "use_hook",
+      "label": "é utilizado por"
+    },
+    {
+      "source": "use_hook",
+      "target": "use_translation",
+      "label": "é utilizado por"
+    },
+    {
+      "source": "use_translation",
+      "target": "ui_component",
+      "label": "é utilizado por"
+    },
+    {
+      "source": "ui_component",
+      "target": "icon",
+      "label": "utiliza"
+    },
+    {
+      "source": "ui_component",
+      "target": "toast",
+      "label": "utiliza"
+    },
+    {
+      "source": "toast",
+      "target": "custom_node",
+      "label": "é visualizado por"
+    },
+    {
+      "source": "custom_node",
+      "target": "external_call_node",
+      "label": "chama"
+    },
+    {
+      "source": "external_call_node",
+      "target": "node_types",
+      "label": "é definido em"
+    },
+    {
+      "source": "use_state",
+      "target": "use_effect",
+      "label": "influencia"
+    },
+    {
+      "source": "lucide_react",
+      "target": "folder",
+      "label": "uso"
+    },
+    {
+      "source": "button",
+      "target": "input",
+      "label": "usa"
+    },
+    {
+      "source": "scroll_area",
+      "target": "section_info",
+      "label": "contém"
+    },
+    {
+      "source": "section_info",
+      "target": "app_store",
+      "label": "consulta"
+    },
+    {
+      "source": "app_store",
+      "target": "translation",
+      "label": "usa"
+    },
+    {
+      "source": "translation",
+      "target": "query",
+      "label": "usa"
+    },
+    {
+      "source": "query",
+      "target": "invoke",
+      "label": "chama"
+    },
+    {
+      "source": "invoke",
+      "target": "ipc_error",
+      "label": "trata"
+    },
+    {
+      "source": "chevron_right",
+      "target": "chevron_down",
+      "label": "é similar a"
+    },
+    {
+      "source": "lucide",
+      "target": "folder",
+      "label": "usa"
+    },
+    {
+      "source": "folder",
+      "target": "file",
+      "label": "contém"
+    },
+    {
+      "source": "file",
+      "target": "sidebar",
+      "label": "é representado por"
+    },
+    {
+      "source": "sidebar",
+      "target": "section_select",
+      "label": "permite a seleção de"
+    },
+    {
+      "source": "section_select",
+      "target": "sections",
+      "label": "seleciona"
+    },
+    {
+      "source": "sections",
+      "target": "active_file",
+      "label": "permite a identificação do"
+    },
+    {
+      "source": "tauri",
+      "target": "lucide_react",
+      "label": "permite o uso de"
+    },
+    {
+      "source": "react",
+      "target": "radix_ui",
+      "label": "Importa"
+    },
+    {
+      "source": "react",
+      "target": "class_variance_authority",
+      "label": "Importa"
+    },
+    {
+      "source": "cva",
+      "target": "cn",
+      "label": "Importa"
+    },
+    {
+      "source": "radix_ui",
+      "target": "slot",
+      "label": "Define"
+    },
+    {
+      "source": "class_variance_authority",
+      "target": "cva",
+      "label": "Define"
+    },
+    {
+      "source": "button_variants",
+      "target": "button",
+      "label": "Define"
+    },
+    {
+      "source": "lib_utils",
+      "target": "cn",
+      "label": "Define"
+    },
+    {
+      "source": "button_variants",
+      "target": "cva",
+      "label": "Define com"
+    },
+    {
+      "source": "react",
+      "target": "ui_component",
+      "label": "constrói"
+    },
+    {
+      "source": "ui_component",
+      "target": "select",
+      "label": "possui"
+    },
+    {
+      "source": "select",
+      "target": "cn",
+      "label": "utiliza"
+    },
+    {
+      "source": "cn",
+      "target": "@base-ui/react/select",
+      "label": "importa"
+    },
+    {
+      "source": "@base-ui/react/select",
+      "target": "lucide-react",
+      "label": "usa"
+    },
+    {
+      "source": "lucide-react",
+      "target": "import",
+      "label": "carrega"
+    },
+    {
+      "source": "import",
+      "target": "const",
+      "label": "chama"
+    },
+    {
+      "source": "const",
+      "target": "export",
+      "label": "declara"
+    },
+    {
+      "source": "export",
+      "target": "function",
+      "label": "exporta"
+    },
+    {
+      "source": "function",
+      "target": "react",
+      "label": "utiliza"
+    },
+    {
+      "source": "input_component",
+      "target": "input_primitive",
+      "label": "Implementa"
+    },
+    {
+      "source": "import_statement",
+      "target": "input_primitive",
+      "label": "Importa"
+    },
+    {
+      "source": "import_statement",
+      "target": "react",
+      "label": "Importa"
+    },
+    {
+      "source": "react",
+      "target": "input_component",
+      "label": "Define"
+    },
+    {
+      "source": "react",
+      "target": "input_function",
+      "label": "Define"
+    },
+    {
+      "source": "input_function",
+      "target": "react_component_props",
+      "label": "Recebe"
+    },
+    {
+      "source": "input_function",
+      "target": "input_component",
+      "label": "Configura"
+    },
+    {
+      "source": "input_primitive",
+      "target": "utils",
+      "label": "Utiliza"
+    },
+    {
+      "source": "utils",
+      "target": "dev_dependencies",
+      "label": "Integra"
+    },
+    {
+      "source": "dev_dependencies",
+      "target": "utils",
+      "label": "Depende"
+    },
+    {
+      "source": "scroll_area",
+      "target": "scroll_area_props",
+      "label": "Extende"
+    },
+    {
+      "source": "scroll_area",
+      "target": "scroll_area_primitive",
+      "label": "usa"
+    },
+    {
+      "source": "scroll_area",
+      "target": "cn",
+      "label": "usa"
+    },
+    {
+      "source": "scroll_area",
+      "target": "react",
+      "label": "usa"
+    },
+    {
+      "source": "scroll_area",
+      "target": "lib_utils",
+      "label": "usa"
+    },
+    {
+      "source": "scroll_area",
+      "target": "root_component",
+      "label": "usa"
+    },
+    {
+      "source": "scroll_area_props",
+      "target": "scrollbar",
+      "label": "delega para"
+    },
+    {
+      "source": "scroll_area_primitive",
+      "target": "cn",
+      "label": "usa"
+    },
+    {
+      "source": "cn",
+      "target": "react",
+      "label": "usa"
+    },
+    {
+      "source": "cn",
+      "target": "lib_utils",
+      "label": "usa"
+    },
+    {
+      "source": "string_match_array_schema",
+      "target": "string_match_schema",
+      "label": "é um array de"
+    },
+    {
+      "source": "import_export_info_array_schema",
+      "target": "import_export_info_schema",
+      "label": "é um array de"
+    },
+    {
+      "source": "search_result_schema",
+      "target": "recent_file_schema",
+      "label": "inclui"
+    },
+    {
+      "source": "extractErrorMessage",
+      "target": "err",
+      "label": "retorna erro"
+    },
+    {
+      "source": "extractErrorMessage",
+      "target": "unknown",
+      "label": "recebe parâmetro desconhecido"
+    },
+    {
+      "source": "extractErrorMessage",
+      "target": "export_function",
+      "label": "exporta resultado"
+    },
+    {
+      "source": "export_function",
+      "target": "err_message",
+      "label": "contém mensagem de erro"
+    },
+    {
+      "source": "export_function",
+      "target": "string",
+      "label": "retorna tipo string"
+    },
+    {
+      "source": "func_cnb",
+      "target": "tailwind_merge",
+      "label": "usa"
+    },
+    {
+      "source": "initReactI18next",
+      "target": "ptBR",
+      "label": "usa a tradução"
+    },
+    {
+      "source": "ptBR",
+      "target": "i18next",
+      "label": "traduz mensagens"
+    },
+    {
+      "source": "i18next",
+      "target": "export-default",
+      "label": "é exportada"
+    },
+    {
+      "source": "use_app_store",
+      "target": "create",
+      "label": "utiliza"
+    },
+    {
+      "source": "create",
+      "target": "set",
+      "label": "gera"
+    },
+    {
+      "source": "use_app_store",
+      "target": "set",
+      "label": "atualiza"
+    },
+    {
+      "source": "zustand",
+      "target": "appstate",
+      "label": "implementa"
+    },
+    {
+      "source": "appstate",
+      "target": "use_app_store",
+      "label": "definição"
+    },
+    {
+      "source": "playwright_test",
+      "target": "night_watch",
+      "label": "Executa testes"
+    },
+    {
+      "source": "night_watch",
+      "target": "sidebar",
+      "label": "Cadastra testes"
+    },
+    {
+      "source": "sidebar",
+      "target": "explorer",
+      "label": "Navega pela aplicação"
+    },
+    {
+      "source": "explorer",
+      "target": "files",
+      "label": "Listar arquivos"
+    },
+    {
+      "source": "files",
+      "target": "search",
+      "label": "Pesquisar conteúdo"
+    },
+    {
+      "source": "search",
+      "target": "soc_matrix",
+      "label": "Abrir matriz SOC"
+    },
+    {
+      "source": "soc_matrix",
+      "target": "settings",
+      "label": "Abrir configurações"
+    },
+    {
+      "source": "settings",
+      "target": "notifications",
+      "label": "Exibir notificações"
+    },
+    {
+      "source": "settings",
+      "target": "error_log",
+      "label": "Exibir registro de erros"
+    },
+    {
+      "source": "test",
+      "target": "error",
+      "label": "gera erro"
+    },
+    {
+      "source": "test",
+      "target": "notifications",
+      "label": "mostra notificações"
+    },
+    {
+      "source": "sidebar",
+      "target": "explorer",
+      "label": "navega por explorador"
+    },
+    {
+      "source": "sidebar",
+      "target": "files",
+      "label": "vizualiza arquivos"
+    },
+    {
+      "source": "sidebar",
+      "target": "search",
+      "label": "procura conteúdo"
+    },
+    {
+      "source": "dashboard",
+      "target": "soc-matrix",
+      "label": "mostra matriz SOC"
+    },
+    {
+      "source": "settings",
+      "target": "dashboard",
+      "label": "configura painel de controle"
+    },
+    {
+      "source": "react-flow",
+      "target": "node",
+      "label": "gera nó"
+    },
+    {
+      "source": "test_runner",
+      "target": "playwright_test",
+      "label": "realiza"
+    },
+    {
+      "source": "playwright_test",
+      "target": "search_input",
+      "label": "acessa"
+    },
+    {
+      "source": "search_input",
+      "target": "function_item",
+      "label": "retorna"
+    },
+    {
+      "source": "function_item",
+      "target": "flow_container",
+      "label": "associa"
+    },
+    {
+      "source": "flow_container",
+      "target": "nodes",
+      "label": "contém"
+    },
+    {
+      "source": "nodes",
+      "target": "watermark",
+      "label": "utiliza"
+    },
+    {
+      "source": "test",
+      "target": "import",
+      "label": "usando"
+    },
+    {
+      "source": "expect",
+      "target": "test",
+      "label": "junto com"
+    },
+    {
+      "source": "import",
+      "target": "expect",
+      "label": "inicia"
+    },
+    {
+      "source": "playwright_test",
+      "target": "test",
+      "label": "Utiliza o recurso"
+    },
+    {
+      "source": "playwright_test",
+      "target": "expect",
+      "label": "Define a expectativa"
+    },
+    {
+      "source": "test",
+      "target": "test_before_each",
+      "label": "executa antes"
+    },
+    {
+      "source": "test_before_each",
+      "target": "go_to",
+      "label": "redireciona"
+    },
+    {
+      "source": "go_to",
+      "target": "expect",
+      "label": "verifica"
+    },
+    {
+      "source": "expect",
+      "target": "timeout",
+      "label": "espera por"
+    },
+    {
+      "source": "timeout",
+      "target": "page",
+      "label": "é executado na"
+    },
+    {
+      "source": "page",
+      "target": "search_input",
+      "label": "é aplicado a"
+    },
+    {
+      "source": "search_input",
+      "target": "fill",
+      "label": "é preenchido com"
+    },
+    {
+      "source": "fill",
+      "target": "locator",
+      "label": "é filtrado para"
+    },
+    {
+      "source": "locator",
+      "target": "filter",
+      "label": "aplica um filtro de"
+    },
+    {
+      "source": "filter",
+      "target": "click",
+      "label": "e simula um"
+    },
+    {
+      "source": "click",
+      "target": "flow_container",
+      "label": "e verifica se existe"
+    },
+    {
+      "source": "flow_container",
+      "target": "react_flow_node",
+      "label": "e verifica se existe"
+    },
+    {
+      "source": "react_flow_node",
+      "target": "nodes",
+      "label": "e é armazenado"
+    },
+    {
+      "source": "test",
+      "target": "esperado",
+      "label": "ser exibido"
+    },
+    {
+      "source": "esperado",
+      "target": "resultado",
+      "label": "ser exibido"
+    },
+    {
+      "source": "test_1",
+      "target": "test_2",
+      "label": "executar antes"
+    },
+    {
+      "source": "test_3",
+      "target": "expect(locator).toBeVisible()",
+      "label": "esperar elemento ficar visível"
+    },
+    {
+      "source": "test_4",
+      "target": "expect(nodes.first()).toBeVisible({ timeout: 10000 })",
+      "label": "esperar elemento ficar visível"
+    },
+    {
+      "source": "locator.getByText('Settings').waitFor({ state: 'visible', timeout: 5000 })",
+      "target": "esperar elemento ficar visível",
+      "label": "esperar"
+    },
+    {
+      "source": "locator.getByText('SOC Matrix', { exact: false }).waitFor({ state: 'visible', timeout: 5000 })",
+      "target": "esperar elemento ficar visível",
+      "label": "esperar"
+    },
+    {
+      "source": "locator.getByText('SOC Matrix', { exact: false }).waitFor({ state: 'visible', timeout: 5000 })",
+      "target": "test_2",
+      "label": "executar"
+    },
+    {
+      "source": "esperado",
+      "target": "sidebar",
+      "label": "deve estar presente"
+    },
+    {
+      "source": "sidebar",
+      "target": "explorador",
+      "label": "visível"
+    },
+    {
+      "source": "sidebar",
+      "target": "files",
+      "label": "visível"
+    },
+    {
+      "source": "sidebar",
+      "target": "search",
+      "label": "visível"
+    },
+    {
+      "source": "esperado",
+      "target": "settings",
+      "label": "presente na ActivityBar"
+    },
+    {
+      "source": "soc_matrix",
+      "target": "esperado",
+      "label": "renderizado"
+    },
+    {
+      "source": "react_flow",
+      "target": "esperado",
+      "label": "renderizado"
+    },
+    {
+      "source": "FileInfo",
+      "target": "format",
+      "label": "contém"
+    },
+    {
+      "source": "FileInfo",
+      "target": "architecture",
+      "label": "contém"
+    },
+    {
+      "source": "import_info",
+      "target": "type_",
+      "label": "Contém"
+    },
+    {
+      "source": "import_info",
+      "target": "dll",
+      "label": "Contém"
+    },
+    {
+      "source": "import_info",
+      "target": "name",
+      "label": "Contém"
+    },
+    {
+      "source": "import_info",
+      "target": "address",
+      "label": "Contém"
+    },
+    {
+      "source": "edge_data",
+      "target": "target",
+      "label": "Pertence a"
+    },
+    {
+      "source": "edge_data",
+      "target": "edge_type",
+      "label": "Pertence a"
+    },
+    {
+      "source": "basic_block",
+      "target": "instructions",
+      "label": "contém"
+    },
+    {
+      "source": "basic_block",
+      "target": "edge_data",
+      "label": "possui"
+    },
+    {
+      "source": "basic_block",
+      "target": "library",
+      "label": "utiliza"
+    },
+    {
+      "source": "basic_block",
+      "target": "symbol",
+      "label": "identificado por"
+    },
+    {
+      "source": "basic_block",
+      "target": "block_type",
+      "label": "é de"
+    },
+    {
+      "source": "instructions",
+      "target": "edge_data",
+      "label": "é parte de"
+    },
+    {
+      "source": "edge_data",
+      "target": "library",
+      "label": "relacionado a"
+    },
+    {
+      "source": "edge_data",
+      "target": "symbol",
+      "label": "relacionado a"
+    },
+    {
+      "source": "audit_gatekeeper",
+      "target": "zero_panic",
+      "label": "Verificada"
+    },
+    {
+      "source": "audit_gatekeeper",
+      "target": "estilo_inline",
+      "label": "Verificada"
+    },
+    {
+      "source": "audit_gatekeeper",
+      "target": "zod_ipc",
+      "label": "Verificada"
+    },
+    {
+      "source": "audit_gatekeeper",
+      "target": "tipagem_estrita",
+      "label": "Verificada"
+    },
+    {
+      "source": "audit_gatekeeper",
+      "target": "codigo_autoexplicativo",
+      "label": "Verificada"
+    },
+    {
+      "source": "hermes_plan_mode",
+      "target": "meta",
+      "label": "Define"
+    },
+    {
+      "source": "meta",
+      "target": "contexto_auditória",
+      "label": "Contém"
+    },
+    {
+      "source": "contexto_auditória",
+      "target": "stack_light_rag",
+      "label": "Implementa"
+    },
+    {
+      "source": "stack_light_rag",
+      "target": "estrutura_pastas",
+      "label": "Define"
+    },
+    {
+      "source": "estrutura_pastas",
+      "target": "auditoria_impactos",
+      "label": "Efeitos"
+    },
+    {
+      "source": "auditoria_impactos",
+      "target": "user_stories",
+      "label": "Informa"
+    },
+    {
+      "source": "user_stories",
+      "target": "dev_checklist",
+      "label": "Implica"
+    },
+    {
+      "source": "dev_checklist",
+      "target": "tech_lead_checklist",
+      "label": "Requer"
+    },
+    {
+      "source": "tech_lead_checklist",
+      "target": "qa_gatekeeper_checklist",
+      "label": "Define"
+    },
+    {
+      "source": "qa_gatekeeper_checklist",
+      "target": "documentacao_memoria",
+      "label": "Indexa"
+    },
+    {
+      "source": "documentacao_memoria",
+      "target": "hermes_plan_mode",
+      "label": "Satisfez"
+    },
+    {
+      "source": "meta",
+      "target": "contexto_auditoria",
+      "label": "deve ser definido"
+    },
+    {
+      "source": "contexto_auditoria",
+      "target": "stories_e_critérios",
+      "label": "após definido"
+    },
+    {
+      "source": "stories_e_critérios",
+      "target": "dev_checklist",
+      "label": "antes de iniciar"
+    },
+    {
+      "source": "dev_checklist",
+      "target": "tech_lead_code_review",
+      "label": "após implementação"
+    },
+    {
+      "source": "tech_lead_code_review",
+      "target": "qa_gatekeeper",
+      "label": "antes de liberar"
+    },
+    {
+      "source": "night_watch",
+      "target": "tech_lead",
+      "label": "Criada por"
+    },
+    {
+      "source": "tech_lead",
+      "target": "perf_extrema",
+      "label": "Visa"
+    },
+    {
+      "source": "night_watch",
+      "target": "fase_3",
+      "label": "Alvo"
+    },
+    {
+      "source": "fase_1",
+      "target": "perf_extrema",
+      "label": "Foco"
+    },
+    {
+      "source": "fase_2",
+      "target": "seg_da_memo",
+      "label": "Acoplamento"
+    },
+    {
+      "source": "seg_da_memo",
+      "target": "modularidade",
+      "label": "Garante"
+    },
+    {
+      "source": "fase_3",
+      "target": "backend",
+      "label": "Adaptação"
+    },
+    {
+      "source": "fase_4",
+      "target": "perf_extrema",
+      "label": "Métricas Visuais"
+    },
+    {
+      "source": "fase_4",
+      "target": "seg_da_memo",
+      "label": "Heurística"
+    },
+    {
+      "source": "fase_4",
+      "target": "backend",
+      "label": "Relatórios"
+    },
+    {
+      "source": "fase_5",
+      "target": "modularidade",
+      "label": "Módulo Isolado"
+    },
+    {
+      "source": "fase_5",
+      "target": "frontend",
+      "label": "Ferramentas Integradas"
+    },
+    {
+      "source": "fase_5",
+      "target": "backend",
+      "label": "Interceptação"
+    },
+    {
+      "source": "backend",
+      "target": "frontend",
+      "label": "Comunicação"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_file_info",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_pe_sections",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_hex_view",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_assembly_view",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_pe_imports_exports",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_pe_strings",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_recent_projects",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "add_recent_project",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "search_in_file",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_cfg_blocks",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "documento_de_comunicacao",
+      "target": "get_function_cfg",
+      "label": "Descreve o Comando"
+    },
+    {
+      "source": "get_recent_projects",
+      "target": "documento_de_comunicacao",
+      "label": "Retorna os Dados"
+    },
+    {
+      "source": "get_recent_projects",
+      "target": "get_recent_projects",
+      "label": "Atualiza os Dados"
+    },
+    {
+      "source": "add_recent_project",
+      "target": "documento_de_comunicacao",
+      "label": "Adiciona o Projeto"
+    },
+    {
+      "source": "search_in_file",
+      "target": "documento_de_comunicacao",
+      "label": "Executa a Busca"
+    },
+    {
+      "source": "get_cfg_blocks",
+      "target": "documento_de_comunicacao",
+      "label": "Retorna os Blocos"
+    },
+    {
+      "source": "get_function_cfg",
+      "target": "documento_de_comunicacao",
+      "label": "Retorna os Dados do CFG"
+    },
+    {
+      "source": "humano",
+      "target": "arquiteto",
+      "label": "Orquestra o Projeto"
+    },
+    {
+      "source": "arquiteto",
+      "target": "hermes",
+      "label": "Coopera com o Orquestrador"
+    },
+    {
+      "source": "hermes",
+      "target": "subagentes_de_qualidade_e_especialistas",
+      "label": "Coordena a Equipe"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "bda",
+      "label": "Trabalha em conjunto com o Analista de Negócios"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "dba",
+      "label": "Trabalha em conjunto com o Especialista em Banco de Dados"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "repo_manager",
+      "label": "Trabalha em conjunto com o Gerente de Repositório"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "qa",
+      "label": "Trabalha em conjunto com o Especialista em Qualidade"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "devops",
+      "label": "Trabalha em conjunto com o Gerente de Integração"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "security_auditor",
+      "label": "Trabalha em conjunto com o Auditor de Segurança"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "crash_investigador",
+      "label": "Trabalha em conjunto com o Investigador de Incidentes"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "site_reliability_engineer",
+      "label": "Trabalha em conjunto com o Engenheiro de Site de Confiança"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "technical_writer",
+      "label": "Trabalha em conjunto com o Escrivão Técnico"
+    },
+    {
+      "source": "subagentes_de_qualidade_e_especialistas",
+      "target": "cursor",
+      "label": "Trabalha em conjunto com o Arquiteto-chave"
+    },
+    {
+      "source": "pull_request_autorizador",
+      "target": "code_reviewer_gatkeeeper",
+      "label": "Coopera com o Revisor de Código"
+    },
+    {
+      "source": "technical_writer",
+      "target": "cursor",
+      "label": "Trabalha em conjunto com o Arquiteto-chave"
+    },
+    {
+      "source": "crash_investigador",
+      "target": "cursor",
+      "label": "Trabalha em conjunto com o Arquiteto-chave"
+    },
+    {
+      "source": "site_reliability_engineer",
+      "target": "cursor",
+      "label": "Trabalha em conjunto com o Arquiteto-chave"
+    },
+    {
+      "source": "app_gui",
+      "target": "store",
+      "label": "Armazena"
+    },
+    {
+      "source": "app_gui",
+      "target": "ipc",
+      "label": "Envia"
+    },
+    {
+      "source": "ipc",
+      "target": "core_parser",
+      "label": "Chama o parseador"
+    },
+    {
+      "source": "core_parser",
+      "target": "core_disassembler",
+      "label": "Gera código de máquina"
+    },
+    {
+      "source": "core_disassembler",
+      "target": "core_analysis",
+      "label": "Desmonta"
+    },
+    {
+      "source": "core_analysis",
+      "target": "core_database",
+      "label": "Grava no banco"
+    },
+    {
+      "source": "core_database",
+      "target": "core_engine",
+      "label": "Envia"
+    },
+    {
+      "source": "core_engine",
+      "target": "core_debugger",
+      "label": "Utiliza"
+    },
+    {
+      "source": "core_debugger",
+      "target": "core_analysis",
+      "label": "Recupera dados"
+    },
+    {
+      "source": "frontend",
+      "target": "docs",
+      "label": "Armazena"
+    },
+    {
+      "source": "scripts",
+      "target": "frontend",
+      "label": "Executa"
+    },
+    {
+      "source": "debito_tecnico",
+      "target": "ux_debt",
+      "label": "afeta"
+    },
+    {
+      "source": "ux_debt",
+      "target": "linux_trackpad",
+      "label": "causa"
+    },
+    {
+      "source": "linux_trackpad",
+      "target": "tauri_stack",
+      "label": "implica"
+    },
+    {
+      "source": "tauri_stack",
+      "target": "server_graficos",
+      "label": "usa"
+    },
+    {
+      "source": "server_graficos",
+      "target": "react_flow",
+      "label": "afeta"
+    },
+    {
+      "source": "react_flow",
+      "target": "gestos_trackpad",
+      "label": "deve"
+    },
+    {
+      "source": "gestos_trackpad",
+      "target": "eventos_hardware",
+      "label": "requer"
+    },
+    {
+      "source": "eventos_hardware",
+      "target": "hardware_trackpad",
+      "label": "enviado"
+    },
+    {
+      "source": "hardware_trackpad",
+      "target": "server_graficos",
+      "label": "consumido"
+    },
+    {
+      "source": "server_graficos",
+      "target": "react_flow",
+      "label": "ignorado"
+    },
+    {
+      "source": "debito_tecnico",
+      "target": "mitigacao",
+      "label": "requer"
+    },
+    {
+      "source": "mitigacao",
+      "target": "controls",
+      "label": "solicita"
+    },
+    {
+      "source": "projeto",
+      "target": "fase_1",
+      "label": "Foco na Análise Estática"
+    },
+    {
+      "source": "fase_1",
+      "target": "backend_core",
+      "label": "Desenvolver Backend"
+    },
+    {
+      "source": "backend_core",
+      "target": "frontend_gui",
+      "label": "Integrar com Frontend"
+    },
+    {
+      "source": "cargo_workspace",
+      "target": "painel_lateral",
+      "label": "Implementar SideBar"
+    },
+    {
+      "source": "cargo_workspace",
+      "target": "area_central",
+      "label": "Implementar Área Central"
+    },
+    {
+      "source": "comunicacao",
+      "target": "painel_lateral",
+      "label": "Realizar Comunicação"
+    },
+    {
+      "source": "painel_lateral",
+      "target": "area_central",
+      "label": "Exibir Conteúdo Selecionado"
+    },
+    {
+      "source": "area_central",
+      "target": "comunicacao",
+      "label": "Realizar Edição"
+    },
+    {
+      "source": "virtual_loader",
+      "target": "arquitetura_memoria",
+      "label": "Implementar Carregador Virtual"
+    },
+    {
+      "source": "arquitetura_memoria",
+      "target": "painel_lateral",
+      "label": "Desenhar Arestas no CFG"
+    },
+    {
+      "source": "modulo_ativo",
+      "target": "identificacao_e_hashes",
+      "label": "inicializa"
+    },
+    {
+      "source": "modulo_ativo",
+      "target": "secoes_executaveis",
+      "label": "inicializa"
+    },
+    {
+      "source": "modulo_ativo",
+      "target": "importacoes_criticas",
+      "label": "inicializa"
+    },
+    {
+      "source": "modulo_ativo",
+      "target": "extraacao_de_strings",
+      "label": "inicializa"
+    },
+    {
+      "source": "react_router",
+      "target": "contexto_de_aplicacao",
+      "label": "ativa"
+    },
+    {
+      "source": "hooks_do_react_query",
+      "target": "backend_rust",
+      "label": "invoke"
+    },
+    {
+      "source": "pipeline_de_parsing_do_zod",
+      "target": "tauri",
+      "label": "valida"
+    },
+    {
+      "source": "backend_rust",
+      "target": "pipeline_de_parsing_do_zod",
+      "label": "envia"
+    },
+    {
+      "source": "control_flow_graph",
+      "target": "custom_node",
+      "label": "contém"
+    },
+    {
+      "source": "custom_node",
+      "target": "lógica_de_alinhamento",
+      "label": "permitem"
+    },
+    {
+      "source": "lógica_de_alinhamento",
+      "target": "estrutura_de_árvore",
+      "label": "calcula"
+    },
+    {
+      "source": "estrutura_de_árvore",
+      "target": "sem_antics",
+      "label": "conecta"
+    },
+    {
+      "source": "sem_antics",
+      "target": "function_selector",
+      "label": "dispara"
+    },
+    {
+      "source": "function_selector",
+      "target": "legend",
+      "label": "sincroniza"
+    },
+    {
+      "source": "legend",
+      "target": "entry_point",
+      "label": "aponta"
+    },
+    {
+      "source": "hex_view",
+      "target": "frontend_virtualization",
+      "label": "utiliza"
+    },
+    {
+      "source": "frontend_virtualization",
+      "target": "memmap2",
+      "label": "substitui"
+    },
+    {
+      "source": "frontend_virtualization",
+      "target": "chunked_reading",
+      "label": "recupera"
+    },
+    {
+      "source": "frontend_virtualization",
+      "target": "offset_to_hex_translation",
+      "label": "aplica"
+    },
+    {
+      "source": "frontend_virtualization",
+      "target": "react_query",
+      "label": "utiliza"
+    },
+    {
+      "source": "rust_ipc_endpoint",
+      "target": "memmap2",
+      "label": "utiliza"
+    },
+    {
+      "source": "rust_ipc_endpoint",
+      "target": "chunked_reading",
+      "label": "executa"
+    },
+    {
+      "source": "tech_lead",
+      "target": "data-fetching",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "cache-avançado",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "gerenciamento-de-estado",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "integracao-com-sqlite",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "gerenciamento-padro-de-caminhos",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "suporte-otimizado-de-drag-and-drop",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "processamento-multithreading",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "construção-de-uma-ui-resiliente",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "implementacao-de-sistema-de-notificacoes",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "log-estruturado",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "implementacao-de-valiacoes-de-esquemas",
+      "label": "adota"
+    },
+    {
+      "source": "tech_lead",
+      "target": "garantia-de-tipagem_segura",
+      "label": "adota"
+    },
+    {
+      "source": "night_watch",
+      "target": "static_analyzer",
+      "label": "Transformar"
+    },
+    {
+      "source": "static_analyzer",
+      "target": "binary_patcher",
+      "label": "Patcher"
+    },
+    {
+      "source": "binary_patcher",
+      "target": "ida_pro",
+      "label": "Referência"
+    },
+    {
+      "source": "binary_patcher",
+      "target": "x64dbg",
+      "label": "Ferramenta similar"
+    },
+    {
+      "source": "binary_patcher",
+      "target": "iced_x86",
+      "label": "Disassemblersembly"
+    },
+    {
+      "source": "iced_x86",
+      "target": "patch_manager",
+      "label": "Integração"
+    },
+    {
+      "source": "patch_manager",
+      "target": "hash_map",
+      "label": "Armazenamento"
+    },
+    {
+      "source": "patch_manager",
+      "target": "export_patched_binary",
+      "label": "Exportação"
+    },
+    {
+      "source": "binary_patcher",
+      "target": "code_caves",
+      "label": "Injeção de código"
+    },
+    {
+      "source": "code_caves",
+      "target": "trampolines",
+      "label": "Salto relativo"
+    },
+    {
+      "source": "binary_patcher",
+      "target": "ui ux",
+      "label": "Interface e cores"
+    },
+    {
+      "source": "ui ux",
+      "target": "react",
+      "label": "Implementação"
+    },
+    {
+      "source": "react",
+      "target": "hex_view",
+      "label": "Visualização"
+    },
+    {
+      "source": "hex_view",
+      "target": "shadcn ui",
+      "label": "Experiência de usuário"
+    },
+    {
+      "source": "shadcn ui",
+      "target": "subagent_backend_rust",
+      "label": "Implementação"
+    },
+    {
+      "source": "subagent_backend_rust",
+      "target": "subagent_backend_rust_algoritmos_avancados",
+      "label": "Coleta de algoritmos"
+    },
+    {
+      "source": "subagent_backend_rust_algoritmos_avancados",
+      "target": "subagent_frontend_react",
+      "label": "Implementação frontend"
+    },
+    {
+      "source": "subagent_frontend_react",
+      "target": "subagente_qa_gatekeeper",
+      "label": "Testes de qualidade"
+    },
+    {
+      "source": "arquitetura_do_backend",
+      "target": "stack_base",
+      "label": "define"
+    },
+    {
+      "source": "stack_base",
+      "target": "rust",
+      "label": "escolhe"
+    },
+    {
+      "source": "stack_base",
+      "target": "cargo_workspaces",
+      "label": "usa"
+    },
+    {
+      "source": "arquitetura_do_backend",
+      "target": "io_e_mapeamento_de_memoria",
+      "label": "especifica"
+    },
+    {
+      "source": "arquitetura_do_backend",
+      "target": "concorrência_e_processamento_massivo",
+      "label": "especifica"
+    },
+    {
+      "source": "arquitetura_do_backend",
+      "target": "seguranca_no_parsing",
+      "label": "especifica"
+    },
+    {
+      "source": "arquitetura_do_backend",
+      "target": "estrutura_de Dominic",
+      "label": "define"
+    },
+    {
+      "source": "io_e_mapeamento_de_memoria",
+      "target": "memmap2",
+      "label": "usa"
+    },
+    {
+      "source": "concorrência_e_processamento_massivo",
+      "target": "rayon",
+      "label": "usa"
+    },
+    {
+      "source": "seguranca_no_parsing",
+      "target": "error_handling",
+      "label": "usa"
+    },
+    {
+      "source": "frontend_development",
+      "target": "tech_lead",
+      "label": "é responsável por"
+    },
+    {
+      "source": "frontend_development",
+      "target": "react",
+      "label": "desenvolvido em"
+    },
+    {
+      "source": "react",
+      "target": "tauri",
+      "label": "com suporte a"
+    },
+    {
+      "source": "tauri",
+      "target": "typescript",
+      "label": "requer TypeScript"
+    },
+    {
+      "source": "typescript",
+      "target": "zod",
+      "label": "utiliza Zod para"
+    },
+    {
+      "source": "zod",
+      "target": "tanstack_react_query",
+      "label": "é utilizado com"
+    },
+    {
+      "source": "tanstack_react_query",
+      "target": "zustand",
+      "label": "juntamente com"
+    },
+    {
+      "source": "zustand",
+      "target": "react_virtual",
+      "label": "e React Virtual"
+    },
+    {
+      "source": "react_virtual",
+      "target": "ipc",
+      "label": "que usa IPC"
+    },
+    {
+      "source": "ipc",
+      "target": "schema_zod",
+      "label": "que segue esquemas de Zod"
+    },
+    {
+      "source": "painel_syncing",
+      "target": "hexadecimal",
+      "label": "permite"
+    },
+    {
+      "source": "painel_syncing",
+      "target": "grafo",
+      "label": "permite"
+    },
+    {
+      "source": "patching_mode",
+      "target": "CFGView",
+      "label": "modifica"
+    },
+    {
+      "source": "coloracao_condicional",
+      "target": "grafo",
+      "label": "exibe"
+    },
+    {
+      "source": "renomeacao_dinamica",
+      "target": "hexadecimal",
+      "label": "substitui"
+    },
+    {
+      "source": "renomeacao_dinamica",
+      "target": "grafo",
+      "label": "substitui"
+    },
+    {
+      "source": "renomeacao_dinamica",
+      "target": "assembly",
+      "label": "substitui"
+    },
+    {
+      "source": "mini_mapa_inteligente",
+      "target": "CFGView",
+      "label": "ativa"
+    },
+    {
+      "source": "mini_mapa_inteligente",
+      "target": "ReactFlow",
+      "label": "utiliza"
+    },
+    {
+      "source": "scroll_infinito_real",
+      "target": "engenheiro_reverso",
+      "label": "permite solucionar"
+    },
+    {
+      "source": "barra_de_tarefas",
+      "target": "react_virtualizer",
+      "label": "permite otimizar"
+    },
+    {
+      "source": "react_virtualizer",
+      "target": "ipc",
+      "label": "usando"
+    },
+    {
+      "source": "ipc",
+      "target": "backend",
+      "label": "comunica"
+    },
+    {
+      "source": "backend",
+      "target": "frontend",
+      "label": "envia"
+    },
+    {
+      "source": "barra_de_tarefas",
+      "target": "arquivo_2gb",
+      "label": "carrega"
+    },
+    {
+      "source": "frontend",
+      "target": "layout_flexbox",
+      "label": "utiliza"
+    },
+    {
+      "source": "layout_flexbox",
+      "target": "section_size",
+      "label": "considera"
+    },
+    {
+      "source": "frontend",
+      "target": "offset",
+      "label": "calcula em função de"
+    },
+    {
+      "source": "frontend",
+      "target": "chunck",
+      "label": "carrega"
+    },
+    {
+      "source": "frontend",
+      "target": "matemática_da_barra_de_rolagem",
+      "label": "usando"
+    },
+    {
+      "source": "matemática_da_barra_de_rolagem",
+      "target": "rodapé",
+      "label": "para fixar"
+    },
+    {
+      "source": "sintese",
+      "target": "import",
+      "label": "Itera"
+    },
+    {
+      "source": "sintese",
+      "target": "export",
+      "label": "Itera"
+    },
+    {
+      "source": "arquitetura",
+      "target": "disassembler",
+      "label": "Configura"
+    },
+    {
+      "source": "disassembler",
+      "target": "capstone",
+      "label": "Desassembela com"
+    },
+    {
+      "source": "capstone",
+      "target": "elf",
+      "label": "Suporte a"
+    },
+    {
+      "source": "motor_de_disassembly",
+      "target": "pesquisador_de_seguranca",
+      "label": "é acessado por"
+    },
+    {
+      "source": "pesquisador_de_seguranca",
+      "target": "engenheiro_reverso",
+      "label": "é ensinado por"
+    },
+    {
+      "source": "analista_de_vulnerabilidades",
+      "target": "motor_de_disassembly",
+      "label": "utiliza"
+    },
+    {
+      "source": "core-disassembler",
+      "target": "capstone-rs",
+      "label": "utiliza a"
+    },
+    {
+      "source": "core-parser",
+      "target": "core-disassembler",
+      "label": "passa para"
+    },
+    {
+      "source": "tauri",
+      "target": "core-parser",
+      "label": "envia"
+    },
+    {
+      "source": "hexgrid",
+      "target": "Assembly View",
+      "label": "é renderizado em"
+    },
+    {
+      "source": "Assembly View",
+      "target": "hexgrid",
+      "label": "tem um buffer de estado"
+    },
+    {
+      "source": "home_page",
+      "target": "sqlite_backend",
+      "label": "usa"
+    },
+    {
+      "source": "react_front_end",
+      "target": "home_page",
+      "label": "rende"
+    },
+    {
+      "source": "sqlite_backend",
+      "target": "recent_files_table",
+      "label": "popula"
+    },
+    {
+      "source": "react_front_end",
+      "target": "drozone_component",
+      "label": "implementa"
+    },
+    {
+      "source": "analista",
+      "target": "home_page",
+      "label": "acesss"
+    },
+    {
+      "source": "sqlite_backend",
+      "target": "ipc_api",
+      "label": "comunica"
+    },
+    {
+      "source": "analisista_estatico",
+      "target": "pe",
+      "label": "utiliza"
+    },
+    {
+      "source": "core-parser",
+      "target": "pe",
+      "label": "extrae"
+    },
+    {
+      "source": "core-parser",
+      "target": "goblin",
+      "label": "utiliza"
+    },
+    {
+      "source": "core-parser",
+      "target": "mmap",
+      "label": "varre"
+    },
+    {
+      "source": "core-parser",
+      "target": "core-parser__tauri",
+      "label": "envia"
+    },
+    {
+      "source": "core-parser__tauri",
+      "target": "tauri",
+      "label": "expõe"
+    },
+    {
+      "source": "core-parser__tauri",
+      "target": "ipc",
+      "label": "utiliza"
+    },
+    {
+      "source": "react",
+      "target": "core-parser__tauri",
+      "label": "recebe"
+    },
+    {
+      "source": "react",
+      "target": "tauri",
+      "label": "renderiza"
+    },
+    {
+      "source": "recent_file",
+      "target": "filepath",
+      "label": "é o caminho"
+    },
+    {
+      "source": "recent_file",
+      "target": "filename",
+      "label": "é o nome"
+    },
+    {
+      "source": "recent_file",
+      "target": "size_bytes",
+      "label": "é o tamanho"
+    },
+    {
+      "source": "recent_file",
+      "target": "last_opened_at",
+      "label": "é a data da última abertura"
     }
   ]
 }
