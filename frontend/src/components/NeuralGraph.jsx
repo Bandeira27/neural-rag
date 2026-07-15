@@ -3,7 +3,9 @@ import {
   ReactFlow,
   Background,
   useNodesState,
-  useEdgesState
+  useEdgesState,
+  Controls,
+  MiniMap
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import dagre from 'dagre';
@@ -66,6 +68,7 @@ const NeuralGraph = () => {
           target: link.target,
           label: link.label,
           animated: true,
+          type: "smoothstep",
         }));
 
         const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
@@ -114,8 +117,11 @@ const NeuralGraph = () => {
           onNodeClick={handleNodeClick}
           colorMode="dark"
           fitView
+          proOptions={{ hideAttribution: true }}
         >
           <Background variant="dots" />
+          <Controls />
+          <MiniMap nodeColor="#4f4f4f" maskColor="rgba(0,0,0,0.5)" />
         </ReactFlow>
       </div>
     </div>
