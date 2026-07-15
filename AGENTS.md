@@ -14,6 +14,7 @@ This file establishes the immutable physics of the Night Watch project for any A
 - **Test-Before-Merge (TDD):** You MUST write Unit Tests and E2E (Playwright) before or alongside implementation. NO EXCEPTIONS. 1:1 Traceability between BDD Scenarios and Playwright tests is mandatory.
 
 ## 2. Technical Strictness
+- **Secret Protection (Gitignore First): É TERMINANTEMENTE PROIBIDO criar chaves, senhas, ou arquivos .env sem antes declarar o rastreio no .gitignore. O DevOps deve atestar a blindagem antes de qualquer commit.**
 - **Binary/Executable Testing:** All resolution of bugs and features MUST be tested against extensionless binary files in the Linux environment (e.g., `/bin/ls`, `/usr/bin/sudo`) and symlinks.
 - **I18n:** Do NOT use raw string keys. Everything must go through `react-i18next`. 100% Portuguese.
 - **Stability:** Out-of-Memory (OOM) errors or crashes equal an automatic FAIL of the PR.
