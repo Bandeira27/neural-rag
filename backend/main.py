@@ -91,44 +91,59 @@ def main():
 
         req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers=headers)
         
-        try:
-            with urllib.request.urlopen(req) as response:
-                result = json.loads(response.read().decode('utf-8'))
-                response_text = result['choices'][0]['message']['content']
-                
-                if response_text.startswith("```json"):
-                    response_text = response_text.split("```json")[1].split("```")[0].strip()
-                elif response_text.startswith("```"):
-                    response_text = response_text.split("```")[1].split("```")[0].strip()
-                else:
-                    match = re.search(r'```(?:json)?\n(.*?)\n```', response_text, re.DOTALL)
-                    if match:
-                        response_text = match.group(1).strip()
-                
-                try:
-                    graph_data = json.loads(response_text)
-                    if 'nodes' in graph_data and 'links' in graph_data:
-                        for node in graph_data['nodes']:
-                            cursor.execute("INSERT INTO nodes (id, label, group_id, description) VALUES (?, ?, ?, ?)", (node['id'], node.get('label', ''), 1, node.get('description', '')))
-                            all_nodes.append(node)
-                        for link in graph_data['links']:
-                            cursor.execute("INSERT INTO edges (source, target, label) VALUES (?, ?, ?)", (link['source'], link['target'], link.get('label', '')))
-                            all_links.append(link)
-                        conn.commit()
-                        print("  -> Success")
-                        time.sleep(3)
-                    else:
-                        print("  -> Missing nodes or links in JSON")
-                except json.JSONDecodeError:
-                    print("  -> JSON Decode Error")
+        max_retries = 3
+        attempt = 0
+        while attempt < max_retries:
+            try:
+                with urllib.request.urlopen(req) as response:
+                    result = json.loads(response.read().decode('utf-8'))
+                    response_text = result['choices'][0]['message']['content']
                     
-        except urllib.error.HTTPError as e:
-            print(f"  -> Request failed with status {e.code}: {e.read().decode('utf-8')}")
-            # wait a bit on error too, in case of rate limit
-            time.sleep(5)
-        except Exception as e:
-            print(f"  -> Request failed: {e}")
-            time.sleep(5)
+                    if response_text.startswith("```json"):
+                        response_text = response_text.split("```json")[1].split("```")[0].strip()
+                    elif response_text.startswith("```"):
+                        response_text = response_text.split("```")[1].split("```")[0].strip()
+                    else:
+                        match = re.search(r'```(?:json)?\n(.*?)\n```', response_text, re.DOTALL)
+                        if match:
+                            response_text = match.group(1).strip()
+                    
+                    try:
+                        graph_data = json.loads(response_text)
+                        if 'nodes' in graph_data and 'links' in graph_data:
+                            for node in graph_data['nodes']:
+                                cursor.execute("INSERT INTO nodes (id, label, group_id, description) VALUES (?, ?, ?, ?)", (node['id'], node.get('label', ''), 1, node.get('description', '')))
+                                all_nodes.append(node)
+                            for link in graph_data['links']:
+                                cursor.execute("INSERT INTO edges (source, target, label) VALUES (?, ?, ?)", (link['source'], link['target'], link.get('label', '')))
+                                all_links.append(link)
+                            conn.commit()
+                            print("  -> Success")
+                            time.sleep(3)
+                        else:
+                            print("  -> Missing nodes or links in JSON")
+                    except json.JSONDecodeError:
+                        print("  -> JSON Decode Error")
+                    break
+                        
+            except urllib.error.HTTPError as e:
+                error_body = e.read().decode('utf-8')
+                print(f"  -> Request failed with status {e.code}: {error_body}")
+                if e.code == 429:
+                    wait_time = 20.0
+                    match = re.search(r'try again in ([\d.]+)s', error_body, re.IGNORECASE)
+                    if match:
+                        wait_time = float(match.group(1)) + 0.5
+                    print(f"  -> Rate limit hit. Waiting {wait_time}s before retry ({attempt+1}/{max_retries})...")
+                    time.sleep(wait_time)
+                    attempt += 1
+                else:
+                    time.sleep(5)
+                    break
+            except Exception as e:
+                print(f"  -> Request failed: {e}")
+                time.sleep(5)
+                break
 
     conn.close()
 
