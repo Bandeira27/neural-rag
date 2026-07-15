@@ -7,8 +7,10 @@ Implement massive ingestion of source code and resolve entity duplication (Entit
 *   **Bug "Ilhas Duplicadas":** Atualmente, o sistema cria nós de entidades duplicadas ou desconectadas para a mesma entidade conceitual (ex: "Porteiro QA" vs "Equipe QA"). Isso fragmenta o grafo e cria "ilhas" de informações desconectadas.
 *   **Source Code Parsing:** Há uma necessidade crítica de parsear o código-fonte real do repositório para extrair entidades arquiteturais e relacionamentos precisos.
 
-## 3. Approach
-Enhance the crawler to handle source code extensions and reimplement the resolver to perform robust entity disambiguation before graph insertion.
+## 3. BDD (Behavior-Driven Development) Scenarios
+1) Cenário (Backend/Resolver): Dado que o parser gera 'Equipe QA' e 'QA Team', Quando passados para o resolver, Então ele DEVE fundir as duas entidades em um único nó centralizando os links.
+2) Cenário (Backend/Crawler): Dado que um arquivo tem mais de X tokens (código grande), Quando ele for enviado, Então o crawler deve cortá-lo e enviar apenas importações e assinaturas para o Groq.
+
 
 ## 4. Dev Checklist
 - [ ] 1) O `crawler.py` DEVE ler arquivos `.tsx`, `.ts` e `package.json` do Night Watch.
