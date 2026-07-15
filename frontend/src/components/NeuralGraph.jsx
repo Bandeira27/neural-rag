@@ -37,10 +37,6 @@ const NeuralGraph = () => {
 
   const handleNodeClick = useCallback(node => {
     setSelectedNode(node);
-    if (fgRef.current) {
-      fgRef.current.centerAt(node.x, node.y, 1000);
-      fgRef.current.zoom(2, 1000);
-    }
   }, []);
 
   const forceGraphComponent = useMemo(() => (
@@ -50,14 +46,15 @@ const NeuralGraph = () => {
       nodeId="id"
       nodeLabel="name"
       d3VelocityDecay={0.1}
+      nodeRelSize={6}
       onNodeDragEnd={node => {
         delete node.fx;
         delete node.fy;
         fgRef.current?.d3ReheatSimulation();
       }}
-      nodeCanvasObject={(node, ctx, _globalScale) => {
+      nodeCanvasObject={(node, ctx, globalScale) => {
         const label = node.label || '';
-        const fontSize = 3;
+        const fontSize = 12 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
         
         // Draw circle
