@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useState, useEffect } from 'react';
+import React, { useRef, useCallback, useState, useEffect, useMemo } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
 
 const NeuralGraph = () => {
@@ -37,9 +37,59 @@ const NeuralGraph = () => {
 
   const handleNodeClick = useCallback(node => {
     setSelectedNode(node);
-    fgRef.current.centerAt(node.x, node.y, 1000);
-    fgRef.current.zoom(8, 2000);
-  }, [fgRef]);
+    if (fgRef.current) {
+      fgRef.current.centerAt(node.x, node.y, 1000);
+      fgRef.current.zoom(2, 1000);
+    }
+  }, []);
+
+  const forceGraphComponent = useMemo(() => (
+    <ForceGraph2D
+      ref={fgRef}
+      graphData={graphData}
+      nodeId="id"
+      nodeLabel="name"
+      d3VelocityDecay={0.1}
+      onNodeDragEnd={node => {
+        delete node.fx;
+        delete node.fy;
+        fgRef.current?.d3ReheatSimulation();
+      }}
+      nodeCanvasObject={(node, ctx, _globalScale) => {
+        const label = node.label || '';
+        const fontSize = 3;
+        ctx.font = `${fontSize}px Sans-Serif`;
+        
+        // Draw circle
+        const r = 4;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
+        let color = '#6b7280';
+        switch(node.group) {
+          case 1: color = '#3b82f6'; break;
+          case 2: color = '#10b981'; break;
+          case 3: color = '#8b5cf6'; break;
+        }
+        ctx.fillStyle = color;
+        ctx.fill();
+
+        // Draw text
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.fillText(label, node.x, node.y + r + fontSize);
+      }}
+      linkColor={() => 'rgba(255, 255, 255, 0.4)'}
+      linkDirectionalArrowLength={3.5}
+      backgroundColor="#09090b"
+      onNodeClick={handleNodeClick}
+      cooldownTicks={100}
+      enableZoomInteraction={true}
+      enablePanInteraction={true}
+      minZoom={0.5}
+      maxZoom={5}
+    />
+  ), [graphData, handleNodeClick]);
 
   return (
     <div className="w-full h-full bg-zinc-950 flex flex-col">
@@ -63,49 +113,7 @@ const NeuralGraph = () => {
             </p>
           </div>
         )}
-        <ForceGraph2D
-          ref={fgRef}
-          graphData={graphData}
-          nodeId="id"
-          nodeLabel="name"
-          d3VelocityDecay={0.1}
-          onNodeDragEnd={node => {
-            delete node.fx;
-            delete node.fy;
-            fgRef.current?.d3ReheatSimulation();
-          }}
-          nodeCanvasObject={(node, ctx, _globalScale) => {
-            const label = node.label || '';
-            const fontSize = 3;
-            ctx.font = `${fontSize}px Sans-Serif`;
-            
-            // Draw circle
-            const r = 4;
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
-            let color = '#6b7280';
-            switch(node.group) {
-              case 1: color = '#3b82f6'; break;
-              case 2: color = '#10b981'; break;
-              case 3: color = '#8b5cf6'; break;
-            }
-            ctx.fillStyle = color;
-            ctx.fill();
-
-            // Draw text
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-            ctx.fillText(label, node.x, node.y + r + fontSize);
-          }}
-          linkColor={() => 'rgba(255, 255, 255, 0.4)'}
-          linkDirectionalArrowLength={3.5}
-          backgroundColor="#09090b"
-          onNodeClick={handleNodeClick}
-          cooldownTicks={100}
-          enableZoomInteraction={true}
-          enablePanInteraction={true}
-        />
+        {forceGraphComponent}
       </div>
     </div>
   );
