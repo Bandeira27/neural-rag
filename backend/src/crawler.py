@@ -1,5 +1,6 @@
 import os
 import argparse
+import re
 import sys
 
 def get_target_path(env_var="REPO_PATH", cli_args=None):
@@ -36,12 +37,15 @@ class Crawler:
                 # Para evitar estourar tokens da Groq, fazemos chunking simples para código fonte
                 if file.endswith(('.tsx', '.ts')):
                     with open(file_path, 'r', encoding='utf-8') as f:
-                        lines = f.readlines()
-                    # Chunk de 100 linhas (ajuste se necessário)
+                        content = f.read()
+                    pattern = re.compile(r'^(?:import\s+.*|export\s+.*|function\s+\w+.*|const\s+\w+.*|class\s+\w+.*)$', re.MULTILINE)
+                    matches = pattern.findall(content)
+                    summary_lines = matches
                     chunk_size = 100
-                    for i in range(0, len(lines), chunk_size):
-                        chunk = "".join(lines[i:i + chunk_size])
-                        yield file_path, chunk
+                    for i in range(0, len(summary_lines), chunk_size):
+                        chunk = "\n".join(summary_lines[i:i + chunk_size])
+                        if chunk.strip():
+                            yield file_path, chunk
                 else:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         yield file_path, f.read()

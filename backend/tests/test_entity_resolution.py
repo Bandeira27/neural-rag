@@ -20,3 +20,12 @@ def test_resolve_entities_distinct():
     assert len(result) == 2
     assert result[0].id == "1"
     assert result[1].id == "2"
+
+def test_resolve_entities_textual_synonyms():
+    e1 = Entity(name="QA Team", id="1", edges=[])
+    e2 = Entity(name="Equipe de QA", id="2", edges=[])
+    
+    # They should merge even if llm_response_is_same=False
+    result = resolve_entities(e1, e2, llm_response_is_same=False)
+    
+    assert len(result) == 1
