@@ -4,6 +4,7 @@ import ForceGraph2D from 'react-force-graph-2d';
 const NeuralGraph = () => {
   const fgRef = useRef();
   const [graphData, setGraphData] = useState({ nodes: [], links: [] });
+  const [selectedNode, setSelectedNode] = useState(null);
 
   useEffect(() => {
     fetch('/graph.json')
@@ -35,6 +36,7 @@ const NeuralGraph = () => {
   }, [graphData]);
 
   const handleNodeClick = useCallback(node => {
+    setSelectedNode(node);
     fgRef.current.centerAt(node.x, node.y, 1000);
     fgRef.current.zoom(8, 2000);
   }, [fgRef]);
@@ -45,6 +47,22 @@ const NeuralGraph = () => {
         Neural RAG - Graph View
       </h2>
       <div className="flex-1 overflow-hidden relative">
+        {selectedNode && (
+          <div className="absolute right-4 top-4 bg-zinc-900 border border-zinc-800 text-white rounded-md p-4 z-10 w-80 shadow-lg">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="text-lg font-semibold">{selectedNode.name || selectedNode.label}</h3>
+              <button 
+                onClick={() => setSelectedNode(null)}
+                className="text-zinc-400 hover:text-white"
+              >
+                ✕
+              </button>
+            </div>
+            <p className="text-sm text-zinc-300">
+              {selectedNode.description || 'Descrição não disponível.'}
+            </p>
+          </div>
+        )}
         <ForceGraph2D
           ref={fgRef}
           graphData={graphData}
